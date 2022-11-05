@@ -1,0 +1,40 @@
+---
+layout: page
+title: Magic Item Generator
+---
+
+<script src="../javascript/scripts.js"></script>
+
+<div>
+    <p>This page randomly generates D&D 5e items with (mostly) weak and (hopefully) unique magical enchantments. I
+      hope this
+      helps when your players want to loot the body of random goblin #3.</p>
+    <p>A CSV file with the complete list of magic effects can be downloaded <a
+        href="../files/ILTB-Effects-20221020.csv" download>here</a>.</p>
+    <p id="possible-items">There are 22,879 possible items.</p>
+</div>
+
+<div class="w3-row w3-padding-16 centered-text">
+    <label for="category">Item Category:</label>
+    <select name="category" id="category" onchange="possibleItems()">
+      <option value="Any">Any</option>
+      <option value="Armor">Armor</option>
+      <option value="Clothing">Clothing</option>
+      <option value="Equipment">Equipment</option>
+      <option value="Instrument">Instrument</option>
+      <option value="Vehicle">Vehicle</option>
+      <option value="Weapon">Weapon</option>
+    </select>
+</div>
+
+<div>
+    <div>
+      <button type="button" onclick="getItem()">Loot the Body</button>
+    </div>
+</div>
+
+<div id="item-container">
+    <h2 id="itemName"></h2>
+    <!-- <img class="item-divider" src="../images/simple-line-divider.svg"> -->
+    <p id="itemDescription"></p>
+</div>
