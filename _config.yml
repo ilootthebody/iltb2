@@ -35,6 +35,9 @@ github:
 twitter:
   username: ilootthebody            # change to your twitter username
 
+instagram:
+  username: ilootthebody
+
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
@@ -43,9 +46,7 @@ social:
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/username       # change to your github homepage
-    # Uncomment below to add more social links
-    # - https://www.instagram.com/ilootthebody
+    - https://www.instagram.com/ilootthebody
     # - https://www.reddit.com/r/ilootthebody
 
 google_site_verification:               # fill in to your verification string
@@ -54,7 +55,7 @@ google_site_verification:               # fill in to your verification string
 # The end of `jekyll-seo-tag` settings
 
 google_analytics:
-  id:                 # fill in your Google Analytics ID
+  id: G-MNCHS7FWQQ                # fill in your Google Analytics ID
   # Google Analytics pageviews report settings
   pv:
     proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
@@ -78,10 +79,10 @@ theme_mode:   # [light|dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn: 'https://raw.githubusercontent.com/cotes2020/chirpy-images/main'
+img_cdn: ''
 
 # the avatar on sidebar, support local or CORS resources
-avatar: '/commons/avatar.jpg'
+avatar: '/assets/img/chestfinal.jpg'
 
 # boolean type, the global switch for ToC in posts.
 toc: true
