@@ -10,3 +10,27 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
 @import "{{ site.theme }}";
 
 /* append your custom style below */
+#item-container {
+  display: none;
+}
+
+.generator-button {
+  transition-duration: 0.4s;
+  background-color: #6B4A8C;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 1.25em;
+  margin-top: 2em;
+}
+
+.generator-button:hover {
+  background-color: #A979D9;
+  color: white;
+}
+
+.smaller-text {
+  font-size: .75em;
+}
