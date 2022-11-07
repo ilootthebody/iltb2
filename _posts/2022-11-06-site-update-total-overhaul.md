@@ -6,7 +6,7 @@ categories: [Misc]
 tags: [site updates]
 ---
 
-Anyone who visited this site before has probably noticed that it looks quite different now. I've spent the last couple of weeks completely overhauling the site from the ground up. While it may look different, the goals and content of I Loot the Body have remained the same. The update has just added some bells and whistles that will make my life easier and will hopefully make your experience as the user much better. For those (like me) who always enjoy a little peek under the hood, read on for the nitty gritty details.
+Some of you may have noticed that the site looks a bit different than when it originally launched. I've spent the last couple of weeks completely overhauling the site from the ground up. While it may look different, the goals and content of I Loot the Body have remained the same. The update has just added some bells and whistles that will make my life easier and will hopefully make your experience as the user much better. For those (like me) who always enjoy a little peek under the hood, read on for the nitty gritty details.
 
 ## First Steps
 
