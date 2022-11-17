@@ -63,14 +63,14 @@ function getName() {
         .then(result => {
             var jsonResponse = JSON.parse(result.body);
             var nameArray = jsonResponse.names;
-            
+
             for (const name of nameArray) {
                 var para = document.createElement("p");
                 var pText = document.createTextNode(name);
                 para.appendChild(pText);
                 nameContainer.appendChild(para);
             }
-            
+
             // Update webpage
             // document.getElementById("names").innerHTML = nameArray.join('\r\n');
             nameContainer.style.display = "inline-block";
@@ -97,5 +97,5 @@ function possibleItems() {
     } else if (category == "Weapon") {
         document.getElementById("possible-items").innerHTML = "There are 6,302 possible weapons."
     }
-    
+
 }
