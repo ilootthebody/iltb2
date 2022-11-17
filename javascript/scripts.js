@@ -65,10 +65,10 @@ function getName() {
             var nameArray = jsonResponse.names;
             
             for (const name of nameArray) {
-                var h2 = document.createElement("h2");
-                var h2Text = document.createTextNode(name);
-                h2.appendChild(h2Text);
-                nameContainer.appendChild(h2);
+                var para = document.createElement("p");
+                var pText = document.createTextNode(name);
+                para.appendChild(pText);
+                nameContainer.appendChild(para);
             }
             
             // Update webpage
