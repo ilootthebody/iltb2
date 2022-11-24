@@ -83,19 +83,19 @@ function possibleItems() {
     var category = e.options[e.selectedIndex].text;
 
     if (category == "Any") {
-        document.getElementById("possible-items").innerHTML = "There are 22,879 possible items."
+        document.getElementById("possible-items").innerHTML = "There are 25,551 possible items."
     } else if (category == "Armor") {
-        document.getElementById("possible-items").innerHTML = "There are 2,055 possible pieces of armor."
+        document.getElementById("possible-items").innerHTML = "There are 2,295 possible pieces of armor."
     } else if (category == "Clothing") {
-        document.getElementById("possible-items").innerHTML = "There are 2,877 possible articles of clothing."
+        document.getElementById("possible-items").innerHTML = "There are 3,213 possible articles of clothing."
     } else if (category == "Equipment") {
-        document.getElementById("possible-items").innerHTML = "There are 9,453 possible pieces of equipment."
+        document.getElementById("possible-items").innerHTML = "There are 10,557 possible pieces of equipment."
     } else if (category == "Instrument") {
-        document.getElementById("possible-items").innerHTML = "There are 1,507 possible instruments."
+        document.getElementById("possible-items").innerHTML = "There are 1,683 possible instruments."
     } else if (category == "Vehicle") {
-        document.getElementById("possible-items").innerHTML = "There are 685 possible vehicles."
+        document.getElementById("possible-items").innerHTML = "There are 765 possible vehicles."
     } else if (category == "Weapon") {
-        document.getElementById("possible-items").innerHTML = "There are 6,302 possible weapons."
+        document.getElementById("possible-items").innerHTML = "There are 7,038 possible weapons."
     }
 
 }
