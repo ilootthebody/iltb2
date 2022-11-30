@@ -43,9 +43,15 @@ layout: page
 {% for post in posts %}
 
   <div class="post-preview">
+    {% if post.pin %}
+    <h1>
+      <a href="/generators">{{ post.title }}</a>
+    </h1>
+    {% else %}
     <h1>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </h1>
+    {% endif %}
 
     <div class="post-content">
       <p>
