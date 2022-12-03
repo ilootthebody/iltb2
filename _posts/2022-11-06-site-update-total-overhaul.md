@@ -2,7 +2,7 @@
 title: "Site Update: Total Overhaul"
 author: njm
 date: 2022-11-06 14:30:00 -0500
-categories: [Site Updates]
+categories: [Website, Site Updates]
 tags: [site updates]
 ---
 
