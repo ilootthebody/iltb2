@@ -1,3 +1,43 @@
+function getItems() {
+    const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/iltbgetitem"
+
+    // Instantiate and populate header.
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    // Grab category from HTML and format as JSON string.
+    // var e = document.getElementById("category");
+    // var category = e.options[e.selectedIndex].text;
+    var raw = JSON.stringify({ "category": 'Any' });
+
+    // create a JSON object with parameters for API call and store in a variable
+    var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+    };
+
+    // make API call with parameters and use promises to get response
+    fetch(API_URL, requestOptions)
+        .then(response => response.json())
+        .then(result => {
+            var jsonResponse = JSON.parse(result.body)
+
+            // Update webpage
+            document.getElementById("itemName").innerHTML = jsonResponse.itemName;
+            document.getElementById("itemDescription").innerHTML = jsonResponse.itemDescription;
+            document.getElementById("item-container").style.display = "inline-block";
+        })
+        .catch(error => console.log('error', error));
+}
+
+// -------------------------------------------------------------------------------- \\
+// Called from magic-item-generator.html.
+//
+// Gets the selected categories from the form, sends the API request to AWS,
+// and formats/displays the generated item(s).
+// -------------------------------------------------------------------------------- \\
 function getItem() {
     const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/iltbgetitem"
 
@@ -32,6 +72,12 @@ function getItem() {
         .catch(error => console.log('error', error));
 }
 
+// -------------------------------------------------------------------------------- \\
+// Called from fantasy-name-generator.html.
+//
+// Gets the number of names, sends the API request to AWS, and formats/displays
+// the generated name(s).
+// -------------------------------------------------------------------------------- \\
 function getName() {
     const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/iltbgetname";
     const nameContainer = document.getElementById("name-container");
@@ -78,6 +124,10 @@ function getName() {
         .catch(error => console.log('error', error));
 }
 
+// -------------------------------------------------------------------------------- \\
+// Called from magic-item-generator.html.
+//
+// -------------------------------------------------------------------------------- \\
 function possibleItems() {
     var e = document.getElementById("category");
     var category = e.options[e.selectedIndex].text;
