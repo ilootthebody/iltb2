@@ -5,9 +5,12 @@ function getItems() {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
-    // Grab category from HTML and format as JSON string.
-    // var e = document.getElementById("category");
-    // var category = e.options[e.selectedIndex].text;
+    // Grab categories from HTML and format as JSON string.
+    var checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
+    var categories = [];
+    for (var i=0; i<checkboxes.length; i++) {
+        categories.push(checkboxes[i].value);
+    }
     var raw = JSON.stringify({ "category": 'Any' });
 
     // create a JSON object with parameters for API call and store in a variable
