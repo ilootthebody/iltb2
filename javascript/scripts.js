@@ -14,7 +14,7 @@ function getItems() {
     // Grab categories from HTML and format as JSON string.
     var checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
     var categories = [];
-    for (var i=0; i<checkboxes.length; i++) {
+    for (var i = 0; i < checkboxes.length; i++) {
         categories.push(checkboxes[i].value);
     };
 
