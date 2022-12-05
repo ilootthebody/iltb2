@@ -11,7 +11,11 @@ title: Magic Item Generator
       hope this
       helps when your players want to loot the body of random goblin #3.</p>
     <!-- <br> -->
-    <p id="possible-items">There are 25,551 possible items. Select or deselect the categories below to generate specific types of items.</p>
+    <p id="possible-items">
+      There are 25,551 possible items. 
+      Select or deselect the categories below to generate specific types of items. 
+      The number in parentheses indicates how many possible items there are of that type.
+    </p>
     <!-- <br> -->
 </div>
 
@@ -20,18 +24,18 @@ title: Magic Item Generator
   <form onsubmit="return false;">
     <fieldset id="category-checkboxes">
       <legend>Categories:</legend>
-      <input type="checkbox" id="armor" name="categories" value="armor" checked>
-      <label for="armor">Armor</label><br>
-      <input type="checkbox" id="clothing" name="categories" value="clothing" checked>
-      <label for="clothing">Clothing</label><br>
-      <input type="checkbox" id="equipment" name="categories" value="equipment" checked>
-      <label for="equipment">Equipment</label><br>
-      <input type="checkbox" id="instrument" name="categories" value="instrument" checked>
-      <label for="instrument">Instrument</label><br>
-      <input type="checkbox" id="vehicle" name="categories" value="vehicle" checked>
-      <label for="vehicle">Vehicle</label><br>
-      <input type="checkbox" id="weapon" name="categories" value="weapon" checked>
-      <label for="weapon">Weapon</label><br>
+      <input type="checkbox" id="armor" name="categories" value="Armor" checked>
+      <label for="armor">Armor (2,295)</label><br>
+      <input type="checkbox" id="clothing" name="categories" value="Clothing" checked>
+      <label for="clothing">Clothing (3,213)</label><br>
+      <input type="checkbox" id="equipment" name="categories" value="Equipment" checked>
+      <label for="equipment">Equipment (10,557)</label><br>
+      <input type="checkbox" id="instrument" name="categories" value="Instrument" checked>
+      <label for="instrument">Instrument (1,683)</label><br>
+      <input type="checkbox" id="vehicle" name="categories" value="Vehicle" checked>
+      <label for="vehicle">Vehicle (765)</label><br>
+      <input type="checkbox" id="weapon" name="categories" value="Weapon" checked>
+      <label for="weapon">Weapon (7,038)</label><br>
       <input type="submit" value="Loot the Body" class="generator-button" onclick="getItems()">
     </fieldset>
   </form>
