@@ -36,9 +36,27 @@ title: Magic Item Generator
       <label for="vehicle">Vehicle</label><br>
       <input type="checkbox" id="weapon" name="categories" value="Weapon" checked>
       <label for="weapon">Weapon</label><br>
-      <input type="submit" value="Loot the Body" class="generator-button" onclick="getItems()">
     </fieldset>
   </form>
+</div>
+
+<br>
+
+<!-- Number of items selector -->
+<div class="w3-row w3-padding-16 centered-text">
+  <label>Number of items:</label>
+  <select name="num_items" id="num_items">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+  </select>
+</div>
+
+<!-- Button -->
+<div>
+  <input type="submit" value="Loot the Body" class="generator-button" onclick="getItems()">
 </div>
 
 <!-- Item Container -->

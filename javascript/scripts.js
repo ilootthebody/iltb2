@@ -5,7 +5,8 @@
 // and formats/displays the generated item(s).
 // -------------------------------------------------------------------------------- \\
 function getItems() {
-    const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/iltbgetitems";
+    const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/iltbgetitem";
+    const itemContainer = document.getElementById("item-container");
 
     // Instantiate and populate header.
     var myHeaders = new Headers();
@@ -26,8 +27,12 @@ function getItems() {
         return;
     };
 
+    // Grab number of items from HTML.
+    var e = document.getElementById("num_items");
+    var numItems = e.options[e.selectedIndex].text;
+
     // create a JSON object with parameters for API call and store in a variable
-    var raw = JSON.stringify({ "category": categories.toString() });
+    var raw = JSON.stringify({ "category": categories.toString(), "numItems": numItems });
     var requestOptions = {
         method: 'POST',
         headers: myHeaders,
@@ -35,22 +40,39 @@ function getItems() {
         redirect: 'follow'
     };
 
+    // Clear old items from HTML.
+    while (itemContainer.firstChild) {
+        itemContainer.removeChild(itemContainer.firstChild);
+    }
+
     // make API call with parameters and use promises to get response
     fetch(API_URL, requestOptions)
         .then(response => response.json())
         .then(result => {
             var jsonResponse = JSON.parse(result.body);
 
-            // Update webpage
-            document.getElementById("itemName").innerHTML = jsonResponse.itemName;
-            document.getElementById("itemDescription").innerHTML = jsonResponse.itemDescription;
-            document.getElementById("item-container").style.display = "inline-block";
+            for (var item of jsonResponse.items) {
+                // Item name.
+                var h2 = document.createElement("h2");
+                var h2Text = document.createTextNode(item[0]);
+                h2.appendChild(h2Text);
+                itemContainer.appendChild(h2);
+
+                // Item description.
+                var para = document.createElement("p");
+                var pText = document.createTextNode(item[1]);
+                para.appendChild(pText);
+                itemContainer.appendChild(para);
+            }
+
+            itemContainer.style.display = "inline-block";
         })
         .catch(error => {
             document.getElementById("itemName").innerHTML = "ERROR";
             document.getElementById("itemDescription").innerHTML = "Sorry for the inconvenience.";
             document.getElementById("item-container").style.display = "inline-block";
             console.log('error', error)
+            return;
         });
 }
 
@@ -81,6 +103,7 @@ function getName() {
         redirect: 'follow'
     };
 
+    // Clear old names from HTML.
     while (nameContainer.firstChild) {
         nameContainer.removeChild(nameContainer.firstChild)
     }
