@@ -2,6 +2,7 @@
 title: "The Calendar of Cordia"
 author: njm
 date: 2022-12-10 14:50:00:00 -0500
+last_modified_at: 2022-12-15 11:20:00 -0500
 categories: [Worldbuilding, Overview]
 tags: [cordia, worldbuilding]
 ---
@@ -54,7 +55,7 @@ On a larger scale, scholars have divided historical eras into logical units know
 
 ### The Divine Age (Unknown Eons)
 
-Almost nothing concrete is known about the eons in which Cordia was formed. The Divine age spans from the elemental forces raging for eons to the arrival of the Twin Gods, Ira and Ilune, and the creation myth of Cordia.
+Almost nothing concrete is known about the eons in which Cordia was formed. The Divine age spans from the elemental forces raging for eons to the arrival of the Twin Gods, Ira and Ilune, and the [creation myth of Cordia](/posts/the-creation-myth-of-cordia/).
 
 ### The Pristine Age (Unknown Millenia)
 
