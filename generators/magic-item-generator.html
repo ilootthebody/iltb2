@@ -7,37 +7,69 @@ title: Magic Item Generator
 
 <!-- Header -->
 <div>
-  <p>This tool randomly generates D&D 5e items with (mostly) weak and (hopefully) unique magical enchantments. 
+  <p>This tool randomly generates D&D 5e items with (mostly) weak and (hopefully) unique magical enchantments.
     I hope this helps when your players want to loot the body of random goblin #3.</p>
   <p id="possible-items">
-    The generator randomly selects from lists of items and magical effects for a total 
-    of 31,977 possible items. Select or deselect the categories below to generate specific 
-    types of items. A CSV file with the complete list of magic effects can be downloaded 
+    The generator randomly selects from lists of items and magical effects for a total
+    of 31,977 possible items. Select or deselect the categories below to generate specific
+    types of items. A CSV file with the complete list of magic effects can be downloaded
     <a href="/downloads/ILTB-Effects-20221124.csv" download>here</a>.
   </p>
 </div>
 
-<!-- Category Selector Form -->
-<div>
-  <form onsubmit="return false;">
-    <fieldset id="category-checkboxes">
-      <legend>Categories:</legend>
-      <input type="checkbox" id="focus" name="categories" value="Focus" checked>
-      <label for="focus">Arcane Focus</label><br>
-      <input type="checkbox" id="armor" name="categories" value="Armor" checked>
-      <label for="armor">Armor</label><br>
-      <input type="checkbox" id="clothing" name="categories" value="Clothing" checked>
-      <label for="clothing">Clothing</label><br>
-      <input type="checkbox" id="equipment" name="categories" value="Equipment" checked>
-      <label for="equipment">Equipment</label><br>
-      <input type="checkbox" id="instrument" name="categories" value="Instrument" checked>
-      <label for="instrument">Instrument</label><br>
-      <input type="checkbox" id="vehicle" name="categories" value="Vehicle" checked>
-      <label for="vehicle">Vehicle</label><br>
-      <input type="checkbox" id="weapon" name="categories" value="Weapon" checked>
-      <label for="weapon">Weapon</label><br>
-    </fieldset>
-  </form>
+<div class="flex-container">
+  <!-- Category Selector Form -->
+  <div class="col">
+    <form onsubmit="return false;">
+      <fieldset id="category-checkboxes">
+        <legend>Categories:</legend>
+        <input type="checkbox" id="accessories" name="categories" value="accessory" checked>
+        <label for="accessories">Accessories</label><br>
+        <input type="checkbox" id="focus" name="categories" value="focus" checked>
+        <label for="focus">Arcane Focus</label><br>
+        <input type="checkbox" id="armor" name="categories" value="armor" checked>
+        <label for="armor">Armor</label><br>
+        <input type="checkbox" id="clothing" name="categories" value="clothing" checked>
+        <label for="clothing">Clothing</label><br>
+        <input type="checkbox" id="equipment" name="categories" value="equipment" checked>
+        <label for="equipment">Equipment</label><br>
+        <input type="checkbox" id="instrument" name="categories" value="instrument" checked>
+        <label for="instrument">Instrument</label><br>
+        <input type="checkbox" id="vehicle" name="categories" value="vehicle" checked>
+        <label for="vehicle">Vehicle</label><br>
+        <input type="checkbox" id="weapon" name="categories" value="weapon" checked>
+        <label for="weapon">Weapon</label><br>
+      </fieldset>
+    </form>
+  </div>
+  <!-- Power Level Selector Form -->
+  <div class="col">
+    <form>
+      <fieldset id="power-level-checkboxes">
+        <legend>Power Level:</legend>
+        <input type="checkbox" id="mundane" name="power-level" value="mundane" checked>
+        <label for="mundane">Mundane</label><br>
+        <input type="checkbox" id="low" name="power-level" value="low" checked>
+        <label for="low">Low</label><br>
+        <input type="checkbox" id="medium" name="power-level" value="medium" checked>
+        <label for="medium">Medium</label><br>
+        <input type="checkbox" id="high" name="power-level" value="high" checked>
+        <label for="high">High</label><br>
+        <input type="checkbox" id="curse" name="power-level" value="curse" checked>
+        <label for="curse">Curse</label><br>
+      </fieldset>
+    </form>
+  </div>
+  <!-- Other Options Selector Form -->
+  <div class="col">
+    <form>
+      <fieldset id="options-checkboxes">
+        <legend>Other Options:</legend>
+        <input type="checkbox" id="price" name="options" value="price" checked>
+        <label for="price">Show Price</label><br>
+      </fieldset>
+    </form>
+  </div>
 </div>
 
 <br>
@@ -46,11 +78,11 @@ title: Magic Item Generator
 <div class="w3-row w3-padding-16 centered-text">
   <label>Number of items:</label>
   <select name="num_items" id="num_items">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
   </select>
 </div>
 

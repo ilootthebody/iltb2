@@ -34,3 +34,14 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
 .smaller-text {
   font-size: .85em;
 }
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 600px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}

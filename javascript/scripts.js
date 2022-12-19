@@ -5,26 +5,35 @@
 // and formats/displays the generated item(s).
 // -------------------------------------------------------------------------------- \\
 function getItems() {
-    const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/iltbgetitem";
+    const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/iltbgetitems";
     const itemContainer = document.getElementById("item-container");
 
     // Instantiate and populate header.
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
-    // Grab categories from HTML and format as JSON string.
-    var checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
+    // Grab categories from HTML.
+    var categoryElement = document.getElementById("category-checkboxes");
+    var categoryCheckboxes = categoryElement.querySelectorAll('input[type=checkbox]:checked');
     var categories = [];
-    for (var i = 0; i < checkboxes.length; i++) {
-        categories.push(checkboxes[i].value);
+    for (var i = 0; i < categoryCheckboxes.length; i++) {
+        categories.push(categoryCheckboxes[i].value);
     };
 
-    // Check for zero selected categories
-    if (categories.length == 0) {
-        document.getElementById("itemName").innerHTML = "Literally Nothing";
-        document.getElementById("itemDescription").innerHTML = "This body has nothing of interest to be found.";
-        document.getElementById("item-container").style.display = "inline-block";
-        return;
+    // Grab power level from HTML.
+    var powerElement = document.getElementById("power-level-checkboxes");
+    var powerCheckboxes = powerElement.querySelectorAll('input[type=checkbox]:checked');
+    var powerLevels = [];
+    for (var i = 0; i < powerCheckboxes.length; i++) {
+        powerLevels.push(powerCheckboxes[i].value);
+    };
+
+    // Grab other options from HTML.
+    var optionsElement = document.getElementById("options-checkboxes");
+    var optionsCheckboxes = optionsElement.querySelectorAll('input[type=checkbox]:checked');
+    var options = [];
+    for (var i = 0; i < optionsCheckboxes.length; i++) {
+        options.push(optionsCheckboxes[i].value);
     };
 
     // Grab number of items from HTML.
@@ -32,7 +41,12 @@ function getItems() {
     var numItems = e.options[e.selectedIndex].text;
 
     // create a JSON object with parameters for API call and store in a variable
-    var raw = JSON.stringify({ "category": categories.toString(), "numItems": numItems });
+    var raw = JSON.stringify({
+        "category": categories.toString(),
+        "power": powerLevels.toString(),
+        "options": options.toString(),
+        "numItems": numItems
+    });
     var requestOptions = {
         method: 'POST',
         headers: myHeaders,
@@ -68,9 +82,9 @@ function getItems() {
             itemContainer.style.display = "inline-block";
         })
         .catch(error => {
-            document.getElementById("itemName").innerHTML = "ERROR";
-            document.getElementById("itemDescription").innerHTML = "Sorry for the inconvenience.";
-            document.getElementById("item-container").style.display = "inline-block";
+            // document.getElementById("itemName").innerHTML = "ERROR";
+            // document.getElementById("itemDescription").innerHTML = "Sorry for the inconvenience.";
+            // document.getElementById("item-container").style.display = "inline-block";
             console.log('error', error)
             return;
         });
