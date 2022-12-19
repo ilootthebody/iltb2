@@ -82,9 +82,15 @@ function getItems() {
             itemContainer.style.display = "inline-block";
         })
         .catch(error => {
-            // document.getElementById("itemName").innerHTML = "ERROR";
-            // document.getElementById("itemDescription").innerHTML = "Sorry for the inconvenience.";
-            // document.getElementById("item-container").style.display = "inline-block";
+            var h2 = document.createElement("h2");
+            var h2Text = document.createTextNode("Oops");
+            h2.appendChild(h2Text);
+            itemContainer.appendChild(h2);
+            var para = document.createElement("p");
+            var pText = document.createTextNode("Sorry, we rolled a 1 on our investigation check.");
+            para.appendChild(pText);
+            itemContainer.appendChild(para);
+            itemContainer.style.display = "inline-block";
             console.log('error', error)
             return;
         });
