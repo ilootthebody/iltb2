@@ -65,18 +65,31 @@ function getItems() {
         .then(result => {
             var jsonResponse = JSON.parse(result.body);
 
+            // Display Items
             for (var item of jsonResponse.items) {
+                var name = item[0]
+                var details = item[1]
+                var desc = item[2]
+                
+
                 // Item name.
                 var h2 = document.createElement("h2");
-                var h2Text = document.createTextNode(item[0]);
+                var h2Text = document.createTextNode(name);
                 h2.appendChild(h2Text);
                 itemContainer.appendChild(h2);
 
+                // Item details.
+                var detailsPara = document.createElement("p");
+                var detailsText = document.createTextNode(item[1]);
+                detailsPara.appendChild(detailsText);
+                detailsPara.classList.add("item-details");
+                itemContainer.appendChild(detailsPara);
+
                 // Item description.
-                var para = document.createElement("p");
-                var pText = document.createTextNode(item[1]);
-                para.appendChild(pText);
-                itemContainer.appendChild(para);
+                var descPara = document.createElement("p");
+                var descText = document.createTextNode(desc);
+                descPara.appendChild(descText);
+                itemContainer.appendChild(descPara);
             }
 
             itemContainer.style.display = "inline-block";
