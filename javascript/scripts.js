@@ -70,7 +70,7 @@ function getItems() {
                 var name = item[0]
                 var details = item[1]
                 var desc = item[2]
-                
+                var curse = item[3]
 
                 // Item name.
                 var h2 = document.createElement("h2");
@@ -80,7 +80,7 @@ function getItems() {
 
                 // Item details.
                 var detailsPara = document.createElement("p");
-                var detailsText = document.createTextNode(item[1]);
+                var detailsText = document.createTextNode(details);
                 detailsPara.appendChild(detailsText);
                 detailsPara.classList.add("item-details");
                 itemContainer.appendChild(detailsPara);
@@ -90,6 +90,14 @@ function getItems() {
                 var descText = document.createTextNode(desc);
                 descPara.appendChild(descText);
                 itemContainer.appendChild(descPara);
+
+                // Additional Curse
+                if (options.includes('cursed')) {
+                    var cursePara = document.createElement("p");
+                    var curseText = document.createTextNode("Curse: " + curse);
+                    cursePara.appendChild(curseText);
+                    itemContainer.appendChild(cursePara);
+                }
             }
 
             itemContainer.style.display = "inline-block";
@@ -156,8 +164,16 @@ function getName() {
             }
 
             // Update webpage
-            // document.getElementById("names").innerHTML = nameArray.join('\r\n');
             nameContainer.style.display = "inline-block";
         })
         .catch(error => console.log('error', error));
 }
+
+// -------------------------------------------------------------------------------- \\
+// Called from fantasy-name-generator.html.
+//
+// Ensures that either 'Curse' power level or 'Add Curse' options are checked, never
+// both.
+// -------------------------------------------------------------------------------- \\
+function addCurseChecked(checkboxElem) { document.getElementById("curse").checked = false; }
+function curseChecked(checkboxElem) { document.getElementById("add-curse").checked = false; }

@@ -55,7 +55,7 @@ title: Magic Item Generator
         <label for="medium">Medium</label><br>
         <input type="checkbox" id="high" name="power-level" value="high" checked>
         <label for="high">High</label><br>
-        <input type="checkbox" id="curse" name="power-level" value="curse" checked>
+        <input type="checkbox" id="curse" name="power-level" value="curse" onchange="curseChecked(this);">
         <label for="curse">Curse</label><br>
       </fieldset>
     </form>
@@ -67,6 +67,8 @@ title: Magic Item Generator
         <legend>Other Options:</legend>
         <input type="checkbox" id="price" name="options" value="price" checked>
         <label for="price">Show Price</label><br>
+        <input type="checkbox" id="add-curse" name="options" value="cursed" onchange="addCurseChecked(this);">
+        <label for="add-curse">Add Curse</label><br>
       </fieldset>
     </form>
   </div>
