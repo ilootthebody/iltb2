@@ -1,5 +1,5 @@
 ---
-title: "Magic Item Categories"
+title: "Magic Item Generator Categories"
 author: njm
 date: 2022-12-20 17:05:00 -0500
 categories: [Website, Generators]

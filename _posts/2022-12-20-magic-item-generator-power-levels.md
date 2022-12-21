@@ -1,5 +1,5 @@
 ---
-title: "Magic Item Power Levels"
+title: "Magic Item Generator Power Levels"
 author: njm
 date: 2022-12-20 16:45:00 -0500
 categories: [Website, Generators]
