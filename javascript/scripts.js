@@ -5,7 +5,7 @@
 // and formats/displays the generated item(s).
 // -------------------------------------------------------------------------------- \\
 function getItems() {
-    const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/iltbgetitems";
+    const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/iltbgetitem";
     const itemContainer = document.getElementById("item-container");
 
     // Instantiate and populate header.
