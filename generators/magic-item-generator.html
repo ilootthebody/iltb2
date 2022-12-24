@@ -11,7 +11,7 @@ title: Magic Item Generator
     I hope this helps when your players want to loot the body of random goblin #3.</p>
   <p id="possible-items">
     The generator randomly selects from lists of items and magical effects for a total
-    of 65,700 possible items. Select or deselect from the lists below to generate specific
+    of 84,700 possible items. Select or deselect from the lists below to generate specific
     types of items. A CSV file with the complete list of magic effects can be downloaded
     <a href="/downloads/ILTB-Effects-20221221.csv" download>here</a>.
   </p>
@@ -47,6 +47,8 @@ title: Magic Item Generator
         <input type="checkbox" id="ranged" name="categories" value="ranged" checked>
         <label for="ranged">Weapon (Ranged)</label><br>
       </fieldset>
+      <input type="checkbox" id="category-toggle" onchange="toggleCategories(this)" checked>
+      <label for="category-toggle">Select/Deselect All</label>
     </form>
   </div>
   <!-- Power Level Selector Form -->
@@ -66,6 +68,8 @@ title: Magic Item Generator
         <input type="checkbox" id="curse" name="power-level" value="curse" onchange="curseChecked(this);">
         <label for="curse">Curse</label><br>
       </fieldset>
+      <input type="checkbox" id="power-level-toggle" onchange="togglePowerLevels(this)" checked>
+      <label for="power-level-toggle">Select/Deselect All</label>
     </form>
   </div>
   <!-- Other Options Selector Form -->

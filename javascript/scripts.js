@@ -177,3 +177,31 @@ function getName() {
 // -------------------------------------------------------------------------------- \\
 function addCurseChecked(checkboxElem) { document.getElementById("curse").checked = false; }
 function curseChecked(checkboxElem) { document.getElementById("add-curse").checked = false; }
+
+// -------------------------------------------------------------------------------- \\
+// Called from fantasy-name-generator.html.
+//
+// Allows user to select/deselect all checkboxes in the category form.
+// -------------------------------------------------------------------------------- \\
+function toggleCategories(source) {
+    categoryBoxes = document.getElementsByName("categories");
+    for (var i=0; i < categoryBoxes.length; i++) {
+        categoryBoxes[i].checked = source.checked;
+    }
+}
+
+// -------------------------------------------------------------------------------- \\
+// Called from fantasy-name-generator.html.
+//
+// Allows user to select/deselect all checkboxes in the power level form.
+// -------------------------------------------------------------------------------- \\
+function togglePowerLevels(source) {
+    plBoxes = document.getElementsByName("power-level");
+    for (var i=0; i < plBoxes.length; i++) {
+        plBoxes[i].checked = source.checked;
+    }
+    // Uncheck 'Add Curse' if 'Curse' power level is checked.
+    if (document.getElementById("curse").checked) {
+        document.getElementById("add-curse").checked = false;
+    }
+}
