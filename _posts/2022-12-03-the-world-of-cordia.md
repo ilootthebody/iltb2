@@ -12,6 +12,8 @@ tags: [cordia, worldbuilding]
 
 *A soulforged mage performs a ritual in the cold atop Mount Jaikon. As magic swirls around them, they lift an iridescent egg towards the night sky. The egg glows with the same pale light as the broken moon above. The shell cracks and the mage smiles.*
 
+{% include ads-in-article.html %}
+
 ## Welcome to Cordia
 
 Cordia is a homebrew world I created for an ongoing D&D 5e campaign I run for my friends. It’s more or less a stereotypical fantasy D&D setting with many of the classic tropes you’d expect from the genre - dwarves, elves, dragons, a token evil empire to the south. I like to think that I’ve put my own spin on things and that it isn’t *totally* derivative… but honestly, I don’t really mind if it is. I’m a strong proponent of the “Take the stuff you like and stick it in your game.” advice I first heard from [Matt Colville’s YouTube channel](https://www.youtube.com/channel/UCkVdb9Yr8fc05_VbAVfskCA). Cordia is essentially an amalgamation of themes, ideas, and tropes from my favorite stories. Beginning with this post, I’ll be writing a series of articles about the world of Cordia, detailing the people, places, and stories that I love about it. I hope these ramblings provide inspiration or spark an idea for my fellow storytellers and world builders out there.
@@ -25,6 +27,8 @@ Long before mortals walked Cordia, before there was even land to walk on, there 
 There is still much debate as to where Ira and Ilune came from. They may have been powerful beings from another realm or perhaps they were born amidst the elemental chaos itself. Whatever their origin, the twin gods saw potential in the chaos and began the arduous process of taming the elements themselves. As the raging forces began to calm, the gods gave form to their wild energies, creating the five elemental dragons known as the Primal Wyrms.
 
 Tectus and Sekona, the Wyrms of earth and sea, took their places as the foundation of the world. Ashka surrounded the new planet, cradling it in her wings and becoming the great Wyrm of the wind and sky. Finally, Solis and Rhega took up their watch as guardians. The sun and the moon assumed their eternal posts, nurturing and protecting the realm with fire and magic. After eons of work, Ira and Ilune looked with pride upon their new home: Cordia.
+
+{% include ads-in-article.html %}
 
 ## Uneasy Peace
 
@@ -51,3 +55,5 @@ There are many nations and cultures across Cordia. Below are short descriptions 
 **Wistari** - The ancestral homeland of the elves and home to the refugee nation of the dwarves. The peaceful Wistarians are master crafters and artisans skilled in weaving old magics of the mountains and forests they call home.
 
 **The Wilds** - The Wyrmwood Forest, Giant’s Belt, and the unexplored eastern wilds hold many secrets. Individuals from these lands seem to have inherited some of the primal energy of their homelands.
+
+{% include ads-in-article.html %}

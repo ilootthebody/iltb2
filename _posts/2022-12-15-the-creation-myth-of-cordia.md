@@ -18,6 +18,8 @@ Thanks for reading!
 
 Before Cordia existed there was only chaos. The five primal forces (earth, water, air, fire, and magic) raged and battled in a storm of formless energy. From this chaos the two true gods were born: Ira and Ilune. Although the gods generally appear as two separate entities, they are effectively two sides of the same coin. One could not exist without the other any more than a shadow could exist without light. Ira is generally associated with light, life, and positive energy while Ilune represents darkness, death, and negative energy. Together, the Twin Gods embody balance and neutrality, attributes that they wished to impart upon their newfound surroundings.
 
+{% include ads-in-article.html %}
+
 The Twin Gods began taming the chaos that created them, seeking to bring balance to their new existence. As the primal forces calmed, the gods gave form to their wild energies, thus creating the great Primal Wyrms. The Primal Wyrms are the physical avatars through which the primal forces of earth, water, air, fire, and magic are channeled. Although they are sometimes referred to as elemental dragons, the Primal Wyrms resemble dragons like a mountain resembles a rock. With the Primal Wyrms at their side, Ira and Ilune set about creating a home for themselves.
 
 Like sculptors with clay, the Twin Gods guided the Primal Wyrms into new forms. Tectus and Sekona, the Wyrms of earth and sea, took their places as the pillars of the world. They wove earth and water together to create what would become the cradle for a new world to thrive. Ashka surrounded the new planet, cradling it in her wings and becoming the great Wyrm of the wind and sky. Finally, Solis and Rhega took up their watch as guardians. The sun and moon, ever watching, protected this newly formed plane with fire and magic. After eons of work, Ira and Ilune looked with pride upon their new home: Cordia.
@@ -31,6 +33,8 @@ Satisfied with their work, Ira and Ilune watched Hela explore the world. Hela sp
 Sad and frustrated, Hela returned to their beautiful, solitary world. One night, the Primal Wyrm of the moon, Rhega, saw Hela's sadness and took pity on the creature she had helped create. Rhega flew down to Hela and told them the story of Hela's own creation in an attempt to cheer them up. Hela was inspired by this story - whether or not this was Rhega’s true intention is unknown - and set off on a quest to visit each of the Primal Wyrms. They either tricked or persuaded each one into giving them the gifts necessary to make new life and, with these gifts in hand, Hela created the first mortals.
 
 Unlike Ira and Ilune, Hela did not seek to create beings in their own image. Instead, they created races inspired by the beautiful diversity of Cordia itself. They created dwarves and aarakocra to inhabit the mountains, they filled the lush forests with centaurs and goblins, the rolling hills became home to halflings and humans, the vast plains given to orcs and tabaxi, in the frozen reaches they created the goliath, the seas became home to triton. Hela traveled far and wide creating these races and many more. They taught these first mortals all they knew of Cordia and how to make it their home. Thanks to a millennium of Hela’s guidance, dozens of advanced civilizations flourished across the land, sea, and skies. Finally, for the first time in their life, Hela was not lonely.
+
+{% include ads-in-article.html %}
 
 ## War
 
@@ -54,6 +58,8 @@ Before they departed to Axis, the Twin Gods left one last measure in place again
 
 These changes to the very structure of Cordia did not happen quietly. Ira and Ilune labored at the top of Mount Jaikon for four days and four nights as they unleashed a torrent of divine power that altered the fabric of reality. The ripples of their efforts could be felt across the entire planet. These four days would be remembered as holy days by most cultures, eventually becoming known as the Lost Days in modern Cordia. When the gods finally finished, much of their power was drained. They took one last look at the world they created and the mortals that now inhabited it. With sadness and a glimmer of hope for the future, Ira and Ilune left Cordia for good and sealed the gate behind them.
 
+{% include ads-in-article.html %}
+
 ## Rebirth
 
 Following the destruction of the First War and the death of Hela, most mortal civilizations were left decimated. Entire cultures were wiped out or quickly dissolved and centuries of technological and arcane advancements were lost in the ashes. For the first time in history, the mortal races of Cordia were left with no divine being to guide them. The few societies that remained were now at the mercy of the harsh elements and wildlife as well as the now independent dragons and giants that roamed the land. Despite winning the war, mortals were dangerously close to extinction.
@@ -61,3 +67,5 @@ Following the destruction of the First War and the death of Hela, most mortal ci
 However, the creations of Hela persisted, proving that they had every right to survive in this world. The Twin Gods may have seen them as parasites, but each and every race was created from the same primal forces that make up the pillars of Cordia itself. Dwarves didn’t just mine the mountains, they were a part of them. Humans and halflings didn’t conquer the land, they cultivated it. Goliaths and orcs weren’t mindless killers, they were a part of the land just as a wolf hunts but is still a part of the forest. All across Cordia mortals picked themselves up from the brink of death and took their first steps towards rebirth.
 
 Over the following centuries, the mortal races of Cordia slowly began to recover. Many great civilizations had been lost to the fires of the First War. Others were reduced to refugee societies that more resembled simple tribes than the vast nations they had once been. However, those societies adapted to their new world and began not only to survive, but to thrive. Over the following centuries, wandering tribes created towns, towns became cities, and cities grew into nations and empires that began to resemble, and even surpass, the heights of civilization that were achieved under Hela’s guidance. The mortal races of Cordia showed the gods that they weren’t going anywhere - Cordia was and forever will be their home.
+
+{% include ads-in-article.html %}

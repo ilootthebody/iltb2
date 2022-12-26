@@ -29,6 +29,8 @@ At a high level, the [magic item generator](/generators/magic-item-generator.htm
 * Signet Ring
 * Silver Ring
 
+{% include ads-in-article.html %}
+
 ## Armor
 
 * Breastplate
@@ -141,6 +143,8 @@ At a high level, the [magic item generator](/generators/magic-item-generator.htm
 * Whistle
 * Wooden Stake
 
+{% include ads-in-article.html %}
+
 ## Arcane Focuses (Foci?)
 
 * Amulet
@@ -250,3 +254,5 @@ At a high level, the [magic item generator](/generators/magic-item-generator.htm
 * Warhammer
 * Whip
 * Yklwa
+
+{% include ads-in-article.html %}

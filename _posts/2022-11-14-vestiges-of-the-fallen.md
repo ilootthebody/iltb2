@@ -4,6 +4,7 @@ author: njm
 date: 2022-11-14 16:15:00 -0500
 categories: [Homebrew, Misc]
 tags: [homebrew items]
+pin: true
 ---
 
 Death happens. 
@@ -11,6 +12,8 @@ Death happens.
 While we as game masters (GMs) rarely *want* a player character to die, it’s bound to happen at one point or another during our tenure. In many cases, death is just another obstacle for the players to overcome. D&D abounds with resurrection spells, friendly clerics, merciful gods, dark forces, and many other avenues to bring a character back from the dead. These methods can be narratively satisfying and fun for your players. However, sometimes there is no viable option to bring a fallen hero back. Maybe resurrection magic doesn’t exist in your world, maybe the player wants to try out a new character, or maybe the character’s body is lost, unable to be recovered. Whatever the reason, the character may have died but that doesn’t mean they need to be forgotten.
 
 We as GMs can use the death of a character as a worldbuilding tool to create powerful artifacts to be used in future adventures. I call these items Vestiges of the Fallen and have used them to wonderful effect in my campaigns. The premise is fairly simple: when a player character dies, a part of their essence or soul clings to a meaningful piece of equipment they carry (i.e. a fighter’s favorite sword, a cleric’s holy symbol, a goblin’s favorite shiny rock). The item then becomes a powerful magic item with effects inspired by the fallen character’s abilities and personality.
+
+{% include ads-in-article.html %}
 
 Not only does the player of the deceased character get some additional closure, they also know that their character’s story will live on through this badass item. Their character may be gone but they have left a long lasting and tangible effect on the lore of this world. D&D already has a rich tradition of incorporating the spells created by former PCs (Tenser’s Floating Disk, Melf’s Acid Arrow, etc.) into the lore of the wider game. Using tools like the Vestiges of the Fallen, we can create that same kind of immortality in the localized lore of our own tables.
 
@@ -28,6 +31,8 @@ The Vestige of the Fallen should have effects inspired by the deceased character
 
 
 The death of a player’s character does not need to mean the end for that character’s story. You can use Vestiges of the Fallen to immortalize them in a powerful magic item for ages to come all while seeding your world with rich lore and loot for the next group of adventurers to uncover. As always, feel free to reach out on social media or email to let me know what you think. Even better, reach out and let me know if you use this in your own game. I would love to hear how this content is being used in the wild!
+
+{% include ads-in-article.html %}
 
 ## Examples
 
@@ -78,3 +83,5 @@ The armor has 5 charges, which are used to fuel the spells within it. While attu
 3 charges: bones of the earth, investiture of stone
 
 The armor regains 1d4 + 1 expended charges each day at dawn.
+
+{% include ads-in-article.html %}

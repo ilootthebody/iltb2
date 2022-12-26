@@ -25,6 +25,8 @@ Barbed weapons can make an excellent addition to a seafaring campaign or a nauti
 The harpoon’s range is 20/60 ft.
 As long as the harpoon is still lodged in the target and provided the target is no more than one size larger than you, it can move only in directions that bring it closer to you. Additionally, you can use a bonus action to make a contested Strength check against the impaled creature, pulling it up to 20 ft. closer to you on a success.
 
+{% include ads-in-article.html %}
+
 ## Using Barbed Weapons
 Sure, you could have your players find some barbed weapons just laying around, but where’s the fun in that? I prefer to introduce them by having enemies use them against the party first. Enemies that are especially cruel, crafty, or just need to slow their prey down would all make great use of barbed weapons. I’ve provided two example stat blocks below that you can use as inspiration or just straight up steal for your own game.
 
@@ -40,3 +42,5 @@ Wastelands are a dangerous place. The people that call these desolate places hom
 
 ## Downloads
 A PDF containing the barbed weapon item description as well as the Goblin Thorn Thrower and Wasteland Hunter stat blocks can be downloaded [here](/downloads/Barbed%20Weapons%20-%20ILTB.pdf). This PDF was generated using the [Homebrewery](https://homebrewery.naturalcrit.com/) tool.
+
+{% include ads-in-article.html %}

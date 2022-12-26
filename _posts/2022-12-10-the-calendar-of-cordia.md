@@ -13,6 +13,8 @@ tags: [cordia, worldbuilding]
 
 Creating a custom calendar for my D&D world felt a bit eccentric at first. I assumed that none of my players would bother to learn it or use it in-game. To an extent, I was correct on that front. However, I’ve found that having a calendar system and actually using it to keep track of in-game events has made me a better GM. Not only is it easy to look up an answer when my players ask when or how long ago an in-game event happened, but it helps me keep track of upcoming plot points or the activities of NPCs, factions, or the BBEG.
 
+{% include ads-in-article.html %}
+
 Once I came up with a calendar, actually using it during my sessions was trivially easy. I created a simple Google Sheet to keep track of in-game events for my current campaign. I keep that document very high level, only tracking the date, a brief summary of the party’s activities, any other relevant events in the world, and the session(s) that took place on that date. It usually takes me less than a minute at the end of each session to update the document and I have gotten some amazing returns on that time investment. I’ve provided a snippet of that document below.
 
 ![Calendar Spreadsheet](/assets/img/calendar_spreadsheet.PNG)
@@ -49,6 +51,8 @@ There are 340 days in a year. These are divided into 12 months of 28 days each (
 
 The last 4 days of the year are known as the Lost Days. The Lost Days are not a part of any month and are considered to be outside the calendar. They sit between the last month of the previous year and the first month of the new year. Many cultures have festivals and traditions during these days and certain magics are said to be heightened, making it a popular time for mages to perform rituals.
 
+{% include ads-in-article.html %}
+
 ## Historical Ages
 
 On a larger scale, scholars have divided historical eras into logical units known as ages. A specific year is generally represented in “*\<year\> \<age\>*” format. For example, the 12th year of the Crimson age would be written as “*12 Crimson.*” A full date is usually written as “*\<day\> \<month\>*, *\<year\> \<age\>*.” So the 20th day of the month of Galyr in the 12th year of the Crimson age would be written as “*20 Galyr, 12 Crimson.*” Though there is some debate amongst historians as to exactly how long certain ages may have lasted, the most commonly accepted timeline is listed below.
@@ -71,6 +75,8 @@ The age of Hela was a time of explosive growth and change across Cordia. Hela sp
 
 The dragons and giants, led by the Twin Gods, assaulted Hela's armies of mortals without mercy. Ira and Ilune sought nothing short of the extermination of all mortal races from Cordia and its return to pristine harmony. Countless mortals, giants, and dragons died over the next century in what would become known simply as the First War. It was only Hela's sacrifice at Mount Jaikon and the forging of the divine covenant that brought the First War and the Crimson age to an end.
 
+{% include ads-in-article.html %}
+
 ### The Spring Age (802 Years)
 
 Following the First War and the divine covenant, a vow made by the gods to allow mortals to live in peace, Ira and Ilune left Cordia in sorrow to watch over Hela's creations from afar. They created a new plane for themselves, Axis, as well as two more planes: Halcyon and the Abyss. The Twin Gods also created the reincarnation cycle by which mortal souls would continuously rejoin the cycle of life until they were deemed worthy of eternal peace in Halcyon or eternal damnation in the Abyss.
@@ -90,3 +96,5 @@ Rhega had dealt a mortal blow to the Emperor but he still lived. Rhega's death c
 ### The Dawn Age (379 Years, Present Day)
 
 Emperor Arraxian's retreat allowed for much of his conquered lands to be liberated. The Arraxian Empire was shrunk down to a fraction of its former power but it still holds some territories and patiently waits for its leader to return. The rest of Cordia has begun the process of healing from the damage dealt by centuries of war. Progress towards a brighter future has been made but with one of the Primal Wyrms dead and the world far out of balance, Cordia's fate is still uncertain as this new age dawns.
+
+{% include ads-in-article.html %}

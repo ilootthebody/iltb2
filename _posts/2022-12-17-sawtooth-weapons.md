@@ -21,6 +21,8 @@ The cutting edge of this wicked looking weapon is lined with jagged teeth from a
 If you’d like sawtooth weapons to deal some extra damage as well then you can allow them to apply a bleeding effect on each hit. Effectively, the weapon cuts so deep into the target that the creature continues to take damage due to excessive blood loss. This variant functions the same as a normal sawtooth weapon with the following additional effect:
 - When you hit a creature with an attack using this weapon, the target takes an additional 1d4 necrotic damage at the start of each of its turns if it is not a construct or undead. This effect lasts until the target is healed for at least 1 hit point or until the target or another creature within 5 ft. of the target uses an action to make a DC 13 Wisdom (Medicine) check to stop the bleeding. Regardless of the number of times the target has been hit by this weapon, it cannot take more than 1d4 damage at the start of its turn.
 
+{% include ads-in-article.html %}
+
 ## Using Sawtooth Weapons
 
 Sawtooth weapons make a great addition to a variety of enemy stat blocks. They are perfect for especially cruel enemies or societies that don’t have access to metalworking or metal weapons. A tribe of lizardfolk living in a swamp could use sawtooth longswords made from the teeth of alligators. The leader of a ruthless gang could use a wicked looking sawtooth whip to help intimidate their followers into submission. A bloodthirsty pirate wielding a sawtooth scimitar is sure to strike fear into the hearts of sailors.
@@ -38,3 +40,5 @@ No matter the setting or encounter you use them in, the Bone Collector works bes
 ## Downloads
 
 A PDF containing the sawtooth weapon item description as well as the Bone Collector stat block can be downloaded [here](/downloads/Sawtooth%20Weapons%20-%20ILTB.pdf). This PDF was generated using the [Homebrewery](https://homebrewery.naturalcrit.com/) tool.
+
+{% include ads-in-article.html %}
