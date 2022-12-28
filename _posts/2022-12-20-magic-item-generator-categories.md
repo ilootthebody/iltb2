@@ -6,7 +6,7 @@ categories: [Website, Generators]
 tags: [Generators]
 ---
 
-At a high level, the [magic item generator](/generators/magic-item-generator.html) works by randomly selecting from a list of items, randomly selecting from a list of magical effects, and then combining the two selections to create a unique item. The list of items that the generator pulls from is divided into 8 categories. All 8 categories as well as the items they contain are listed below.
+At a high level, the [magic item generator](/generators/magic-item-generator.html) works by randomly selecting from a list of items, randomly selecting from a list of magical effects, and then combining the two selections to create a unique item. The list of items that the generator pulls from is divided into 11 categories. All 11 categories as well as the items they contain are listed below.
 
 ## Accessories
 
@@ -30,6 +30,22 @@ At a high level, the [magic item generator](/generators/magic-item-generator.htm
 * Silver Ring
 
 {% include ads-in-article.html %}
+
+## Arcane Focuses (Foci?)
+
+* Amulet
+* Component Pouch
+* Crystal
+* Emblem
+* Orb
+* Reliquary
+* Rod
+* Sprig
+* Staff
+* Totem
+* Wand
+* Wooden Staff
+* Yew Wand
 
 ## Armor
 
@@ -145,22 +161,6 @@ At a high level, the [magic item generator](/generators/magic-item-generator.htm
 
 {% include ads-in-article.html %}
 
-## Arcane Focuses (Foci?)
-
-* Amulet
-* Component Pouch
-* Crystal
-* Emblem
-* Orb
-* Reliquary
-* Rod
-* Sprig
-* Staff
-* Totem
-* Wand
-* Wooden Staff
-* Yew Wand
-
 ## Instruments
 
 * Bagpipes
@@ -180,6 +180,32 @@ At a high level, the [magic item generator](/generators/magic-item-generator.htm
 * Tambourine
 * Viol
 * War Drum
+
+## Tool Sets
+
+* Alchemy Supplies
+* Brewing Supplies
+* Calligraphy Supplies
+* Carpentry Tools
+* Cartography Tools
+* Cobbling Tools
+* Cooking Utensils
+* Disguise Kit
+* Forgery Kit
+* Glassblowing Tools
+* Herbalism Kit
+* Jeweling Tools
+* Leatherworking Tools
+* Masonry Tools
+* Navigation Tools
+* Painting Supplies
+* Poison Kit
+* Pottery Tools
+* Smithing Tools
+* Thieves' Tools
+* Tinker Tools
+* Weaving Tools
+* Woodcarving Tools
 
 ## Vehicles
 
@@ -202,18 +228,25 @@ At a high level, the [magic item generator](/generators/magic-item-generator.htm
 * Wagon
 * Warship
 
-## Weapons
+## Weapons (Firearms)
 
 * Antimatter Rifle
 * Automatic Pistol
 * Automatic Rifle
-* Battleaxe
-* Blowgun
 * Blunderbuss
-* Boomerang
+* Hunting Rifle
+* Laser Rifle
+* Musket
+* Palm Pistol
+* Pistol
+* Revolver
+* Shotgun
+
+## Weapons (Melee)
+
+* Battleaxe
 * Club
 * Dagger
-* Dart
 * Double-Bladed Scimitar
 * Flail
 * Glaive
@@ -221,38 +254,37 @@ At a high level, the [magic item generator](/generators/magic-item-generator.htm
 * Greatclub
 * Greatsword
 * Halberd
-* Hand Crossbow
 * Handaxe
-* Heavy Crossbow
-* Hunting Rifle
 * Javelin
 * Lance
-* Laser Rifle
-* Light Crossbow
 * Light Hammer
-* Longbow
 * Longsword
 * Mace
 * Maul
 * Morningstar
-* Musket
-* Palm Pistol
 * Pike
-* Pistol
 * Quarterstaff
 * Rapier
-* Revolver
 * Scimitar
-* Shortbow
 * Shortsword
-* Shotgun
 * Sickle
-* Sling
 * Spear
 * Trident
 * War Pick
 * Warhammer
 * Whip
 * Yklwa
+
+## Weapons (Ranged)
+
+* Blowgun
+* Boomerang
+* Dart
+* Hand Crossbow
+* Heavy Crossbow
+* Light Crossbow
+* Longbow
+* Shortbow
+* Sling
 
 {% include ads-in-article.html %}
