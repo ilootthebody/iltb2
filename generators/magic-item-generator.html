@@ -23,7 +23,7 @@ title: Magic Item Generator
     <form onsubmit="return false;">
       <fieldset id="category-checkboxes">
         <legend><a href="/posts/magic-item-generator-categories/" target="_blank"
-            rel="noreferrer noopener">Categories</a>:</legend>
+            rel="noreferrer noopener">Item Categories</a>:</legend>
         <input type="checkbox" id="accessory" name="categories" value="accessory" checked>
         <label for="accessory">Accessory</label><br>
         <input type="checkbox" id="focus" name="categories" value="focus" checked>
@@ -55,8 +55,7 @@ title: Magic Item Generator
   <div class="col">
     <form>
       <fieldset id="power-level-checkboxes">
-        <legend><a href="/posts/magic-item-generator-power-levels/" target="_blank" rel="noreferrer noopener">Power
-            Level</a>:</legend>
+        <legend><a href="/posts/magic-item-generator-power-levels/" target="_blank" rel="noreferrer noopener">Effect Power</a>:</legend>
         <input type="checkbox" id="mundane" name="power-level" value="mundane" checked>
         <label for="mundane">Mundane</label><br>
         <input type="checkbox" id="low" name="power-level" value="low" checked>
@@ -80,6 +79,8 @@ title: Magic Item Generator
             Options:</a></legend>
         <input type="checkbox" id="price" name="options" value="price" checked>
         <label for="price">Show Price</label><br>
+        <input type="checkbox" id="level" name="options" value="level" checked>
+        <label for="level">Show Suggested Level</label><br>
         <input type="checkbox" id="add-curse" name="options" value="cursed" onchange="addCurseChecked(this);">
         <label for="add-curse">Add Curse</label><br>
       </fieldset>
@@ -98,6 +99,17 @@ title: Magic Item Generator
     <option value="3">3</option>
     <option value="4">4</option>
     <option value="5">5</option>
+  </select>
+</div>
+
+<!-- Number of effects selector -->
+<div class="w3-row w3-padding-16 centered-text">
+  <label>Number of effects per item:</label>
+  <select name="num_effects" id="num_effects">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
   </select>
 </div>
 

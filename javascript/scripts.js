@@ -5,7 +5,7 @@
 // and formats/displays the generated item(s).
 // -------------------------------------------------------------------------------- \\
 function getItems() {
-    const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/iltbgetitem";
+    const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/iltbgetitems";
     const itemContainer = document.getElementById("item-container");
 
     // Instantiate and populate header.
@@ -37,15 +37,20 @@ function getItems() {
     };
 
     // Grab number of items from HTML.
-    var e = document.getElementById("num_items");
-    var numItems = e.options[e.selectedIndex].text;
+    var i = document.getElementById("num_items");
+    var numItems = i.options[i.selectedIndex].text;
+
+    // Grab number of items from HTML.
+    var e = document.getElementById("num_effects");
+    var numEffects = e.options[e.selectedIndex].text;
 
     // create a JSON object with parameters for API call and store in a variable
     var raw = JSON.stringify({
         "category": categories.toString(),
         "power": powerLevels.toString(),
         "options": options.toString(),
-        "numItems": numItems
+        "numItems": numItems,
+        "numEffects": numEffects
     });
     var requestOptions = {
         method: 'POST',
@@ -67,10 +72,9 @@ function getItems() {
 
             // Display Items
             for (var item of jsonResponse.items) {
-                var name = item[0]
-                var details = item[1]
-                var desc = item[2]
-                var curse = item[3]
+                var name = item[0];
+                var details = item[1];
+                var desc = item[2];
 
                 // Item name.
                 var h2 = document.createElement("h2");
@@ -88,16 +92,9 @@ function getItems() {
                 // Item description.
                 var descPara = document.createElement("p");
                 var descText = document.createTextNode(desc);
+                descPara.classList.add("item-desc");
                 descPara.appendChild(descText);
                 itemContainer.appendChild(descPara);
-
-                // Additional Curse
-                if (options.includes('cursed')) {
-                    var cursePara = document.createElement("p");
-                    var curseText = document.createTextNode("Curse: " + curse);
-                    cursePara.appendChild(curseText);
-                    itemContainer.appendChild(cursePara);
-                }
             }
 
             itemContainer.style.display = "inline-block";
