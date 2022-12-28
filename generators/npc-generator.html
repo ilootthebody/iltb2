@@ -1,0 +1,74 @@
+---
+layout: page
+title: NPC Generator
+---
+
+<script src="../javascript/npcScripts.js"></script>
+
+<!-- Header -->
+<div>
+    <p>This generator randomly creates NPCs for your favorite TTRPGs.</p>
+</div>
+
+<!-- Button -->
+<div>
+    <div>
+        <button class="generator-button" type="button" onclick="generateNPC()">Generate NPC</button>
+    </div>
+</div>
+<br>
+<!-- NPC Container -->
+<div id="npc-container">
+    <!-- Name -->
+    <div id="npc-name-container">
+        <h2 id="npc-name-header">Mario</h2>
+        <p id="npc-race-details">Human, 41 years old</p>
+    </div>
+    <div id="npc-details-container">
+        <div id="npc-appearance-details">
+            <p>
+                <b>Physical Appearance: </b>
+                <span id="npc-appearance-text">Short stature, bulbous nose, moustache</span>
+            </p>
+        </div>
+        <div id="npc-clothing-details">
+            <p>
+                <b>Clothing: </b>
+                <span id="npc-clothing-text">Red shirt, blue overalls, red cap</span>
+            </p>
+        </div>
+        <div id="npc-voice-details">
+            <p>
+                <b>Voice: </b>
+                <span id="npc-voice-text">Stereotypical Italian accent</span>
+            </p>
+        </div>
+        <div id="npc-personality-details">
+            <p>
+                <b>Personality: </b>
+                <span id="npc-personality-text">Cheerful, determined, loyal to a fault</span>
+            </p>
+        </div>
+        <div id="npc-profession-details">
+            <p>
+                <b>Profession: </b>
+                <span id="npc-profession-text">Plumber (Legendary)</span>
+            </p>
+        </div>
+        <div id="npc-motivation-details">
+            <p>
+                <b>Motivation: </b>
+                <span id="npc-motivation-text">Mario seeks to free Princess Peach from the castle.</span>
+            </p>
+        </div>
+        <div id="npc-background-details">
+            <p>
+                <b>Background: </b>
+                <span id="npc-background-text">Mario is just a simple plumber from the Mushroom Kingdom.</span>
+            </p>
+        </div>
+    </div>
+</div>
+<br>
+
+{% include ads-horizontal-long.html %}
