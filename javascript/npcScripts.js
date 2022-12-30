@@ -23,9 +23,13 @@ async function generateNPC() {
 
     console.log(npcDetails);
 
+    // Update HTML
     document.getElementById("npc-name-header").textContent = npcDetails.name;
     document.getElementById("npc-race-details").textContent = npcDetails.race;
     document.getElementById("npc-appearance-text").textContent = npcDetails.appearance;
-    
-
+    document.getElementById("npc-clothing-text").textContent = npcDetails.clothing;
+    document.getElementById("npc-voice-text").textContent = npcDetails.voice;
+    document.getElementById("npc-personality-text").textContent = npcDetails.personality;
+    document.getElementById("npc-profession-text").textContent = npcDetails.profession;
+    document.getElementById("npc-motivation-text").textContent = npcDetails.motivation;
 }
