@@ -33,3 +33,9 @@ async function generateNPC() {
     document.getElementById("npc-profession-text").textContent = npcDetails.profession;
     document.getElementById("npc-motivation-text").textContent = npcDetails.motivation;
 }
+
+async function regenField(field) {
+    if (field == "name") {
+        console.log("Regenerating name.")
+    }
+}

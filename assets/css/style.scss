@@ -31,6 +31,19 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
   color: white;
 }
 
+.regen-button {
+  width: 20px;
+  height: 20px;
+}
+
+.regen-button:hover {
+  cursor: pointer;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
 .smaller-text {
   font-size: .85em;
 }
