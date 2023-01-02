@@ -8,18 +8,22 @@ title: Random NPC Generator
 <!-- Header -->
 <div>
     <p>
-        This generator randomly creates NPCs for your favorite TTRPGs. This tool is designed 
-        to provide short, useful NPC descriptions with minimal fluff. The NPCs can be used 
+        This generator randomly creates NPCs for your favorite TTRPGs. This tool is designed
+        to provide short, useful NPC descriptions with minimal fluff. The NPCs can be used
         as-is for minor characters or as a base to build a more in-depth NPC upon. 
-        Whether you're looking for inspiration while planning your next session or need a quick 
-        NPC for a game you're currently running, I hope this generator helps. 
+        Whether you're looking for inspiration while planning your next session or need a quick
+        NPC for a game you're currently running, I hope this generator helps.
     </p>
     <p>
-        This tool is currently in a beta stage and is still being developed. Future features 
-        that I hope to implement include the ability to regenerate specific elements of the NPC 
-        description, a plot hook element for each NPC, and combat-related stats/abilities. I will 
-        also be implementing tools to select/deselect which elements you want to include as well 
-        as the ability to select specific races to be generated.
+        Simply click the 'Generate NPC' button below to randomly create a wide variety of NPCs. 
+        You can click the refresh button to the right of each field to regenerate just that field 
+        while keeping the rest the same.
+    </p>
+    <p>
+        This is the first iteration of this generator. Future features that I hope to implement 
+        include a plot hook field for each NPC, equipment/currency the NPC is carrying, and 
+        combat-related stats/abilities. I will also be implementing tools to select/deselect specific 
+        options to narrow down the scope of the NPCs generated.
     </p>
 </div>
 
@@ -33,51 +37,70 @@ title: Random NPC Generator
 <!-- NPC Container -->
 <div id="npc-container">
     <!-- Name -->
-    <div id="npc-name-container">
-        <h2 id="npc-name-header" class="display-inline-block">Mario</h2>
-        <img src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate" class="regen-button" onclick="regenField('name')">
+    <div id="npc-name-container" class="npc-flex-container">
+        <h2 id="npc-name-header">Mario</h2>
+        <img src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate" class="regen-button"
+            onclick="regenField('npc-name-header')">
     </div>
-    <div id="npc-race-container">
-        <p id="npc-race-details" class="display-inline-block">Human, 41 years old</p>
-        <img src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate" class="regen-button">
+    <!-- Race -->
+    <div id="npc-race-details" class="npc-flex-container">
+        <p id="npc-race-text">Male human, 41 years old</p>
+        <img src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate" class="regen-button"
+            onclick="regenField('npc-race-text')">
     </div>
-    <div id="npc-details-container">
-        <div id="npc-appearance-details">
-            <p>
-                <b>Physical Appearance: </b>
-                <span id="npc-appearance-text">Short stature, bulbous nose, moustache</span>
-            </p>
-        </div>
-        <div id="npc-clothing-details">
-            <p>
-                <b>Clothing: </b>
-                <span id="npc-clothing-text">Red shirt, blue overalls, red cap</span>
-            </p>
-        </div>
-        <div id="npc-voice-details">
-            <p>
-                <b>Voice & Speech: </b>
-                <span id="npc-voice-text">Stereotypical Italian accent</span>
-            </p>
-        </div>
-        <div id="npc-personality-details">
-            <p>
-                <b>Personality & Behavior: </b>
-                <span id="npc-personality-text">Determined and loyal to a fault</span>
-            </p>
-        </div>
-        <div id="npc-profession-details">
-            <p>
-                <b>Profession: </b>
-                <span id="npc-profession-text">Mario is a legendary plumber.</span>
-            </p>
-        </div>
-        <div id="npc-motivation-details">
-            <p>
-                <b>Motivation: </b>
-                <span id="npc-motivation-text">Mario seeks to free Princess Peach from the castle.</span>
-            </p>
-        </div>
+    <!-- Appearance -->
+    <div id="npc-appearance-details" class="npc-flex-container">
+        <p>
+            <b>Physical Appearance: </b>
+            <span id="npc-appearance-text">Short stature, bulbous nose, moustache</span>
+        </p>
+        <img src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate" class="regen-button"
+            onclick="regenField('npc-appearance-text')">
+    </div>
+    <!-- Clothing -->
+    <div id="npc-clothing-details" class="npc-flex-container">
+        <p>
+            <b>Clothing: </b>
+            <span id="npc-clothing-text">Red shirt, blue overalls, red cap</span>
+        </p>
+        <img src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate" class="regen-button"
+            onclick="regenField('npc-clothing-text')">
+    </div>
+    <!-- Voice -->
+    <div id="npc-voice-details" class="npc-flex-container">
+        <p>
+            <b>Voice & Speech: </b>
+            <span id="npc-voice-text">Stereotypical Italian accent</span>
+        </p>
+        <img src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate" class="regen-button"
+            onclick="regenField('npc-voice-text')">
+    </div>
+    <!-- Personality -->
+    <div id="npc-personality-details" class="npc-flex-container">
+        <p>
+            <b>Personality & Behavior: </b>
+            <span id="npc-personality-text">Mario is determined and loyal to a fault</span>
+        </p>
+        <img src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate" class="regen-button"
+            onclick="regenField('npc-personality-text')">
+    </div>
+    <!-- Profession -->
+    <div id="npc-profession-details" class="npc-flex-container">
+        <p>
+            <b>Profession: </b>
+            <span id="npc-profession-text">Mario is a legendary plumber.</span>
+        </p>
+        <img src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate" class="regen-button"
+            onclick="regenField('npc-profession-text')">
+    </div>
+    <!-- Motivation -->
+    <div id="npc-motivation-details" class="npc-flex-container">
+        <p>
+            <b>Motivation: </b>
+            <span id="npc-motivation-text">Mario seeks to free Princess Peach from the castle.</span>
+        </p>
+        <img src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate" class="regen-button"
+            onclick="regenField('npc-motivation-text')">
     </div>
 </div>
 <br>
