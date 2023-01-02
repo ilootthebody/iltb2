@@ -3,7 +3,7 @@ layout: page
 title: Fantasy Name Generator
 ---
 
-<script src="../javascript/scripts.js"></script>
+<script src="../javascript/nameGenScripts.js"></script>
 
 <!-- Header -->
 <div>
@@ -12,6 +12,20 @@ title: Fantasy Name Generator
     <br>
 </div>
 
+<div class="flex-container">
+    <div class="col">
+        <form>
+            <fieldset id="gender-checkboxes">
+                <legend>Gender:</legend>
+                <input type="checkbox" id="male" name="genders" value="male" checked>
+                <label for="male">Male</label><br>
+                <input type="checkbox" id="female" name="genders" value="female" checked>
+                <label for="female">Female</label><br>
+            </fieldset>
+        </form>
+    </div>
+</div>
+<br>
 <!-- Number of names selector -->
 <div class="w3-row w3-padding-16 centered-text">
     <label for="category">Number of names:</label>
