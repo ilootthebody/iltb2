@@ -10,19 +10,19 @@ title: Random NPC Generator
     <p>
         This generator randomly creates NPCs for your favorite TTRPGs. This tool is designed
         to provide short, useful NPC descriptions with minimal fluff. The NPCs can be used
-        as-is for minor characters or as a base to build a more in-depth NPC upon. 
+        as-is for minor characters or as a base to build a more in-depth NPC upon.
         Whether you're looking for inspiration while planning your next session or need a quick
         NPC for a game you're currently running, I hope this generator helps.
     </p>
     <p>
-        Simply click the 'Generate NPC' button below to randomly create a wide variety of NPCs. 
-        You can click the refresh button to the right of each field to regenerate just that field 
+        Simply click the 'Generate NPC' button below to randomly create a wide variety of NPCs.
+        You can click the refresh button to the right of each field to regenerate just that field
         while keeping the rest the same.
     </p>
     <p>
-        This is the first iteration of this generator. Future features that I hope to implement 
-        include a plot hook field for each NPC, equipment/currency the NPC is carrying, and 
-        combat-related stats/abilities. I will also be implementing tools to select/deselect specific 
+        This is the first iteration of this generator. Future features that I hope to implement
+        include a plot hook field for each NPC, equipment/currency the NPC is carrying, and
+        combat-related stats/abilities. I will also be implementing tools to select/deselect specific
         options to narrow down the scope of the NPCs generated.
     </p>
 </div>
@@ -106,3 +106,58 @@ title: Random NPC Generator
 <br>
 
 {% include ads-horizontal-long.html %}
+
+<div>
+    <h1>About the NPC Generator</h1>
+    <p>
+        This generator creates an NPC by randomly selecting from a number of databases to assemble the various
+        characteristics that make up the NPC. The information is presented in what I think is the most useful order for
+        a GM running a game. First comes the NPC’s name, race, and age for quick reference. The rest of the information
+        is arranged according to what the players would usually notice first about the NPC. Physical appearance and
+        clothing come first followed by the NPC’s voice. The NPC’s personality comes next with their profession and
+        motivations bringing up the rear. More details about the generation process can be found below.
+    </p>
+    <p>
+        The generator starts by selecting a gender and name for the NPC. The gender options are male, female, and
+        non-binary. There is a 45% chance of selecting male, 45% chance of selecting female, and 10% chance of selecting
+        non-binary. The NPC’s name is generated based on the selected gender, pulling from lists of male and female
+        names (non-binary names are pulled from both lists). The vast majority of the names used in this generator were
+        pulled from <a href="https://en.wiktionary.org/wiki/Category:English_names">Wiktionary’s lists of English
+            names</a>.
+    </p>
+    <p>
+        Next, the generator selects a race and age for the NPC. Currently, the list of races includes all available
+        races in the core D&D 5e rulebooks. I will be expanding this range in the future as well as implementing an
+        option to select/deselect the races you want to include in the generation. Each race has a maximum age value
+        assigned based on information given in the D&D 5e source material for that race. The generator calculates a
+        random value between 16 and the race’s maximum age to determine the age for that particular NPC.
+    </p>
+    <p>
+        The NPC’s physical appearance and clothing are generated next. Physical appearance is described using three
+        traits: stature, hair, and an identifying feature (i.e. athletic build, short blonde hair, a scar on their
+        face). The description of the NPC’s clothing is broken up into three parts as well: a descriptive adjective, the
+        outfit itself, and an additional accessory (i.e. dirty overalls with a wool cap). I think that together these
+        fields paint a fairly detailed picture of a character without getting too wordy.
+    </p>
+    <p>
+        Personality is generated next. The NPC’s personality consists of two parts: a trait and a behavior or quirk. The
+        trait is a broad description of the character’s personality such as “friendly” or “stoic.” The behavior is meant
+        to provide some additional color to the NPC’s personality and give you as a GM some more guidance on how the NPC
+        may behave when interacting with the players. Examples of behaviors include “likes animals more than people” and
+        “is a bit bossy.”
+    </p>
+    <p>
+        Finally, the NPC’s profession and current motivation are generated. The profession is selected from a long list
+        of professions that are mostly themed around a fantasy/medieval era society. The profession is then paired with
+        a word to describe roughly how good the NPC is at their chosen profession. For example, a character could be
+        described as a “legendary plumber” or a “failing blacksmith.” The NPC’s motivation is simply selected from a
+        list of simple motivations. This is not the NPC’s only motivation in life, but can serve as guidance for what
+        this particular character may be seeking at this point in time.
+    </p>
+    <p>
+        Wherever possible I've done my best to make these characteristics as system and setting agnostic as I can,
+        though I did use D&D 5e as a starting point so many of the descriptions are focused around typical high fantasy.
+        I have plans to add an option to select specific environments/genres (space, nautical, western, etc.) to give
+        you the ability to generate more specific NPCs.
+    </p>
+</div>
