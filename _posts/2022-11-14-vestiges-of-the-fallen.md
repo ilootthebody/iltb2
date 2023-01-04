@@ -4,7 +4,6 @@ author: njm
 date: 2022-11-14 16:15:00 -0500
 categories: [Homebrew, Misc]
 tags: [homebrew items]
-pin: true
 ---
 
 Death happens. 
