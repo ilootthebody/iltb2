@@ -27,9 +27,9 @@ title: Random NPC Generator
     </p>
 </div>
 
-<!-- Options
+<!-- Options -->
 <div>
-    <button type="button" class="collapsible">Races</button>
+    <button type="button" class="collapsible">Race</button>
     <div class="content">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
@@ -42,13 +42,14 @@ title: Random NPC Generator
             ea commodo consequat.</p>
     </div>
 </div>
+<!-- Collapsible Menu Script -->
 <script>
     var coll = document.getElementsByClassName("collapsible");
     var i;
 
     for (i = 0; i < coll.length; i++) {
         coll[i].addEventListener("click", function () {
-            this.classList.toggle("active");
+            this.classList.toggle("collapsible-active");
             var content = this.nextElementSibling;
             if (content.style.display === "block") {
                 content.style.display = "none";
@@ -57,7 +58,7 @@ title: Random NPC Generator
             }
         });
     }
-</script> -->
+</script>
 
 <!-- Button -->
 <div>
