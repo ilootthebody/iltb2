@@ -19,21 +19,145 @@ title: Random NPC Generator
         You can click the refresh button to the right of each field to regenerate just that field
         while keeping the rest the same.
     </p>
-    <p>
-        This is the first iteration of this generator. Future features that I hope to implement
-        include a plot hook field for each NPC, equipment/currency the NPC is carrying, and
-        combat-related stats/abilities. I will also be implementing tools to select/deselect specific
-        options to narrow down the scope of the NPCs generated.
-    </p>
 </div>
 
 <!-- Options -->
 <div>
+    <!-- Race Options -->
     <button type="button" class="collapsible">Race</button>
     <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.</p>
+        <div class="flex-container">
+            <!-- Standard Fantasy Races -->
+            <div class="col">
+                <fieldset id="standard-fantasy-races">
+                    <legend>Standard Fantasy:</legend>
+                    <input type="checkbox" id="dwarf" name="races" value="dwarf" checked>
+                    <label for="dwarf">Dwarf</label><br>
+                    <input type="checkbox" id="elf" name="races" value="elf" checked>
+                    <label for="elf">Elf</label><br>
+                    <input type="checkbox" id="gnome" name="races" value="gnome" checked>
+                    <label for="gnome">Gnome</label><br>
+                    <input type="checkbox" id="goblin" name="races" value="goblin" checked>
+                    <label for="goblin">Goblin</label><br>
+                    <input type="checkbox" id="half-elf" name="races" value="half-elf" checked>
+                    <label for="half-elf">Half-elf</label><br>
+                    <input type="checkbox" id="half-orc" name="races" value="half-orc" checked>
+                    <label for="half-orc">Half-orc</label><br>
+                    <input type="checkbox" id="halfling" name="races" value="halfling" checked>
+                    <label for="halfling">Halfling</label><br>
+                    <input type="checkbox" id="human" name="races" value="human" checked>
+                    <label for="human">Human</label><br>
+                    <input type="checkbox" id="orc" name="races" value="orc" checked>
+                    <label for="orc">Orc</label><br>
+                </fieldset>
+            </div>
+            <!-- Expanded DnD Races -->
+            <div class="col">
+                <fieldset id="expanded-dnd-races">
+                    <legend>Expanded Fantasy:</legend>
+                    <input type="checkbox" id="expanded" name="races" value="expanded">
+                    <label for="expanded">expanded</label><br>
+                    <input type="checkbox" id="expanded" name="races" value="expanded">
+                    <label for="expanded">expanded</label><br>
+                    <input type="checkbox" id="expanded" name="races" value="expanded">
+                    <label for="expanded">expanded</label><br>
+                    <input type="checkbox" id="expanded" name="races" value="expanded">
+                    <label for="expanded">expanded</label><br>
+                    <input type="checkbox" id="expanded" name="races" value="expanded">
+                    <label for="expanded">expanded</label><br>
+                    <input type="checkbox" id="expanded" name="races" value="expanded">
+                    <label for="expanded">expanded</label><br>
+                    <input type="checkbox" id="expanded" name="races" value="expanded">
+                    <label for="expanded">expanded</label><br>
+                    <input type="checkbox" id="expanded" name="races" value="expanded">
+                    <label for="expanded">expanded</label><br>
+                    <input type="checkbox" id="expanded" name="races" value="expanded">
+                    <label for="expanded">expanded</label><br>
+                    <input type="checkbox" id="expanded" name="races" value="expanded">
+                    <label for="expanded">expanded</label><br>
+                    <input type="checkbox" id="expanded" name="races" value="expanded">
+                    <label for="expanded">expanded</label><br>
+                    <input type="checkbox" id="expanded" name="races" value="expanded">
+                    <label for="expanded">expanded</label><br>
+                    <input type="checkbox" id="expanded" name="races" value="expanded">
+                    <label for="expanded">expanded</label><br>
+                    <input type="checkbox" id="expanded" name="races" value="expanded">
+                    <label for="expanded">expanded</label><br>
+                    <input type="checkbox" id="expanded" name="races" value="expanded">
+                    <label for="expanded">expanded</label><br>
+                </fieldset>
+            </div>
+            <!-- Beast Races -->
+            <div class="col">
+                <fieldset id="beast-races">
+                    <legend>Beastfolk:</legend>
+                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
+                    <label for="beastfolk">beastfolk</label><br>
+                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
+                    <label for="beastfolk">beastfolk</label><br>
+                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
+                    <label for="beastfolk">beastfolk</label><br>
+                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
+                    <label for="beastfolk">beastfolk</label><br>
+                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
+                    <label for="beastfolk">beastfolk</label><br>
+                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
+                    <label for="beastfolk">beastfolk</label><br>
+                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
+                    <label for="beastfolk">beastfolk</label><br>
+                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
+                    <label for="beastfolk">beastfolk</label><br>
+                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
+                    <label for="beastfolk">beastfolk</label><br>
+                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
+                    <label for="beastfolk">beastfolk</label><br>
+                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
+                    <label for="beastfolk">beastfolk</label><br>
+                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
+                    <label for="beastfolk">beastfolk</label><br>
+                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
+                    <label for="beastfolk">beastfolk</label><br>
+                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
+                    <label for="beastfolk">beastfolk</label><br>
+                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
+                    <label for="beastfolk">beastfolk</label><br>
+                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
+                    <label for="beastfolk">beastfolk</label><br>
+                </fieldset>
+            </div>
+        </div>
+        <div class="flex-container">
+            <!-- Exotic Races -->
+            <div class="col">
+                <fieldset id="exotic-races">
+                    <legend>Exotic/Other:</legend>
+                    <input type="checkbox" id="exotic" name="races" value="exotic">
+                    <label for="exotic">exotic</label><br>
+                    <input type="checkbox" id="exotic" name="races" value="exotic">
+                    <label for="exotic">exotic</label><br>
+                    <input type="checkbox" id="exotic" name="races" value="exotic">
+                    <label for="exotic">exotic</label><br>
+                    <input type="checkbox" id="exotic" name="races" value="exotic">
+                    <label for="exotic">exotic</label><br>
+                    <input type="checkbox" id="exotic" name="races" value="exotic">
+                    <label for="exotic">exotic</label><br>
+                    <input type="checkbox" id="exotic" name="races" value="exotic">
+                    <label for="exotic">exotic</label><br>
+                    <input type="checkbox" id="exotic" name="races" value="exotic">
+                    <label for="exotic">exotic</label><br>
+                    <input type="checkbox" id="exotic" name="races" value="exotic">
+                    <label for="exotic">exotic</label><br>
+                    <input type="checkbox" id="exotic" name="races" value="exotic">
+                    <label for="exotic">exotic</label><br>
+                    <input type="checkbox" id="exotic" name="races" value="exotic">
+                    <label for="exotic">exotic</label><br>
+                    <input type="checkbox" id="exotic" name="races" value="exotic">
+                    <label for="exotic">exotic</label><br>
+                    <input type="checkbox" id="exotic" name="races" value="exotic">
+                    <label for="exotic">exotic</label><br>
+                </fieldset>
+            </div>
+        </div>
     </div>
     <button type="button" class="collapsible">Gender & Age</button>
     <div class="content">
