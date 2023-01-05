@@ -95,18 +95,18 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
   // color: black;
 }
 
-.collapsible:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: white;
-  float: right;
-  margin-left: 5px;
-}
+// .collapsible:after {
+//   content: '\02795'; /* Unicode character for "plus" sign (+) */
+//   font-size: 13px;
+//   color: white;
+//   float: right;
+//   margin-left: 5px;
+// }
 
-.active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
-  color: white;
-}
+// .active:after {
+//   content: "\2796"; /* Unicode character for "minus" sign (-) */
+//   color: white;
+// }
 
 @media (max-width: 600px) {
   .flex-container {
