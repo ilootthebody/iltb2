@@ -27,137 +27,206 @@ title: Random NPC Generator
     <button type="button" class="collapsible">Race</button>
     <div class="content">
         <div class="flex-container">
-            <!-- Standard Fantasy Races -->
-            <div class="col">
-                <fieldset id="standard-fantasy-races">
-                    <legend>Standard Fantasy:</legend>
-                    <input type="checkbox" id="dwarf" name="races" value="dwarf" checked>
-                    <label for="dwarf">Dwarf</label><br>
-                    <input type="checkbox" id="elf" name="races" value="elf" checked>
-                    <label for="elf">Elf</label><br>
-                    <input type="checkbox" id="gnome" name="races" value="gnome" checked>
-                    <label for="gnome">Gnome</label><br>
-                    <input type="checkbox" id="goblin" name="races" value="goblin" checked>
-                    <label for="goblin">Goblin</label><br>
-                    <input type="checkbox" id="half-elf" name="races" value="half-elf" checked>
-                    <label for="half-elf">Half-elf</label><br>
-                    <input type="checkbox" id="half-orc" name="races" value="half-orc" checked>
-                    <label for="half-orc">Half-orc</label><br>
-                    <input type="checkbox" id="halfling" name="races" value="halfling" checked>
-                    <label for="halfling">Halfling</label><br>
-                    <input type="checkbox" id="human" name="races" value="human" checked>
-                    <label for="human">Human</label><br>
-                    <input type="checkbox" id="orc" name="races" value="orc" checked>
-                    <label for="orc">Orc</label><br>
-                </fieldset>
-            </div>
-            <!-- Expanded DnD Races -->
-            <div class="col">
-                <fieldset id="expanded-dnd-races">
-                    <legend>Expanded Fantasy:</legend>
-                    <input type="checkbox" id="expanded" name="races" value="expanded">
-                    <label for="expanded">expanded</label><br>
-                    <input type="checkbox" id="expanded" name="races" value="expanded">
-                    <label for="expanded">expanded</label><br>
-                    <input type="checkbox" id="expanded" name="races" value="expanded">
-                    <label for="expanded">expanded</label><br>
-                    <input type="checkbox" id="expanded" name="races" value="expanded">
-                    <label for="expanded">expanded</label><br>
-                    <input type="checkbox" id="expanded" name="races" value="expanded">
-                    <label for="expanded">expanded</label><br>
-                    <input type="checkbox" id="expanded" name="races" value="expanded">
-                    <label for="expanded">expanded</label><br>
-                    <input type="checkbox" id="expanded" name="races" value="expanded">
-                    <label for="expanded">expanded</label><br>
-                    <input type="checkbox" id="expanded" name="races" value="expanded">
-                    <label for="expanded">expanded</label><br>
-                    <input type="checkbox" id="expanded" name="races" value="expanded">
-                    <label for="expanded">expanded</label><br>
-                    <input type="checkbox" id="expanded" name="races" value="expanded">
-                    <label for="expanded">expanded</label><br>
-                    <input type="checkbox" id="expanded" name="races" value="expanded">
-                    <label for="expanded">expanded</label><br>
-                    <input type="checkbox" id="expanded" name="races" value="expanded">
-                    <label for="expanded">expanded</label><br>
-                    <input type="checkbox" id="expanded" name="races" value="expanded">
-                    <label for="expanded">expanded</label><br>
-                    <input type="checkbox" id="expanded" name="races" value="expanded">
-                    <label for="expanded">expanded</label><br>
-                    <input type="checkbox" id="expanded" name="races" value="expanded">
-                    <label for="expanded">expanded</label><br>
-                </fieldset>
-            </div>
-            <!-- Beast Races -->
-            <div class="col">
-                <fieldset id="beast-races">
-                    <legend>Beastfolk:</legend>
-                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
-                    <label for="beastfolk">beastfolk</label><br>
-                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
-                    <label for="beastfolk">beastfolk</label><br>
-                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
-                    <label for="beastfolk">beastfolk</label><br>
-                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
-                    <label for="beastfolk">beastfolk</label><br>
-                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
-                    <label for="beastfolk">beastfolk</label><br>
-                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
-                    <label for="beastfolk">beastfolk</label><br>
-                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
-                    <label for="beastfolk">beastfolk</label><br>
-                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
-                    <label for="beastfolk">beastfolk</label><br>
-                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
-                    <label for="beastfolk">beastfolk</label><br>
-                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
-                    <label for="beastfolk">beastfolk</label><br>
-                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
-                    <label for="beastfolk">beastfolk</label><br>
-                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
-                    <label for="beastfolk">beastfolk</label><br>
-                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
-                    <label for="beastfolk">beastfolk</label><br>
-                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
-                    <label for="beastfolk">beastfolk</label><br>
-                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
-                    <label for="beastfolk">beastfolk</label><br>
-                    <input type="checkbox" id="beastfolk" name="races" value="beastfolk">
-                    <label for="beastfolk">beastfolk</label><br>
-                </fieldset>
-            </div>
+            <fieldset id="sources-fs">
+                <legend>D&D5e Source Book:</legend>
+                <div class="display-inline-block">
+                    <input type="checkbox" id="phb" name="sources" value="phb" onchange="toggleSourceRaces(this)">
+                    <label for="phb" class="padding-r10">Player's Handbook</label>
+                </div>
+                <div class="display-inline-block">
+                    <input type="checkbox" id="motm" name="sources" value="motm" onchange="toggleSourceRaces(this)">
+                    <label for="motm" class="padding-r10">Monsters of the Multiverse</label>
+                </div>
+                <div class="display-inline-block">
+                    <input type="checkbox" id="vgtm" name="sources" value="vgtm" onchange="toggleSourceRaces(this)">
+                    <label for="vgtm" class="padding-r10">Volo's Guide to Monsters</label>
+                </div>
+            </fieldset>
         </div>
         <div class="flex-container">
-            <!-- Exotic Races -->
-            <div class="col">
-                <fieldset id="exotic-races">
-                    <legend>Exotic/Other:</legend>
-                    <input type="checkbox" id="exotic" name="races" value="exotic">
-                    <label for="exotic">exotic</label><br>
-                    <input type="checkbox" id="exotic" name="races" value="exotic">
-                    <label for="exotic">exotic</label><br>
-                    <input type="checkbox" id="exotic" name="races" value="exotic">
-                    <label for="exotic">exotic</label><br>
-                    <input type="checkbox" id="exotic" name="races" value="exotic">
-                    <label for="exotic">exotic</label><br>
-                    <input type="checkbox" id="exotic" name="races" value="exotic">
-                    <label for="exotic">exotic</label><br>
-                    <input type="checkbox" id="exotic" name="races" value="exotic">
-                    <label for="exotic">exotic</label><br>
-                    <input type="checkbox" id="exotic" name="races" value="exotic">
-                    <label for="exotic">exotic</label><br>
-                    <input type="checkbox" id="exotic" name="races" value="exotic">
-                    <label for="exotic">exotic</label><br>
-                    <input type="checkbox" id="exotic" name="races" value="exotic">
-                    <label for="exotic">exotic</label><br>
-                    <input type="checkbox" id="exotic" name="races" value="exotic">
-                    <label for="exotic">exotic</label><br>
-                    <input type="checkbox" id="exotic" name="races" value="exotic">
-                    <label for="exotic">exotic</label><br>
-                    <input type="checkbox" id="exotic" name="races" value="exotic">
-                    <label for="exotic">exotic</label><br>
+            <fieldset id="settings-fs">
+                <legend>Setting:</legend>
+                <div class="display-inline-block">
+                    <input type="checkbox" id="dragonlance" name="settings" value="dragonlance"
+                        onchange="toggleSettingRaces(this)">
+                    <label for="dragonlance" class="padding-r10">Dragonlance</label>
+                </div>
+                <div class="display-inline-block">
+                    <input type="checkbox" id="eberron" name="settings" value="eberron"
+                        onchange="toggleSettingRaces(this)">
+                    <label for="eberron" class="padding-r10">Eberron</label>
+                </div>
+                <div class="display-inline-block">
+                    <input type="checkbox" id="ravnica" name="settings" value="ravnica"
+                        onchange="toggleSettingRaces(this)">
+                    <label for="ravnica" class="padding-r10">Ravnica</label>
+                </div>
+                <div class="display-inline-block">
+                    <input type="checkbox" id="spelljammer" name="settings" value="spelljammer"
+                        onchange="toggleSettingRaces(this)">
+                    <label for="spelljammer" class="padding-r10">Spelljammer</label>
+                </div>
+                <div class="display-inline-block">
+                    <input type="checkbox" id="strixhaven" name="settings" value="strixhaven"
+                        onchange="toggleSettingRaces(this)">
+                    <label for="strixhaven" class="padding-r10">Strixhaven</label>
+                </div>
+                <div class="display-inline-block">
+                    <input type="checkbox" id="theros" name="settings" value="theros"
+                        onchange="toggleSettingRaces(this)">
+                    <label for="theros" class="padding-r10">Theros</label>
+                </div>
+            </fieldset>
+        </div>
+        <div class="flex-container margin-top-10">
+            <!-- Standard Fantasy Races -->
+            <div class="col no-left-pad">
+                <fieldset class="no-left-pad" id="standard-races-fs">
+                    <legend>Core Fantasy:</legend>
+                    <input type="checkbox" id="dragonborn" name="standard-races" value="dragonborn" checked>
+                    <label for="dragonborn">Dragonborn</label><br>
+                    <input type="checkbox" id="dwarf" name="standard-races" value="dwarf" checked>
+                    <label for="dwarf">Dwarf</label><br>
+                    <input type="checkbox" id="elf" name="standard-races" value="elf" checked>
+                    <label for="elf">Elf</label><br>
+                    <input type="checkbox" id="gnome" name="standard-races" value="gnome" checked>
+                    <label for="gnome">Gnome</label><br>
+                    <input type="checkbox" id="goblin" name="standard-races" value="goblin" checked>
+                    <label for="goblin">Goblin</label><br>
+                    <input type="checkbox" id="half-elf" name="standard-races" value="half-elf" checked>
+                    <label for="half-elf">Half-elf</label><br>
+                    <input type="checkbox" id="half-orc" name="standard-races" value="half-orc" checked>
+                    <label for="half-orc">Half-orc</label><br>
+                    <input type="checkbox" id="halfling" name="standard-races" value="halfling" checked>
+                    <label for="halfling">Halfling</label><br>
+                    <input type="checkbox" id="human" name="standard-races" value="human" checked>
+                    <label for="human">Human</label><br>
+                    <input type="checkbox" id="orc" name="standard-races" value="orc" checked>
+                    <label for="orc">Orc</label><br>
+                    <input type="checkbox" id="tiefling" name="standard-races" value="tiefling" checked>
+                    <label for="tiefling">Tiefling</label><br>
                 </fieldset>
+                <input type="checkbox" id="standard-races-toggle" onchange="toggleStandardRaces(this)" checked>
+                <label for="standard-races-toggle">Select/Deselect All</label>
+            </div>
+            <!-- Expanded DnD Races -->
+            <div class="col no-left-pad">
+                <fieldset id="expanded-races-fs">
+                    <legend>Expanded:</legend>
+                    <input type="checkbox" id="aasimar" name="expanded-races" value="aasimar">
+                    <label for="aasimar">Aasimar</label><br>
+                    <input type="checkbox" id="bugbear" name="expanded-races" value="bugbear">
+                    <label for="bugbear">Bugbear</label><br>
+                    <input type="checkbox" id="deep-gnome" name="expanded-races" value="deep-gnome">
+                    <label for="deep-gnome">Deep Gnome</label><br>
+                    <input type="checkbox" id="duergar" name="expanded-races" value="duergar">
+                    <label for="duergar">Duergar</label><br>
+                    <input type="checkbox" id="eladrin" name="expanded-races" value="eladrin">
+                    <label for="eladrin">Eladrin</label><br>
+                    <input type="checkbox" id="firbolg" name="expanded-races" value="firbolg">
+                    <label for="firbolg">Firbolg</label><br>
+                    <input type="checkbox" id="genasi-air" name="expanded-races" value="genasi-air">
+                    <label for="genasi-air">Genasi (Air)</label><br>
+                    <input type="checkbox" id="genasi-earth" name="expanded-races" value="genasi-earth">
+                    <label for="genasi-earth">Genasi (Earth)</label><br>
+                    <input type="checkbox" id="genasi-fire" name="expanded-races" value="genasi-fire">
+                    <label for="genasi-fire">Genasi (Fire)</label><br>
+                    <input type="checkbox" id="genasi-water" name="expanded-races" value="genasi-water">
+                    <label for="genasi-water">Genasi (Water)</label><br>
+                    <input type="checkbox" id="goliath" name="expanded-races" value="goliath">
+                    <label for="goliath">Goliath</label><br>
+                    <input type="checkbox" id="hobgoblin" name="expanded-races" value="hobgoblin">
+                    <label for="hobgoblin">Hobgoblin</label><br>
+                    <input type="checkbox" id="sea-elf" name="expanded-races" value="sea-elf">
+                    <label for="sea-elf">Sea Elf</label><br>
+                    <input type="checkbox" id="shadar-kai" name="expanded-races" value="shadar-kai">
+                    <label for="shadar-kai">Shadar-kai</label><br>
+                    <input type="checkbox" id="triton" name="expanded-races" value="triton">
+                    <label for="triton">Triton</label><br>
+                    <input type="checkbox" id="yuan-ti" name="expanded-races" value="yuan-ti">
+                    <label for="yuan-ti">Yuan-ti</label><br>
+                </fieldset>
+                <input type="checkbox" id="expanded-races-toggle" onchange="toggleExpandedRaces(this)">
+                <label for="expanded-races-toggle">Select/Deselect All</label>
+            </div>
+            <!-- Beast Races -->
+            <div class="col no-left-pad">
+                <fieldset id="beast-races-fs">
+                    <legend>Beastfolk:</legend>
+                    <input type="checkbox" id="aarakocra" name="beast-races" value="aarakocra">
+                    <label for="aarakocra">Aarakocra</label><br>
+                    <input type="checkbox" id="centaur" name="beast-races" value="centaur">
+                    <label for="centaur">Centaur</label><br>
+                    <input type="checkbox" id="giff" name="beast-races" value="giff">
+                    <label for="giff">Giff</label><br>
+                    <input type="checkbox" id="hadozee" name="beast-races" value="hadozee">
+                    <label for="hadozee">Hadozee</label><br>
+                    <input type="checkbox" id="harengon" name="beast-races" value="harengon">
+                    <label for="harengon">Harengon</label><br>
+                    <input type="checkbox" id="kenku" name="beast-races" value="kenku">
+                    <label for="kenku">Kenku</label><br>
+                    <input type="checkbox" id="kobold" name="beast-races" value="kobold">
+                    <label for="kobold">Kobold</label><br>
+                    <input type="checkbox" id="leonin" name="beast-races" value="leonin">
+                    <label for="leonin">Leonin</label><br>
+                    <input type="checkbox" id="lizardfolk" name="beast-races" value="lizardfolk">
+                    <label for="lizardfolk">Lizardfolk</label><br>
+                    <input type="checkbox" id="loxodon" name="beast-races" value="loxodon">
+                    <label for="loxodon">Loxodon</label><br>
+                    <input type="checkbox" id="minotaur" name="beast-races" value="minotaur">
+                    <label for="minotaur">Minotaur</label><br>
+                    <input type="checkbox" id="owlin" name="beast-races" value="owlin">
+                    <label for="owlin">Owlin</label><br>
+                    <input type="checkbox" id="satyr" name="beast-races" value="satyr">
+                    <label for="satyr">Satyr</label><br>
+                    <input type="checkbox" id="tabaxi" name="beast-races" value="tabaxi">
+                    <label for="tabaxi">Tabaxi</label><br>
+                    <input type="checkbox" id="thri-kreen" name="beast-races" value="thri-kreen">
+                    <label for="thri-kreen">Thri-kreen</label><br>
+                    <input type="checkbox" id="tortle" name="beast-races" value="tortle">
+                    <label for="tortle">Tortle</label><br>
+                </fieldset>
+                <input type="checkbox" id="beast-races-toggle" onchange="toggleBeastRaces(this)">
+                <label for="beast-races-toggle">Select/Deselect All</label>
+            </div>
+            <!-- Exotic Races -->
+            <div class="col no-left-pad">
+                <fieldset id="exotic-races-fs">
+                    <legend>Exotic/Other:</legend>
+                    <input type="checkbox" id="astral-elf" name="exotic-races" value="astral-elf">
+                    <label for="astral-elf">Astral Elf</label><br>
+                    <input type="checkbox" id="autognome" name="exotic-races" value="autognome">
+                    <label for="autognome">Autognome</label><br>
+                    <input type="checkbox" id="changeling" name="exotic-races" value="changeling">
+                    <label for="changeling">Changeling</label><br>
+                    <input type="checkbox" id="fairy" name="exotic-races" value="fairy">
+                    <label for="fairy">Fairy</label><br>
+                    <input type="checkbox" id="githyanki" name="exotic-races" value="githyanki">
+                    <label for="githyanki">Githyanki</label><br>
+                    <input type="checkbox" id="githzerai" name="exotic-races" value="githzerai">
+                    <label for="githzerai">Githzerai</label><br>
+                    <input type="checkbox" id="kalashtar" name="exotic-races" value="kalashtar">
+                    <label for="kalashtar">Kalashtar</label><br>
+                    <input type="checkbox" id="kender" name="exotic-races" value="kender">
+                    <label for="kender">Kender</label><br>
+                    <input type="checkbox" id="plasmoid" name="exotic-races" value="plasmoid">
+                    <label for="plasmoid">Plasmoid</label><br>
+                    <input type="checkbox" id="shifter" name="exotic-races" value="shifter">
+                    <label for="shifter">Shifter</label><br>
+                    <input type="checkbox" id="simic-hybrid" name="exotic-races" value="simic-hybrid">
+                    <label for="simic-hybrid">Simic Hybrid</label><br>
+                    <input type="checkbox" id="vedalken" name="exotic-races" value="vedalken">
+                    <label for="vedalken">Vedalken</label><br>
+                    <input type="checkbox" id="warforged" name="exotic-races" value="warforged">
+                    <label for="warforged">Warforged</label><br>
+                </fieldset>
+                <input type="checkbox" id="exotic-races-toggle" onchange="toggleExoticRaces(this)">
+                <label for="exotic-races-toggle">Select/Deselect All</label>
             </div>
         </div>
+        <!-- <div class="flex-container margin-top-10">
+            
+        </div> -->
     </div>
     <button type="button" class="collapsible">Gender & Age</button>
     <div class="content">
