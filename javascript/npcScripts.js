@@ -1,3 +1,7 @@
+// -------------------------------------------------------------------------------- \\
+// Gathers relevant information from the checkboxes, send the API request to AWS, 
+// and displays the resulting NPC when the 'Generate NPC' button is pressed.
+// -------------------------------------------------------------------------------- \\
 async function generateNPC() {
     const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/generatenpc";
 
@@ -5,9 +9,17 @@ async function generateNPC() {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
+    // Grab races from HTML.
+    var races = [];
+    var raceCheckboxes = document.getElementsByName("race-checkbox");
+    for (var i = 0; i < raceCheckboxes.length; i++) {
+        if (raceCheckboxes[i].checked) { races.push(raceCheckboxes[i].value); }
+    };
+    console.log(races.toString());
+
     // create a JSON object with parameters for API call and store in a variable
     var raw = JSON.stringify({
-        "future": "NONE"
+        "races": races.toString()
     });
     var requestOptions = {
         method: 'POST',
@@ -32,6 +44,10 @@ async function generateNPC() {
     document.getElementById("npc-motivation-text").textContent = npcDetails.motivation;
 }
 
+// -------------------------------------------------------------------------------- \\
+// Regenerates a specific field within the NPC details when the refresh button is
+// pressed.
+// -------------------------------------------------------------------------------- \\
 async function regenField(field) {
     const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/iltbregenfield";
 
@@ -76,34 +92,53 @@ async function regenField(field) {
     document.getElementById("npc-motivation-text").textContent = newFields.motivation;
 }
 
+// -------------------------------------------------------------------------------- \\
+// Selects/deselects all races in the 'Core Fantasy' section.
+// -------------------------------------------------------------------------------- \\
 function toggleStandardRaces(source) {
-    categoryBoxes = document.getElementsByName("standard-races");
+    parent = document.getElementById("standard-races-fs");
+    categoryBoxes = parent.querySelectorAll("[name='race-checkbox']");
     for (var i=0; i < categoryBoxes.length; i++) {
         categoryBoxes[i].checked = source.checked;
     }
 }
 
+// -------------------------------------------------------------------------------- \\
+// Selects/deselects all races in the 'Expanded' section.
+// -------------------------------------------------------------------------------- \\
 function toggleExpandedRaces(source) {
-    categoryBoxes = document.getElementsByName("expanded-races");
+    parent = document.getElementById("expanded-races-fs");
+    categoryBoxes = parent.querySelectorAll("[name='race-checkbox']");
     for (var i=0; i < categoryBoxes.length; i++) {
         categoryBoxes[i].checked = source.checked;
     }
 }
 
+// -------------------------------------------------------------------------------- \\
+// Selects/deselects all races in the 'Beastfolk' section.
+// -------------------------------------------------------------------------------- \\
 function toggleBeastRaces(source) {
-    categoryBoxes = document.getElementsByName("beast-races");
+    parent = document.getElementById("beast-races-fs");
+    categoryBoxes = parent.querySelectorAll("[name='race-checkbox']");
     for (var i=0; i < categoryBoxes.length; i++) {
         categoryBoxes[i].checked = source.checked;
     }
 }
 
+// -------------------------------------------------------------------------------- \\
+// Selects/deselects all races in the 'Exotic/Other' section.
+// -------------------------------------------------------------------------------- \\
 function toggleExoticRaces(source) {
-    categoryBoxes = document.getElementsByName("exotic-races");
+    parent = document.getElementById("exotic-races-fs");
+    categoryBoxes = parent.querySelectorAll("[name='race-checkbox']");
     for (var i=0; i < categoryBoxes.length; i++) {
         categoryBoxes[i].checked = source.checked;
     }
 }
 
+// -------------------------------------------------------------------------------- \\
+// Toggles the races for the selected source book.
+// -------------------------------------------------------------------------------- \\
 function toggleSourceRaces(source) {
     if (source.value == "phb") {
         document.getElementById("dragonborn").checked = source.checked;
@@ -167,6 +202,9 @@ function toggleSourceRaces(source) {
     }
 }
 
+// -------------------------------------------------------------------------------- \\
+// Toggles the races for the selected campaign setting.
+// -------------------------------------------------------------------------------- \\
 function toggleSettingRaces(source) {
     if (source.value == "dragonlance") {
         document.getElementById("kender").checked = source.checked;
@@ -192,6 +230,15 @@ function toggleSettingRaces(source) {
         document.getElementById("orc").checked = source.checked;
         document.getElementById("shifter").checked = source.checked;
         document.getElementById("warforged").checked = source.checked;
+    }
+    else if (source.value == "ravenloft") {
+        var phb = document.getElementById("phb");
+        phb.checked = source.checked;
+        toggleSourceRaces(phb);
+
+        document.getElementById("dhampir").checked = source.checked;
+        document.getElementById("hexblood").checked = source.checked;
+        document.getElementById("reborn").checked = source.checked;
     }
     else if (source.value == "ravnica") {
         document.getElementById("human").checked = source.checked;

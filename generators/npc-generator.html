@@ -30,7 +30,7 @@ title: Random NPC Generator
             <fieldset id="sources-fs">
                 <legend>D&D5e Source Book:</legend>
                 <div class="display-inline-block">
-                    <input type="checkbox" id="phb" name="sources" value="phb" onchange="toggleSourceRaces(this)">
+                    <input type="checkbox" id="phb" name="sources" value="phb" onchange="toggleSourceRaces(this)" checked>
                     <label for="phb" class="padding-r10">Player's Handbook</label>
                 </div>
                 <div class="display-inline-block">
@@ -55,6 +55,11 @@ title: Random NPC Generator
                     <input type="checkbox" id="eberron" name="settings" value="eberron"
                         onchange="toggleSettingRaces(this)">
                     <label for="eberron" class="padding-r10">Eberron</label>
+                </div>
+                <div class="display-inline-block">
+                    <input type="checkbox" id="ravenloft" name="settings" value="ravenloft"
+                        onchange="toggleSettingRaces(this)">
+                    <label for="ravenloft" class="padding-r10">Ravenloft</label>
                 </div>
                 <div class="display-inline-block">
                     <input type="checkbox" id="ravnica" name="settings" value="ravnica"
@@ -83,67 +88,67 @@ title: Random NPC Generator
             <div class="col no-left-pad">
                 <fieldset class="no-left-pad" id="standard-races-fs">
                     <legend>Core Fantasy:</legend>
-                    <input type="checkbox" id="dragonborn" name="standard-races" value="dragonborn" checked>
+                    <input type="checkbox" id="dragonborn" name="race-checkbox" value="dragonborn" checked>
                     <label for="dragonborn">Dragonborn</label><br>
-                    <input type="checkbox" id="dwarf" name="standard-races" value="dwarf" checked>
+                    <input type="checkbox" id="dwarf" name="race-checkbox" value="dwarf" checked>
                     <label for="dwarf">Dwarf</label><br>
-                    <input type="checkbox" id="elf" name="standard-races" value="elf" checked>
+                    <input type="checkbox" id="elf" name="race-checkbox" value="elf" checked>
                     <label for="elf">Elf</label><br>
-                    <input type="checkbox" id="gnome" name="standard-races" value="gnome" checked>
+                    <input type="checkbox" id="gnome" name="race-checkbox" value="gnome" checked>
                     <label for="gnome">Gnome</label><br>
-                    <input type="checkbox" id="goblin" name="standard-races" value="goblin" checked>
+                    <input type="checkbox" id="goblin" name="race-checkbox" value="goblin">
                     <label for="goblin">Goblin</label><br>
-                    <input type="checkbox" id="half-elf" name="standard-races" value="half-elf" checked>
+                    <input type="checkbox" id="half-elf" name="race-checkbox" value="half-elf" checked>
                     <label for="half-elf">Half-elf</label><br>
-                    <input type="checkbox" id="half-orc" name="standard-races" value="half-orc" checked>
+                    <input type="checkbox" id="half-orc" name="race-checkbox" value="half-orc" checked>
                     <label for="half-orc">Half-orc</label><br>
-                    <input type="checkbox" id="halfling" name="standard-races" value="halfling" checked>
+                    <input type="checkbox" id="halfling" name="race-checkbox" value="halfling" checked>
                     <label for="halfling">Halfling</label><br>
-                    <input type="checkbox" id="human" name="standard-races" value="human" checked>
+                    <input type="checkbox" id="human" name="race-checkbox" value="human" checked>
                     <label for="human">Human</label><br>
-                    <input type="checkbox" id="orc" name="standard-races" value="orc" checked>
+                    <input type="checkbox" id="orc" name="race-checkbox" value="orc">
                     <label for="orc">Orc</label><br>
-                    <input type="checkbox" id="tiefling" name="standard-races" value="tiefling" checked>
+                    <input type="checkbox" id="tiefling" name="race-checkbox" value="tiefling" checked>
                     <label for="tiefling">Tiefling</label><br>
                 </fieldset>
-                <input type="checkbox" id="standard-races-toggle" onchange="toggleStandardRaces(this)" checked>
+                <input type="checkbox" id="standard-races-toggle" onchange="toggleStandardRaces(this)">
                 <label for="standard-races-toggle">Select/Deselect All</label>
             </div>
             <!-- Expanded DnD Races -->
             <div class="col no-left-pad">
                 <fieldset id="expanded-races-fs">
                     <legend>Expanded:</legend>
-                    <input type="checkbox" id="aasimar" name="expanded-races" value="aasimar">
+                    <input type="checkbox" id="aasimar" name="race-checkbox" value="aasimar">
                     <label for="aasimar">Aasimar</label><br>
-                    <input type="checkbox" id="bugbear" name="expanded-races" value="bugbear">
+                    <input type="checkbox" id="bugbear" name="race-checkbox" value="bugbear">
                     <label for="bugbear">Bugbear</label><br>
-                    <input type="checkbox" id="deep-gnome" name="expanded-races" value="deep-gnome">
+                    <input type="checkbox" id="deep-gnome" name="race-checkbox" value="deep-gnome">
                     <label for="deep-gnome">Deep Gnome</label><br>
-                    <input type="checkbox" id="duergar" name="expanded-races" value="duergar">
+                    <input type="checkbox" id="duergar" name="race-checkbox" value="duergar">
                     <label for="duergar">Duergar</label><br>
-                    <input type="checkbox" id="eladrin" name="expanded-races" value="eladrin">
+                    <input type="checkbox" id="eladrin" name="race-checkbox" value="eladrin">
                     <label for="eladrin">Eladrin</label><br>
-                    <input type="checkbox" id="firbolg" name="expanded-races" value="firbolg">
+                    <input type="checkbox" id="firbolg" name="race-checkbox" value="firbolg">
                     <label for="firbolg">Firbolg</label><br>
-                    <input type="checkbox" id="genasi-air" name="expanded-races" value="genasi-air">
+                    <input type="checkbox" id="genasi-air" name="race-checkbox" value="genasi-air">
                     <label for="genasi-air">Genasi (Air)</label><br>
-                    <input type="checkbox" id="genasi-earth" name="expanded-races" value="genasi-earth">
+                    <input type="checkbox" id="genasi-earth" name="race-checkbox" value="genasi-earth">
                     <label for="genasi-earth">Genasi (Earth)</label><br>
-                    <input type="checkbox" id="genasi-fire" name="expanded-races" value="genasi-fire">
+                    <input type="checkbox" id="genasi-fire" name="race-checkbox" value="genasi-fire">
                     <label for="genasi-fire">Genasi (Fire)</label><br>
-                    <input type="checkbox" id="genasi-water" name="expanded-races" value="genasi-water">
+                    <input type="checkbox" id="genasi-water" name="race-checkbox" value="genasi-water">
                     <label for="genasi-water">Genasi (Water)</label><br>
-                    <input type="checkbox" id="goliath" name="expanded-races" value="goliath">
+                    <input type="checkbox" id="goliath" name="race-checkbox" value="goliath">
                     <label for="goliath">Goliath</label><br>
-                    <input type="checkbox" id="hobgoblin" name="expanded-races" value="hobgoblin">
+                    <input type="checkbox" id="hobgoblin" name="race-checkbox" value="hobgoblin">
                     <label for="hobgoblin">Hobgoblin</label><br>
-                    <input type="checkbox" id="sea-elf" name="expanded-races" value="sea-elf">
+                    <input type="checkbox" id="sea-elf" name="race-checkbox" value="sea-elf">
                     <label for="sea-elf">Sea Elf</label><br>
-                    <input type="checkbox" id="shadar-kai" name="expanded-races" value="shadar-kai">
+                    <input type="checkbox" id="shadar-kai" name="race-checkbox" value="shadar-kai">
                     <label for="shadar-kai">Shadar-kai</label><br>
-                    <input type="checkbox" id="triton" name="expanded-races" value="triton">
+                    <input type="checkbox" id="triton" name="race-checkbox" value="triton">
                     <label for="triton">Triton</label><br>
-                    <input type="checkbox" id="yuan-ti" name="expanded-races" value="yuan-ti">
+                    <input type="checkbox" id="yuan-ti" name="race-checkbox" value="yuan-ti">
                     <label for="yuan-ti">Yuan-ti</label><br>
                 </fieldset>
                 <input type="checkbox" id="expanded-races-toggle" onchange="toggleExpandedRaces(this)">
@@ -153,37 +158,37 @@ title: Random NPC Generator
             <div class="col no-left-pad">
                 <fieldset id="beast-races-fs">
                     <legend>Beastfolk:</legend>
-                    <input type="checkbox" id="aarakocra" name="beast-races" value="aarakocra">
+                    <input type="checkbox" id="aarakocra" name="race-checkbox" value="aarakocra">
                     <label for="aarakocra">Aarakocra</label><br>
-                    <input type="checkbox" id="centaur" name="beast-races" value="centaur">
+                    <input type="checkbox" id="centaur" name="race-checkbox" value="centaur">
                     <label for="centaur">Centaur</label><br>
-                    <input type="checkbox" id="giff" name="beast-races" value="giff">
+                    <input type="checkbox" id="giff" name="race-checkbox" value="giff">
                     <label for="giff">Giff</label><br>
-                    <input type="checkbox" id="hadozee" name="beast-races" value="hadozee">
+                    <input type="checkbox" id="hadozee" name="race-checkbox" value="hadozee">
                     <label for="hadozee">Hadozee</label><br>
-                    <input type="checkbox" id="harengon" name="beast-races" value="harengon">
+                    <input type="checkbox" id="harengon" name="race-checkbox" value="harengon">
                     <label for="harengon">Harengon</label><br>
-                    <input type="checkbox" id="kenku" name="beast-races" value="kenku">
+                    <input type="checkbox" id="kenku" name="race-checkbox" value="kenku">
                     <label for="kenku">Kenku</label><br>
-                    <input type="checkbox" id="kobold" name="beast-races" value="kobold">
+                    <input type="checkbox" id="kobold" name="race-checkbox" value="kobold">
                     <label for="kobold">Kobold</label><br>
-                    <input type="checkbox" id="leonin" name="beast-races" value="leonin">
+                    <input type="checkbox" id="leonin" name="race-checkbox" value="leonin">
                     <label for="leonin">Leonin</label><br>
-                    <input type="checkbox" id="lizardfolk" name="beast-races" value="lizardfolk">
+                    <input type="checkbox" id="lizardfolk" name="race-checkbox" value="lizardfolk">
                     <label for="lizardfolk">Lizardfolk</label><br>
-                    <input type="checkbox" id="loxodon" name="beast-races" value="loxodon">
+                    <input type="checkbox" id="loxodon" name="race-checkbox" value="loxodon">
                     <label for="loxodon">Loxodon</label><br>
-                    <input type="checkbox" id="minotaur" name="beast-races" value="minotaur">
+                    <input type="checkbox" id="minotaur" name="race-checkbox" value="minotaur">
                     <label for="minotaur">Minotaur</label><br>
-                    <input type="checkbox" id="owlin" name="beast-races" value="owlin">
+                    <input type="checkbox" id="owlin" name="race-checkbox" value="owlin">
                     <label for="owlin">Owlin</label><br>
-                    <input type="checkbox" id="satyr" name="beast-races" value="satyr">
+                    <input type="checkbox" id="satyr" name="race-checkbox" value="satyr">
                     <label for="satyr">Satyr</label><br>
-                    <input type="checkbox" id="tabaxi" name="beast-races" value="tabaxi">
+                    <input type="checkbox" id="tabaxi" name="race-checkbox" value="tabaxi">
                     <label for="tabaxi">Tabaxi</label><br>
-                    <input type="checkbox" id="thri-kreen" name="beast-races" value="thri-kreen">
+                    <input type="checkbox" id="thri-kreen" name="race-checkbox" value="thri-kreen">
                     <label for="thri-kreen">Thri-kreen</label><br>
-                    <input type="checkbox" id="tortle" name="beast-races" value="tortle">
+                    <input type="checkbox" id="tortle" name="race-checkbox" value="tortle">
                     <label for="tortle">Tortle</label><br>
                 </fieldset>
                 <input type="checkbox" id="beast-races-toggle" onchange="toggleBeastRaces(this)">
@@ -193,47 +198,50 @@ title: Random NPC Generator
             <div class="col no-left-pad">
                 <fieldset id="exotic-races-fs">
                     <legend>Exotic/Other:</legend>
-                    <input type="checkbox" id="astral-elf" name="exotic-races" value="astral-elf">
+                    <input type="checkbox" id="astral-elf" name="race-checkbox" value="astral-elf">
                     <label for="astral-elf">Astral Elf</label><br>
-                    <input type="checkbox" id="autognome" name="exotic-races" value="autognome">
+                    <input type="checkbox" id="autognome" name="race-checkbox" value="autognome">
                     <label for="autognome">Autognome</label><br>
-                    <input type="checkbox" id="changeling" name="exotic-races" value="changeling">
+                    <input type="checkbox" id="changeling" name="race-checkbox" value="changeling">
                     <label for="changeling">Changeling</label><br>
-                    <input type="checkbox" id="fairy" name="exotic-races" value="fairy">
+                    <input type="checkbox" id="dhampir" name="race-checkbox" value="dhampir">
+                    <label for="dhampir">Dhampir</label><br>
+                    <input type="checkbox" id="fairy" name="race-checkbox" value="fairy">
                     <label for="fairy">Fairy</label><br>
-                    <input type="checkbox" id="githyanki" name="exotic-races" value="githyanki">
+                    <input type="checkbox" id="githyanki" name="race-checkbox" value="githyanki">
                     <label for="githyanki">Githyanki</label><br>
-                    <input type="checkbox" id="githzerai" name="exotic-races" value="githzerai">
+                    <input type="checkbox" id="githzerai" name="race-checkbox" value="githzerai">
                     <label for="githzerai">Githzerai</label><br>
-                    <input type="checkbox" id="kalashtar" name="exotic-races" value="kalashtar">
+                    <input type="checkbox" id="hexblood" name="race-checkbox" value="hexblood">
+                    <label for="hexblood">Hexblood</label><br>
+                    <input type="checkbox" id="kalashtar" name="race-checkbox" value="kalashtar">
                     <label for="kalashtar">Kalashtar</label><br>
-                    <input type="checkbox" id="kender" name="exotic-races" value="kender">
+                    <input type="checkbox" id="kender" name="race-checkbox" value="kender">
                     <label for="kender">Kender</label><br>
-                    <input type="checkbox" id="plasmoid" name="exotic-races" value="plasmoid">
+                    <input type="checkbox" id="plasmoid" name="race-checkbox" value="plasmoid">
                     <label for="plasmoid">Plasmoid</label><br>
-                    <input type="checkbox" id="shifter" name="exotic-races" value="shifter">
+                    <input type="checkbox" id="reborn" name="race-checkbox" value="reborn">
+                    <label for="reborn">Reborn</label><br>
+                    <input type="checkbox" id="shifter" name="race-checkbox" value="shifter">
                     <label for="shifter">Shifter</label><br>
-                    <input type="checkbox" id="simic-hybrid" name="exotic-races" value="simic-hybrid">
+                    <input type="checkbox" id="simic-hybrid" name="race-checkbox" value="simic-hybrid">
                     <label for="simic-hybrid">Simic Hybrid</label><br>
-                    <input type="checkbox" id="vedalken" name="exotic-races" value="vedalken">
+                    <input type="checkbox" id="vedalken" name="race-checkbox" value="vedalken">
                     <label for="vedalken">Vedalken</label><br>
-                    <input type="checkbox" id="warforged" name="exotic-races" value="warforged">
+                    <input type="checkbox" id="warforged" name="race-checkbox" value="warforged">
                     <label for="warforged">Warforged</label><br>
                 </fieldset>
                 <input type="checkbox" id="exotic-races-toggle" onchange="toggleExoticRaces(this)">
                 <label for="exotic-races-toggle">Select/Deselect All</label>
             </div>
         </div>
-        <!-- <div class="flex-container margin-top-10">
-            
-        </div> -->
     </div>
-    <button type="button" class="collapsible">Gender & Age</button>
+    <!-- <button type="button" class="collapsible">Gender & Age</button>
     <div class="content">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
             ea commodo consequat.</p>
-    </div>
+    </div> -->
 </div>
 <!-- Collapsible Menu Script -->
 <script>
