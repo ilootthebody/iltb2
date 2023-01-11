@@ -73,6 +73,30 @@ async function regenField(field) {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
+    // Grab races from HTML.
+    var races = [];
+    var raceCheckboxes = document.getElementsByName("race-checkbox");
+    for (var i = 0; i < raceCheckboxes.length; i++) {
+        if (raceCheckboxes[i].checked) { races.push(raceCheckboxes[i].value); }
+    };
+    console.log(races.toString());
+
+    // Grab genders from HTML.
+    var genders = [];
+    var genderCheckboxes = document.getElementsByName("gender-checkbox");
+    for (var i = 0; i < genderCheckboxes.length; i++) {
+        if (genderCheckboxes[i].checked) { genders.push(genderCheckboxes[i].value); }
+    };
+    console.log(genders.toString());
+
+    // Grab ages from HTML.
+    var ages = [];
+    var ageCheckboxes = document.getElementsByName("age-checkbox");
+    for (var i = 0; i < ageCheckboxes.length; i++) {
+        if (ageCheckboxes[i].checked) { ages.push(ageCheckboxes[i].value); }
+    };
+    console.log(ages.toString());
+
     // create a JSON object with parameters for API call and store in a variable
     var raw = JSON.stringify({
         "field": field,
@@ -85,7 +109,10 @@ async function regenField(field) {
             "npc-personality-text": document.getElementById("npc-personality-text").textContent,
             "npc-profession-text": document.getElementById("npc-profession-text").textContent,
             "npc-motivation-text": document.getElementById("npc-motivation-text").textContent
-        }
+        },
+        "races": races.toString(),
+        "genders": genders.toString(),
+        "ages": ages.toString()
     });
     var requestOptions = {
         method: 'POST',
