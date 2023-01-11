@@ -3,7 +3,7 @@
 // and displays the resulting NPC when the 'Generate NPC' button is pressed.
 // -------------------------------------------------------------------------------- \\
 async function generateNPC() {
-    const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/generatenpc";
+    const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/iltbgeneratenpc";
 
     // Instantiate and populate header.
     var myHeaders = new Headers();
@@ -17,9 +17,27 @@ async function generateNPC() {
     };
     console.log(races.toString());
 
+    // Grab genders from HTML.
+    var genders = [];
+    var genderCheckboxes = document.getElementsByName("gender-checkbox");
+    for (var i = 0; i < genderCheckboxes.length; i++) {
+        if (genderCheckboxes[i].checked) { genders.push(genderCheckboxes[i].value); }
+    };
+    console.log(genders.toString());
+
+    // Grab ages from HTML.
+    var ages = [];
+    var ageCheckboxes = document.getElementsByName("age-checkbox");
+    for (var i = 0; i < ageCheckboxes.length; i++) {
+        if (ageCheckboxes[i].checked) { ages.push(ageCheckboxes[i].value); }
+    };
+    console.log(ages.toString());
+
     // create a JSON object with parameters for API call and store in a variable
     var raw = JSON.stringify({
-        "races": races.toString()
+        "races": races.toString(),
+        "genders": genders.toString(),
+        "ages": ages.toString()
     });
     var requestOptions = {
         method: 'POST',

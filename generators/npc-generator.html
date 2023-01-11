@@ -122,7 +122,7 @@ title: Random NPC Generator
                     <label for="aasimar">Aasimar</label><br>
                     <input type="checkbox" id="bugbear" name="race-checkbox" value="bugbear">
                     <label for="bugbear">Bugbear</label><br>
-                    <input type="checkbox" id="deep-gnome" name="race-checkbox" value="deep-gnome">
+                    <input type="checkbox" id="deep-gnome" name="race-checkbox" value="deep gnome">
                     <label for="deep-gnome">Deep Gnome</label><br>
                     <input type="checkbox" id="duergar" name="race-checkbox" value="duergar">
                     <label for="duergar">Duergar</label><br>
@@ -130,19 +130,19 @@ title: Random NPC Generator
                     <label for="eladrin">Eladrin</label><br>
                     <input type="checkbox" id="firbolg" name="race-checkbox" value="firbolg">
                     <label for="firbolg">Firbolg</label><br>
-                    <input type="checkbox" id="genasi-air" name="race-checkbox" value="genasi-air">
+                    <input type="checkbox" id="genasi-air" name="race-checkbox" value="genasi (air)">
                     <label for="genasi-air">Genasi (Air)</label><br>
-                    <input type="checkbox" id="genasi-earth" name="race-checkbox" value="genasi-earth">
+                    <input type="checkbox" id="genasi-earth" name="race-checkbox" value="genasi (earth)">
                     <label for="genasi-earth">Genasi (Earth)</label><br>
-                    <input type="checkbox" id="genasi-fire" name="race-checkbox" value="genasi-fire">
+                    <input type="checkbox" id="genasi-fire" name="race-checkbox" value="genasi (fire)">
                     <label for="genasi-fire">Genasi (Fire)</label><br>
-                    <input type="checkbox" id="genasi-water" name="race-checkbox" value="genasi-water">
+                    <input type="checkbox" id="genasi-water" name="race-checkbox" value="genasi (water)">
                     <label for="genasi-water">Genasi (Water)</label><br>
                     <input type="checkbox" id="goliath" name="race-checkbox" value="goliath">
                     <label for="goliath">Goliath</label><br>
                     <input type="checkbox" id="hobgoblin" name="race-checkbox" value="hobgoblin">
                     <label for="hobgoblin">Hobgoblin</label><br>
-                    <input type="checkbox" id="sea-elf" name="race-checkbox" value="sea-elf">
+                    <input type="checkbox" id="sea-elf" name="race-checkbox" value="sea elf">
                     <label for="sea-elf">Sea Elf</label><br>
                     <input type="checkbox" id="shadar-kai" name="race-checkbox" value="shadar-kai">
                     <label for="shadar-kai">Shadar-kai</label><br>
@@ -198,7 +198,7 @@ title: Random NPC Generator
             <div class="col no-left-pad">
                 <fieldset id="exotic-races-fs">
                     <legend>Exotic/Other:</legend>
-                    <input type="checkbox" id="astral-elf" name="race-checkbox" value="astral-elf">
+                    <input type="checkbox" id="astral-elf" name="race-checkbox" value="astral elf">
                     <label for="astral-elf">Astral Elf</label><br>
                     <input type="checkbox" id="autognome" name="race-checkbox" value="autognome">
                     <label for="autognome">Autognome</label><br>
@@ -224,7 +224,7 @@ title: Random NPC Generator
                     <label for="reborn">Reborn</label><br>
                     <input type="checkbox" id="shifter" name="race-checkbox" value="shifter">
                     <label for="shifter">Shifter</label><br>
-                    <input type="checkbox" id="simic-hybrid" name="race-checkbox" value="simic-hybrid">
+                    <input type="checkbox" id="simic-hybrid" name="race-checkbox" value="simic hybrid">
                     <label for="simic-hybrid">Simic Hybrid</label><br>
                     <input type="checkbox" id="vedalken" name="race-checkbox" value="vedalken">
                     <label for="vedalken">Vedalken</label><br>
@@ -236,12 +236,41 @@ title: Random NPC Generator
             </div>
         </div>
     </div>
-    <!-- <button type="button" class="collapsible">Gender & Age</button>
+    <button type="button" class="collapsible">Gender & Age</button>
     <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.</p>
-    </div> -->
+        <div class="flex-container margin-top-10">
+            <div class="col no-left-pad">
+                <fieldset id="gender-fs">
+                    <legend>Gender</legend>
+                    <input type="checkbox" id="male" name="gender-checkbox" value="male" checked>
+                    <label for="male">Male</label><br>
+                    <input type="checkbox" id="female" name="gender-checkbox" value="female" checked>
+                    <label for="female">Female</label><br>
+                    <input type="checkbox" id="non-binary" name="gender-checkbox" value="non-binary" checked>
+                    <label for="non-binary">Non-binary</label><br>
+                </fieldset>
+            </div>
+            <div class="col no-left-pad">
+                <fieldset id="gender-fs">
+                    <legend>Age Range</legend>
+                    <input type="checkbox" id="young-adult" name="age-checkbox" value="young-adult" checked>
+                    <label for="young-adult">Young Adult</label><br>
+                    <input type="checkbox" id="adult" name="age-checkbox" value="adult" checked>
+                    <label for="adult">Adult</label><br>
+                    <input type="checkbox" id="older" name="age-checkbox" value="older" checked>
+                    <label for="older">Older</label><br>
+                    <input type="checkbox" id="very-old" name="age-checkbox" value="very-old" checked>
+                    <label for="very-old">Very Old</label><br>
+                </fieldset>
+            </div>
+            <div class="col no-left-pad">
+                <!-- Placeholder -->
+            </div>
+            <div class="col no-left-pad">
+                <!-- Placeholder -->
+            </div>
+        </div>
+    </div>
 </div>
 <!-- Collapsible Menu Script -->
 <script>
