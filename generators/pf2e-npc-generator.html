@@ -1,14 +1,14 @@
 ---
 layout: page
-title: D&D 5e NPC Generator
+title: Pathfinder 2e NPC Generator
 ---
 
-<script src="../javascript/npcScripts.js"></script>
+<script src="../javascript/pf2eNpcScripts.js"></script>
 
 <!-- Header -->
 <div>
     <p>
-        This generator randomly creates NPCs for D&D 5e. This tool is designed
+        This generator randomly creates NPCs for Pathfinder 2e. This tool is designed
         to provide short, useful NPC descriptions with minimal fluff. The NPCs can be used
         as-is for minor characters or as a base to build a more in-depth NPC upon.
         Whether you're looking for inspiration while planning your next session or need a quick
@@ -24,215 +24,204 @@ title: D&D 5e NPC Generator
 <!-- Options -->
 <div>
     <!-- Race Options -->
-    <button type="button" class="collapsible">Race</button>
+    <button type="button" class="collapsible">Ancestry</button>
     <div class="content">
         <div class="flex-container">
             <fieldset id="sources-fs">
-                <legend>D&D5e Source Book:</legend>
+                <legend>Pathfinder 2e Source Book:</legend>
                 <div class="display-inline-block">
-                    <input type="checkbox" id="phb" name="sources" value="phb" onchange="toggleSourceRaces(this)" checked>
-                    <label for="phb" class="padding-r10">Player's Handbook</label>
+                    <input type="checkbox" id="pf2ecrb" name="sources" value="pf2ecrb"
+                        onchange="toggleSourceRaces(this)"  checked>
+                    <label for="pf2ecrb" class="padding-r10">Core Rulebook</label>
                 </div>
                 <div class="display-inline-block">
-                    <input type="checkbox" id="motm" name="sources" value="motm" onchange="toggleSourceRaces(this)">
-                    <label for="motm" class="padding-r10">Monsters of the Multiverse</label>
+                    <input type="checkbox" id="pf2ecg" name="sources" value="pf2ecg"
+                        onchange="toggleSourceRaces(this)">
+                    <label for="pf2ecg" class="padding-r10">Character Guide</label>
                 </div>
                 <div class="display-inline-block">
-                    <input type="checkbox" id="vgtm" name="sources" value="vgtm" onchange="toggleSourceRaces(this)">
-                    <label for="vgtm" class="padding-r10">Volo's Guide to Monsters</label>
+                    <input type="checkbox" id="pf2eapg" name="sources" value="pf2eapg"
+                        onchange="toggleSourceRaces(this)">
+                    <label for="pf2eapg" class="padding-r10">Advanced Player's Guide</label>
+                </div>
+                <div class="display-inline-block">
+                    <input type="checkbox" id="pf2eag" name="sources" value="pf2eag"
+                        onchange="toggleSourceRaces(this)">
+                    <label for="pf2eag" class="padding-r10">Ancestry Guide</label>
+                </div>
+                <div class="display-inline-block">
+                    <input type="checkbox" id="pf2egg" name="sources" value="pf2egg"
+                        onchange="toggleSourceRaces(this)">
+                    <label for="pf2egg" class="padding-r10">Guns & Gears</label>
+                </div>
+                <div class="display-inline-block">
+                    <input type="checkbox" id="pf2ebotd" name="sources" value="pf2ebotd"
+                        onchange="toggleSourceRaces(this)">
+                    <label for="pf2ebotd" class="padding-r10">Book of the Dead</label>
+                </div>
+                <div class="display-inline-block">
+                    <input type="checkbox" id="pf2eda" name="sources" value="pf2eda"
+                        onchange="toggleSourceRaces(this)">
+                    <label for="pf2eda" class="padding-r10">Dark Archive</label>
                 </div>
             </fieldset>
         </div>
         <div class="flex-container">
             <fieldset id="settings-fs">
-                <legend>Setting:</legend>
+                <legend>Region:</legend>
+                <div class="display-inline-block">
+                    <input type="checkbox" id="dark-sun" name="settings" value="dark-sun"
+                        onchange="toggleSettingRaces(this)">
+                    <label for="dark-sun" class="padding-r10">Region 1</label>
+                </div>
                 <div class="display-inline-block">
                     <input type="checkbox" id="dragonlance" name="settings" value="dragonlance"
                         onchange="toggleSettingRaces(this)">
-                    <label for="dragonlance" class="padding-r10">Dragonlance</label>
+                    <label for="dragonlance" class="padding-r10">Region 2</label>
                 </div>
                 <div class="display-inline-block">
                     <input type="checkbox" id="eberron" name="settings" value="eberron"
                         onchange="toggleSettingRaces(this)">
-                    <label for="eberron" class="padding-r10">Eberron</label>
-                </div>
-                <div class="display-inline-block">
-                    <input type="checkbox" id="ravenloft" name="settings" value="ravenloft"
-                        onchange="toggleSettingRaces(this)">
-                    <label for="ravenloft" class="padding-r10">Ravenloft</label>
-                </div>
-                <div class="display-inline-block">
-                    <input type="checkbox" id="ravnica" name="settings" value="ravnica"
-                        onchange="toggleSettingRaces(this)">
-                    <label for="ravnica" class="padding-r10">Ravnica</label>
-                </div>
-                <div class="display-inline-block">
-                    <input type="checkbox" id="spelljammer" name="settings" value="spelljammer"
-                        onchange="toggleSettingRaces(this)">
-                    <label for="spelljammer" class="padding-r10">Spelljammer</label>
-                </div>
-                <div class="display-inline-block">
-                    <input type="checkbox" id="strixhaven" name="settings" value="strixhaven"
-                        onchange="toggleSettingRaces(this)">
-                    <label for="strixhaven" class="padding-r10">Strixhaven</label>
-                </div>
-                <div class="display-inline-block">
-                    <input type="checkbox" id="theros" name="settings" value="theros"
-                        onchange="toggleSettingRaces(this)">
-                    <label for="theros" class="padding-r10">Theros</label>
+                    <label for="eberron" class="padding-r10">Region 3</label>
                 </div>
             </fieldset>
         </div>
         <div class="flex-container margin-top-10">
-            <!-- Standard Fantasy Races -->
+            <!-- Common Ancestries -->
             <div class="col no-left-pad">
-                <fieldset class="no-left-pad" id="standard-races-fs">
-                    <legend>Core Fantasy:</legend>
-                    <input type="checkbox" id="dragonborn" name="race-checkbox" value="dragonborn" checked>
-                    <label for="dragonborn">Dragonborn</label><br>
-                    <input type="checkbox" id="dwarf" name="race-checkbox" value="dwarf" checked>
+                <fieldset class="no-left-pad" id="common-ancestry-fs">
+                    <legend>Common:</legend>
+                    <input type="checkbox" id="dwarf" name="ancestry-checkbox" value="dwarf" checked>
                     <label for="dwarf">Dwarf</label><br>
-                    <input type="checkbox" id="elf" name="race-checkbox" value="elf" checked>
+                    <input type="checkbox" id="elf" name="ancestry-checkbox" value="elf" checked>
                     <label for="elf">Elf</label><br>
-                    <input type="checkbox" id="gnome" name="race-checkbox" value="gnome" checked>
+                    <input type="checkbox" id="gnome" name="ancestry-checkbox" value="gnome" checked>
                     <label for="gnome">Gnome</label><br>
-                    <input type="checkbox" id="goblin" name="race-checkbox" value="goblin">
+                    <input type="checkbox" id="goblin" name="ancestry-checkbox" value="goblin" checked>
                     <label for="goblin">Goblin</label><br>
-                    <input type="checkbox" id="half-elf" name="race-checkbox" value="half-elf" checked>
+                    <input type="checkbox" id="half-elf" name="ancestry-checkbox" value="half-elf" checked>
                     <label for="half-elf">Half-elf</label><br>
-                    <input type="checkbox" id="half-orc" name="race-checkbox" value="half-orc" checked>
+                    <input type="checkbox" id="half-orc" name="ancestry-checkbox" value="half-orc" checked>
                     <label for="half-orc">Half-orc</label><br>
-                    <input type="checkbox" id="halfling" name="race-checkbox" value="halfling" checked>
+                    <input type="checkbox" id="halfling" name="ancestry-checkbox" value="halfling" checked>
                     <label for="halfling">Halfling</label><br>
-                    <input type="checkbox" id="human" name="race-checkbox" value="human" checked>
+                    <input type="checkbox" id="human" name="ancestry-checkbox" value="human" checked>
                     <label for="human">Human</label><br>
-                    <input type="checkbox" id="orc" name="race-checkbox" value="orc">
-                    <label for="orc">Orc</label><br>
-                    <input type="checkbox" id="tiefling" name="race-checkbox" value="tiefling" checked>
-                    <label for="tiefling">Tiefling</label><br>
                 </fieldset>
-                <input type="checkbox" id="standard-races-toggle" onchange="toggleStandardRaces(this)">
-                <label for="standard-races-toggle">Select/Deselect All</label>
+                <input type="checkbox" id="common-ancestries-toggle" onchange="toggleCommonAncestries(this)" checked>
+                <label for="common-ancestries-toggle">Select/Deselect All</label>
             </div>
-            <!-- Expanded DnD Races -->
+            <!-- Uncommon Ancestries -->
             <div class="col no-left-pad">
-                <fieldset id="expanded-races-fs">
-                    <legend>Expanded:</legend>
-                    <input type="checkbox" id="aasimar" name="race-checkbox" value="aasimar">
-                    <label for="aasimar">Aasimar</label><br>
-                    <input type="checkbox" id="bugbear" name="race-checkbox" value="bugbear">
-                    <label for="bugbear">Bugbear</label><br>
-                    <input type="checkbox" id="deep-gnome" name="race-checkbox" value="deep gnome">
-                    <label for="deep-gnome">Deep Gnome</label><br>
-                    <input type="checkbox" id="duergar" name="race-checkbox" value="duergar">
-                    <label for="duergar">Duergar</label><br>
-                    <input type="checkbox" id="eladrin" name="race-checkbox" value="eladrin">
-                    <label for="eladrin">Eladrin</label><br>
-                    <input type="checkbox" id="firbolg" name="race-checkbox" value="firbolg">
-                    <label for="firbolg">Firbolg</label><br>
-                    <input type="checkbox" id="genasi-air" name="race-checkbox" value="genasi (air)">
-                    <label for="genasi-air">Genasi (Air)</label><br>
-                    <input type="checkbox" id="genasi-earth" name="race-checkbox" value="genasi (earth)">
-                    <label for="genasi-earth">Genasi (Earth)</label><br>
-                    <input type="checkbox" id="genasi-fire" name="race-checkbox" value="genasi (fire)">
-                    <label for="genasi-fire">Genasi (Fire)</label><br>
-                    <input type="checkbox" id="genasi-water" name="race-checkbox" value="genasi (water)">
-                    <label for="genasi-water">Genasi (Water)</label><br>
-                    <input type="checkbox" id="goliath" name="race-checkbox" value="goliath">
-                    <label for="goliath">Goliath</label><br>
-                    <input type="checkbox" id="hobgoblin" name="race-checkbox" value="hobgoblin">
+                <fieldset id="uncommon-ancestry-fs">
+                    <legend>Uncommon:</legend>
+                    <input type="checkbox" id="azarketi" name="ancestry-checkbox" value="azarketi">
+                    <label for="azarketi">Azarketi</label><br>
+                    <input type="checkbox" id="catfolk" name="ancestry-checkbox" value="catfolk">
+                    <label for="catfolk">Catfolk</label><br>
+                    <input type="checkbox" id="fetchling" name="ancestry-checkbox" value="fetchling">
+                    <label for="fetchling">Fetchling</label><br>
+                    <input type="checkbox" id="gnoll" name="ancestry-checkbox" value="gnoll">
+                    <label for="gnoll">Gnoll</label><br>
+                    <input type="checkbox" id="grippli" name="ancestry-checkbox" value="grippli">
+                    <label for="grippli">Grippli</label><br>
+                    <input type="checkbox" id="hobgoblin" name="ancestry-checkbox" value="hobgoblin">
                     <label for="hobgoblin">Hobgoblin</label><br>
-                    <input type="checkbox" id="sea-elf" name="race-checkbox" value="sea elf">
-                    <label for="sea-elf">Sea Elf</label><br>
-                    <input type="checkbox" id="shadar-kai" name="race-checkbox" value="shadar-kai">
-                    <label for="shadar-kai">Shadar-kai</label><br>
-                    <input type="checkbox" id="triton" name="race-checkbox" value="triton">
-                    <label for="triton">Triton</label><br>
-                    <input type="checkbox" id="yuan-ti" name="race-checkbox" value="yuan-ti">
-                    <label for="yuan-ti">Yuan-ti</label><br>
-                </fieldset>
-                <input type="checkbox" id="expanded-races-toggle" onchange="toggleExpandedRaces(this)">
-                <label for="expanded-races-toggle">Select/Deselect All</label>
-            </div>
-            <!-- Beast Races -->
-            <div class="col no-left-pad">
-                <fieldset id="beast-races-fs">
-                    <legend>Beastfolk:</legend>
-                    <input type="checkbox" id="aarakocra" name="race-checkbox" value="aarakocra">
-                    <label for="aarakocra">Aarakocra</label><br>
-                    <input type="checkbox" id="centaur" name="race-checkbox" value="centaur">
-                    <label for="centaur">Centaur</label><br>
-                    <input type="checkbox" id="giff" name="race-checkbox" value="giff">
-                    <label for="giff">Giff</label><br>
-                    <input type="checkbox" id="hadozee" name="race-checkbox" value="hadozee">
-                    <label for="hadozee">Hadozee</label><br>
-                    <input type="checkbox" id="harengon" name="race-checkbox" value="harengon">
-                    <label for="harengon">Harengon</label><br>
-                    <input type="checkbox" id="kenku" name="race-checkbox" value="kenku">
-                    <label for="kenku">Kenku</label><br>
-                    <input type="checkbox" id="kobold" name="race-checkbox" value="kobold">
+                    <input type="checkbox" id="kitsune" name="ancestry-checkbox" value="kitsune">
+                    <label for="kitsune">Kitsune</label><br>
+                    <input type="checkbox" id="kobold" name="ancestry-checkbox" value="kobold">
                     <label for="kobold">Kobold</label><br>
-                    <input type="checkbox" id="leonin" name="race-checkbox" value="leonin">
-                    <label for="leonin">Leonin</label><br>
-                    <input type="checkbox" id="lizardfolk" name="race-checkbox" value="lizardfolk">
+                    <input type="checkbox" id="leshy" name="ancestry-checkbox" value="leshy">
+                    <label for="leshy">Leshy</label><br>
+                    <input type="checkbox" id="lizardfolk" name="ancestry-checkbox" value="lizardfolk">
                     <label for="lizardfolk">Lizardfolk</label><br>
-                    <input type="checkbox" id="loxodon" name="race-checkbox" value="loxodon">
-                    <label for="loxodon">Loxodon</label><br>
-                    <input type="checkbox" id="minotaur" name="race-checkbox" value="minotaur">
-                    <label for="minotaur">Minotaur</label><br>
-                    <input type="checkbox" id="owlin" name="race-checkbox" value="owlin">
-                    <label for="owlin">Owlin</label><br>
-                    <input type="checkbox" id="satyr" name="race-checkbox" value="satyr">
-                    <label for="satyr">Satyr</label><br>
-                    <input type="checkbox" id="tabaxi" name="race-checkbox" value="tabaxi">
-                    <label for="tabaxi">Tabaxi</label><br>
-                    <input type="checkbox" id="thri-kreen" name="race-checkbox" value="thri-kreen">
-                    <label for="thri-kreen">Thri-kreen</label><br>
-                    <input type="checkbox" id="tortle" name="race-checkbox" value="tortle">
-                    <label for="tortle">Tortle</label><br>
+                    <input type="checkbox" id="nagaji" name="ancestry-checkbox" value="nagaji">
+                    <label for="nagaji">Nagaji</label><br>
+                    <input type="checkbox" id="orc" name="ancestry-checkbox" value="orc">
+                    <label for="orc">Orc</label><br>
+                    <input type="checkbox" id="ratfolk" name="ancestry-checkbox" value="ratfolk">
+                    <label for="ratfolk">Ratfolk</label><br>
+                    <input type="checkbox" id="tengu" name="ancestry-checkbox" value="tengu">
+                    <label for="tengu">Tengu</label><br>
+                    <input type="checkbox" id="vanara" name="ancestry-checkbox" value="vanara">
+                    <label for="vanara">Vanara</label><br>
                 </fieldset>
-                <input type="checkbox" id="beast-races-toggle" onchange="toggleBeastRaces(this)">
-                <label for="beast-races-toggle">Select/Deselect All</label>
+                <input type="checkbox" id="uncommon-ancestries-toggle" onchange="toggleUncommonAncestries(this)">
+                <label for="uncommon-ancestries-toggle">Select/Deselect All</label>
             </div>
-            <!-- Exotic Races -->
+            <!-- Rare Ancestries -->
             <div class="col no-left-pad">
-                <fieldset id="exotic-races-fs">
-                    <legend>Exotic/Other:</legend>
-                    <input type="checkbox" id="astral-elf" name="race-checkbox" value="astral elf">
-                    <label for="astral-elf">Astral Elf</label><br>
-                    <input type="checkbox" id="autognome" name="race-checkbox" value="autognome">
-                    <label for="autognome">Autognome</label><br>
-                    <input type="checkbox" id="changeling" name="race-checkbox" value="changeling">
-                    <label for="changeling">Changeling</label><br>
-                    <input type="checkbox" id="dhampir" name="race-checkbox" value="dhampir">
-                    <label for="dhampir">Dhampir</label><br>
-                    <input type="checkbox" id="fairy" name="race-checkbox" value="fairy">
-                    <label for="fairy">Fairy</label><br>
-                    <input type="checkbox" id="githyanki" name="race-checkbox" value="githyanki">
-                    <label for="githyanki">Githyanki</label><br>
-                    <input type="checkbox" id="githzerai" name="race-checkbox" value="githzerai">
-                    <label for="githzerai">Githzerai</label><br>
-                    <input type="checkbox" id="hexblood" name="race-checkbox" value="hexblood">
-                    <label for="hexblood">Hexblood</label><br>
-                    <input type="checkbox" id="kalashtar" name="race-checkbox" value="kalashtar">
-                    <label for="kalashtar">Kalashtar</label><br>
-                    <input type="checkbox" id="kender" name="race-checkbox" value="kender">
-                    <label for="kender">Kender</label><br>
-                    <input type="checkbox" id="plasmoid" name="race-checkbox" value="plasmoid">
-                    <label for="plasmoid">Plasmoid</label><br>
-                    <input type="checkbox" id="reborn" name="race-checkbox" value="reborn">
-                    <label for="reborn">Reborn</label><br>
-                    <input type="checkbox" id="shifter" name="race-checkbox" value="shifter">
-                    <label for="shifter">Shifter</label><br>
-                    <input type="checkbox" id="simic-hybrid" name="race-checkbox" value="simic hybrid">
-                    <label for="simic-hybrid">Simic Hybrid</label><br>
-                    <input type="checkbox" id="vedalken" name="race-checkbox" value="vedalken">
-                    <label for="vedalken">Vedalken</label><br>
-                    <input type="checkbox" id="warforged" name="race-checkbox" value="warforged">
-                    <label for="warforged">Warforged</label><br>
+                <fieldset id="rare-ancestry-fs">
+                    <legend>Rare:</legend>
+                    <input type="checkbox" id="anadi" name="ancestry-checkbox" value="anadi">
+                    <label for="anadi">Anadi</label><br>
+                    <input type="checkbox" id="android" name="ancestry-checkbox" value="android">
+                    <label for="android">Android</label><br>
+                    <input type="checkbox" id="automaton" name="ancestry-checkbox" value="automaton">
+                    <label for="automaton">Automaton</label><br>
+                    <input type="checkbox" id="conrasu" name="ancestry-checkbox" value="conrasu">
+                    <label for="conrasu">Conrasu</label><br>
+                    <input type="checkbox" id="fleshwarp" name="ancestry-checkbox" value="fleshwarp">
+                    <label for="fleshwarp">Fleshwarp</label><br>
+                    <input type="checkbox" id="ghoran" name="ancestry-checkbox" value="ghoran">
+                    <label for="ghoran">Ghoran</label><br>
+                    <input type="checkbox" id="goloma" name="ancestry-checkbox" value="goloma">
+                    <label for="goloma">Goloma</label><br>
+                    <input type="checkbox" id="kashrishi" name="ancestry-checkbox" value="kashrishi">
+                    <label for="kashrishi">Kashrishi</label><br>
+                    <input type="checkbox" id="poppet" name="ancestry-checkbox" value="poppet">
+                    <label for="poppet">Poppet</label><br>
+                    <input type="checkbox" id="shisk" name="ancestry-checkbox" value="shisk">
+                    <label for="shisk">Shisk</label><br>
+                    <input type="checkbox" id="shoony" name="ancestry-checkbox" value="shoony">
+                    <label for="shoony">Shoony</label><br>
+                    <input type="checkbox" id="skeleton" name="ancestry-checkbox" value="skeleton">
+                    <label for="skeleton">Skeleton</label><br>
+                    <input type="checkbox" id="sprite" name="ancestry-checkbox" value="sprite">
+                    <label for="sprite">Sprite</label><br>
+                    <input type="checkbox" id="strix" name="ancestry-checkbox" value="strix">
+                    <label for="strix">Strix</label><br>
+                    <input type="checkbox" id="vishkanya" name="ancestry-checkbox" value="vishkanya">
+                    <label for="vishkanya">Vishkanya</label><br>
                 </fieldset>
-                <input type="checkbox" id="exotic-races-toggle" onchange="toggleExoticRaces(this)">
-                <label for="exotic-races-toggle">Select/Deselect All</label>
+                <input type="checkbox" id="rare-ancestries-toggle" onchange="toggleRareAncestries(this)">
+                <label for="rare-ancestries-toggle">Select/Deselect All</label>
+            </div>
+            <!-- Versatile Ancestries -->
+            <div class="col no-left-pad">
+                <fieldset class="no-left-pad" id="versatile-ancestry-fs">
+                    <legend>Versatile Heritages:</legend>
+                    <input type="checkbox" id="aasimar" name="ancestry-checkbox" value="aasimar">
+                    <label for="aasimar">Aasimar</label><br>
+                    <input type="checkbox" id="aphorite" name="ancestry-checkbox" value="aphorite">
+                    <label for="aphorite">Aphorite</label><br>
+                    <input type="checkbox" id="beastkin" name="ancestry-checkbox" value="beastkin">
+                    <label for="beastkin">Beastkin</label><br>
+                    <input type="checkbox" id="changeling" name="ancestry-checkbox" value="changeling">
+                    <label for="changeling">Changeling</label><br>
+                    <input type="checkbox" id="dhampir" name="ancestry-checkbox" value="dhampir">
+                    <label for="dhampir">Dhampir</label><br>
+                    <input type="checkbox" id="duskwalker" name="ancestry-checkbox" value="duskwalker">
+                    <label for="duskwalker">Duskwalker</label><br>
+                    <input type="checkbox" id="ganzi" name="ancestry-checkbox" value="ganzi">
+                    <label for="ganzi">Ganzi</label><br>
+                    <input type="checkbox" id="ifrit" name="ancestry-checkbox" value="ifrit">
+                    <label for="ifrit">Ifrit</label><br>
+                    <input type="checkbox" id="oread" name="ancestry-checkbox" value="oread">
+                    <label for="oread">Oread</label><br>
+                    <input type="checkbox" id="reflection" name="ancestry-checkbox" value="reflection">
+                    <label for="reflection">Reflection</label><br>
+                    <input type="checkbox" id="suli" name="ancestry-checkbox" value="suli">
+                    <label for="suli">Suli</label><br>
+                    <input type="checkbox" id="sylph" name="ancestry-checkbox" value="sylph">
+                    <label for="sylph">Sylph</label><br>
+                    <input type="checkbox" id="tiefling" name="ancestry-checkbox" value="tiefling">
+                    <label for="tiefling">Tiefling</label><br>
+                    <input type="checkbox" id="undine" name="ancestry-checkbox" value="undine">
+                    <label for="undine">Undine</label><br>
+                </fieldset>
+                <input type="checkbox" id="versatile-ancestries-toggle" onchange="toggleVersatileAncestries(this)">
+                <label for="versatile-ancestries-toggle">Select/Deselect All</label>
             </div>
         </div>
     </div>
