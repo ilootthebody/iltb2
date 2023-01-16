@@ -138,44 +138,44 @@ async function regenField(field) {
 }
 
 // -------------------------------------------------------------------------------- \\
-// Selects/deselects all races in the 'Core Fantasy' section.
+// Selects/deselects all ancestries in the 'Common' section.
 // -------------------------------------------------------------------------------- \\
-function toggleStandardRaces(source) {
-    parent = document.getElementById("standard-races-fs");
-    categoryBoxes = parent.querySelectorAll("[name='race-checkbox']");
+function toggleCommonAncestries(source) {
+    parent = document.getElementById("common-ancestry-fs");
+    categoryBoxes = parent.querySelectorAll("[name='ancestry-checkbox']");
     for (var i=0; i < categoryBoxes.length; i++) {
         categoryBoxes[i].checked = source.checked;
     }
 }
 
 // -------------------------------------------------------------------------------- \\
-// Selects/deselects all races in the 'Expanded' section.
+// Selects/deselects all ancestries in the 'Uncommon' section.
 // -------------------------------------------------------------------------------- \\
-function toggleExpandedRaces(source) {
-    parent = document.getElementById("expanded-races-fs");
-    categoryBoxes = parent.querySelectorAll("[name='race-checkbox']");
+function toggleUncommonAncestries(source) {
+    parent = document.getElementById("uncommon-ancestry-fs");
+    categoryBoxes = parent.querySelectorAll("[name='ancestry-checkbox']");
     for (var i=0; i < categoryBoxes.length; i++) {
         categoryBoxes[i].checked = source.checked;
     }
 }
 
 // -------------------------------------------------------------------------------- \\
-// Selects/deselects all races in the 'Beastfolk' section.
+// Selects/deselects all ancestries in the 'Rare' section.
 // -------------------------------------------------------------------------------- \\
-function toggleBeastRaces(source) {
-    parent = document.getElementById("beast-races-fs");
-    categoryBoxes = parent.querySelectorAll("[name='race-checkbox']");
+function toggleRareAncestries(source) {
+    parent = document.getElementById("rare-ancestry-fs");
+    categoryBoxes = parent.querySelectorAll("[name='ancestry-checkbox']");
     for (var i=0; i < categoryBoxes.length; i++) {
         categoryBoxes[i].checked = source.checked;
     }
 }
 
 // -------------------------------------------------------------------------------- \\
-// Selects/deselects all races in the 'Exotic/Other' section.
+// Selects/deselects all ancestries in the 'Versatile Heritages' section.
 // -------------------------------------------------------------------------------- \\
-function toggleExoticRaces(source) {
-    parent = document.getElementById("exotic-races-fs");
-    categoryBoxes = parent.querySelectorAll("[name='race-checkbox']");
+function toggleVersatileAncestries(source) {
+    parent = document.getElementById("versatile-ancestry-fs");
+    categoryBoxes = parent.querySelectorAll("[name='ancestry-checkbox']");
     for (var i=0; i < categoryBoxes.length; i++) {
         categoryBoxes[i].checked = source.checked;
     }
@@ -185,67 +185,7 @@ function toggleExoticRaces(source) {
 // Toggles the races for the selected source book.
 // -------------------------------------------------------------------------------- \\
 function toggleSourceRaces(source) {
-    if (source.value == "phb") {
-        document.getElementById("dragonborn").checked = source.checked;
-        document.getElementById("dwarf").checked = source.checked;
-        document.getElementById("elf").checked = source.checked;
-        document.getElementById("gnome").checked = source.checked;
-        document.getElementById("half-elf").checked = source.checked;
-        document.getElementById("halfling").checked = source.checked;
-        document.getElementById("half-orc").checked = source.checked;
-        document.getElementById("human").checked = source.checked;
-        document.getElementById("tiefling").checked = source.checked;
-    }
-    else if (source.value == "motm") {
-        document.getElementById("aarakocra").checked = source.checked;
-        document.getElementById("aasimar").checked = source.checked;
-        document.getElementById("bugbear").checked = source.checked;
-        document.getElementById("centaur").checked = source.checked;
-        document.getElementById("changeling").checked = source.checked;
-        document.getElementById("deep-gnome").checked = source.checked;
-        document.getElementById("duergar").checked = source.checked;
-        document.getElementById("eladrin").checked = source.checked;
-        document.getElementById("fairy").checked = source.checked;
-        document.getElementById("firbolg").checked = source.checked;
-        document.getElementById("genasi-air").checked = source.checked;
-        document.getElementById("genasi-earth").checked = source.checked;
-        document.getElementById("genasi-fire").checked = source.checked;
-        document.getElementById("genasi-water").checked = source.checked;
-        document.getElementById("githyanki").checked = source.checked;
-        document.getElementById("githzerai").checked = source.checked;
-        document.getElementById("goblin").checked = source.checked;
-        document.getElementById("goliath").checked = source.checked;
-        document.getElementById("harengon").checked = source.checked;
-        document.getElementById("hobgoblin").checked = source.checked;
-        document.getElementById("kenku").checked = source.checked;
-        document.getElementById("kobold").checked = source.checked;
-        document.getElementById("lizardfolk").checked = source.checked;
-        document.getElementById("minotaur").checked = source.checked;
-        document.getElementById("orc").checked = source.checked;
-        document.getElementById("satyr").checked = source.checked;
-        document.getElementById("sea-elf").checked = source.checked;
-        document.getElementById("shadar-kai").checked = source.checked;
-        document.getElementById("shifter").checked = source.checked;
-        document.getElementById("tabaxi").checked = source.checked;
-        document.getElementById("tortle").checked = source.checked;
-        document.getElementById("triton").checked = source.checked;
-        document.getElementById("yuan-ti").checked = source.checked;
-    }
-    else if (source.value == "vgtm") {
-        document.getElementById("aasimar").checked = source.checked;
-        document.getElementById("bugbear").checked = source.checked;
-        document.getElementById("firbolg").checked = source.checked;
-        document.getElementById("goblin").checked = source.checked;
-        document.getElementById("hobgoblin").checked = source.checked;
-        document.getElementById("kenku").checked = source.checked;
-        document.getElementById("kobold").checked = source.checked;
-        document.getElementById("lizardfolk").checked = source.checked;
-        document.getElementById("orc").checked = source.checked;
-        document.getElementById("tabaxi").checked = source.checked;
-        document.getElementById("triton").checked = source.checked;
-        document.getElementById("yuan-ti").checked = source.checked;
-    }
-    else if (source.value == "pf2ecrb") {
+    if (source.value == "pf2ecrb") {
         document.getElementById("dwarf").checked = source.checked;
         document.getElementById("elf").checked = source.checked;
         document.getElementById("gnome").checked = source.checked;
@@ -279,23 +219,44 @@ function toggleSourceRaces(source) {
         document.getElementById("fetchling").checked = source.checked;
         document.getElementById("fleshwarp").checked = source.checked;
         document.getElementById("ganzi").checked = source.checked;
-        document.getElementById("genasi-fire").checked = source.checked; // ifrit
+        document.getElementById("ifrit").checked = source.checked;
         document.getElementById("kitsune").checked = source.checked;
-        document.getElementById("genasi-earth").checked = source.checked; // oread
+        document.getElementById("oread").checked = source.checked;
         document.getElementById("sprite").checked = source.checked;
         document.getElementById("strix").checked = source.checked;
         document.getElementById("suli").checked = source.checked;
-        document.getElementById("genasi-air").checked = source.checked; // sylph
-        document.getElementById("genasi-water").checked = source.checked; // undine
+        document.getElementById("sylph").checked = source.checked;
+        document.getElementById("undine").checked = source.checked;
+    }
+    else if (source.value == "pf2etme") {
+        document.getElementById("anadi").checked = source.checked;
+        document.getElementById("conrasu").checked = source.checked;
+        document.getElementById("gnoll").checked = source.checked;
+        document.getElementById("goloma").checked = source.checked;
+        document.getElementById("grippli").checked = source.checked;
+        document.getElementById("shisk").checked = source.checked;
     }
     else if (source.value == "pf2egg") {
         document.getElementById("automaton").checked = source.checked;
+    }
+    else if (source.value == "pf2egb") {
+        document.getElementById("poppet").checked = source.checked;
+    }
+    else if (source.value == "pf2eacolo") {
+        document.getElementById("azarketi").checked = source.checked;
     }
     else if (source.value == "pf2ebotd") {
         document.getElementById("skeleton").checked = source.checked;
     }
     else if (source.value == "pf2eda") {
         document.getElementById("reflection").checked = source.checked;
+    }
+    else if (source.value == "pf2eil") {
+        document.getElementById("ghoran").checked = source.checked;
+        document.getElementById("kashrishi").checked = source.checked;
+        document.getElementById("nagaji").checked = source.checked;
+        document.getElementById("vanara").checked = source.checked;
+        document.getElementById("vishkanya").checked = source.checked;
     }
 }
 

@@ -50,9 +50,24 @@ title: Pathfinder 2e NPC Generator
                     <label for="pf2eag" class="padding-r10">Ancestry Guide</label>
                 </div>
                 <div class="display-inline-block">
+                    <input type="checkbox" id="pf2etme" name="sources" value="pf2etme"
+                        onchange="toggleSourceRaces(this)">
+                    <label for="pf2etme" class="padding-r10">The Mwangi Expanse</label>
+                </div>
+                <div class="display-inline-block">
                     <input type="checkbox" id="pf2egg" name="sources" value="pf2egg"
                         onchange="toggleSourceRaces(this)">
                     <label for="pf2egg" class="padding-r10">Guns & Gears</label>
+                </div>
+                <div class="display-inline-block">
+                    <input type="checkbox" id="pf2egb" name="sources" value="pf2egb"
+                        onchange="toggleSourceRaces(this)">
+                    <label for="pf2egb" class="padding-r10">Grand Bazaar</label>
+                </div>
+                <div class="display-inline-block">
+                    <input type="checkbox" id="pf2eacolo" name="sources" value="pf2eacolo"
+                        onchange="toggleSourceRaces(this)">
+                    <label for="pf2eacolo" class="padding-r10">Absolom, City of Lost Omens</label>
                 </div>
                 <div class="display-inline-block">
                     <input type="checkbox" id="pf2ebotd" name="sources" value="pf2ebotd"
@@ -64,9 +79,14 @@ title: Pathfinder 2e NPC Generator
                         onchange="toggleSourceRaces(this)">
                     <label for="pf2eda" class="padding-r10">Dark Archive</label>
                 </div>
+                <div class="display-inline-block">
+                    <input type="checkbox" id="pf2eil" name="sources" value="pf2eil"
+                        onchange="toggleSourceRaces(this)">
+                    <label for="pf2eil" class="padding-r10">Impossible Lands</label>
+                </div>
             </fieldset>
         </div>
-        <div class="flex-container">
+        <!-- <div class="flex-container">
             <fieldset id="settings-fs">
                 <legend>Region:</legend>
                 <div class="display-inline-block">
@@ -85,7 +105,7 @@ title: Pathfinder 2e NPC Generator
                     <label for="eberron" class="padding-r10">Region 3</label>
                 </div>
             </fieldset>
-        </div>
+        </div> -->
         <div class="flex-container margin-top-10">
             <!-- Common Ancestries -->
             <div class="col no-left-pad">
