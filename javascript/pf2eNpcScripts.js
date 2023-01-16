@@ -3,15 +3,15 @@
 // and displays the resulting NPC when the 'Generate NPC' button is pressed.
 // -------------------------------------------------------------------------------- \\
 async function generateNPC() {
-    const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/iltbgeneratenpc";
+    const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/generatenpc";
 
     // Instantiate and populate header.
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
-    // Grab races from HTML.
+    // Grab ancestries from HTML.
     var races = [];
-    var raceCheckboxes = document.getElementsByName("race-checkbox");
+    var raceCheckboxes = document.getElementsByName("ancestry-checkbox");
     for (var i = 0; i < raceCheckboxes.length; i++) {
         if (raceCheckboxes[i].checked) { races.push(raceCheckboxes[i].value); }
     };
@@ -37,7 +37,8 @@ async function generateNPC() {
     var raw = JSON.stringify({
         "races": races.toString(),
         "genders": genders.toString(),
-        "ages": ages.toString()
+        "ages": ages.toString(),
+        "system": "pf2e"
     });
     var requestOptions = {
         method: 'POST',
@@ -73,9 +74,9 @@ async function regenField(field) {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
-    // Grab races from HTML.
+    // Grab ancestries from HTML.
     var races = [];
-    var raceCheckboxes = document.getElementsByName("race-checkbox");
+    var raceCheckboxes = document.getElementsByName("ancestry-checkbox");
     for (var i = 0; i < raceCheckboxes.length; i++) {
         if (raceCheckboxes[i].checked) { races.push(raceCheckboxes[i].value); }
     };
@@ -112,7 +113,8 @@ async function regenField(field) {
         },
         "races": races.toString(),
         "genders": genders.toString(),
-        "ages": ages.toString()
+        "ages": ages.toString(),
+        "system": "pf2e"
     });
     var requestOptions = {
         method: 'POST',

@@ -37,7 +37,8 @@ async function generateNPC() {
     var raw = JSON.stringify({
         "races": races.toString(),
         "genders": genders.toString(),
-        "ages": ages.toString()
+        "ages": ages.toString(),
+        "system": "dnd5e"
     });
     var requestOptions = {
         method: 'POST',
@@ -112,7 +113,8 @@ async function regenField(field) {
         },
         "races": races.toString(),
         "genders": genders.toString(),
-        "ages": ages.toString()
+        "ages": ages.toString(),
+        "system": "dnd5e"
     });
     var requestOptions = {
         method: 'POST',
