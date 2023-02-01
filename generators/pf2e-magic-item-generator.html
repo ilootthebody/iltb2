@@ -12,7 +12,6 @@ title: Pathfinder Magic Item Generator
     <p>Simply click the button below to generate millions of unique magical items. You can select/deselect various item
         categories, magical effect power levels, and other options to narrow down the type of items the generator
         creates.</p>
-    <p>Complete lists of the items and magical effects used by the generator can be downloaded here.</p>
 </div>
 
 <!-- Options -->
@@ -43,7 +42,7 @@ title: Pathfinder Magic Item Generator
                     <input type="checkbox" id="combination" name="category-checkbox" value="combination" checked>
                     <label for="combination">Combination Weapon (12)</label><br>
                 </fieldset>
-                <input type="checkbox" id="common-ancestries-toggle" onchange="toggleCommonAncestries(this)" checked>
+                <input type="checkbox" id="common-ancestries-toggle" onchange="toggleWeaponCategories(this)" checked>
                 <label for="common-ancestries-toggle">Select/Deselect All</label>
             </div>
             <!-- Armor -->
@@ -59,8 +58,7 @@ title: Pathfinder Magic Item Generator
                     <input type="checkbox" id="shield" name="category-checkbox" value="shield" checked>
                     <label for="shield">Shield (4)</label><br>
                 </fieldset>
-                <input type="checkbox" id="uncommon-ancestries-toggle" onchange="toggleUncommonAncestries(this)"
-                    checked>
+                <input type="checkbox" id="uncommon-ancestries-toggle" onchange="toggleArmorCategories(this)" checked>
                 <label for="uncommon-ancestries-toggle">Select/Deselect All</label>
             </div>
             <!-- Other -->
@@ -87,11 +85,12 @@ title: Pathfinder Magic Item Generator
                     <input type="checkbox" id="vehicle-rare" name="category-checkbox" value="vehicle-rare" checked>
                     <label for="vehicle-rare">Rare Vehicle (13)</label><br>
                 </fieldset>
-                <input type="checkbox" id="rare-ancestries-toggle" onchange="toggleRareAncestries(this)" checked>
+                <input type="checkbox" id="rare-ancestries-toggle" onchange="toggleOtherCategories(this)" checked>
                 <label for="rare-ancestries-toggle">Select/Deselect All</label>
             </div>
         </div>
     </div>
+    <!-- Magical Effect Power Levels -->
     <button type="button" class="collapsible">Magical Effect Power Levels</button>
     <div class="content">
         <div class="flex-container margin-top-10">
@@ -114,11 +113,12 @@ title: Pathfinder Magic Item Generator
             </div>
         </div>
     </div>
+    <!-- Additional Options -->
     <button type="button" class="collapsible">Additional Options</button>
     <div class="content">
         <div class="flex-container margin-top-10">
             <div class="col no-left-pad">
-                <fieldset id="pl-fs">
+                <fieldset id="other-options-fs">
                     <legend><a href="/posts/magic-item-generator-options/" target="_blank"
                             rel="noreferrer noopener">Additional Options:</a></legend>
                     <input type="checkbox" id="price" name="options" value="price" checked>
@@ -129,13 +129,12 @@ title: Pathfinder Magic Item Generator
                         onchange="addCurseChecked(this);">
                     <label for="add-curse">Add Curse</label><br>
                 </fieldset>
-                <input type="checkbox" id="power-level-toggle" onchange="togglePowerLevels(this)" checked>
-                <label for="power-level-toggle">Select/Deselect All</label>
             </div>
         </div>
     </div>
 </div>
 <!-- End Options -->
+
 <!-- Collapsible Menu Script -->
 <script>
     var coll = document.getElementsByClassName("collapsible");
@@ -179,7 +178,7 @@ title: Pathfinder Magic Item Generator
     </select>
 </div>
 
-<!-- Button -->
+<!-- Generate Item Button -->
 <div>
     <input type="submit" value="Loot the Body" class="generator-button" onclick="getItems()">
 </div>
@@ -190,10 +189,9 @@ title: Pathfinder Magic Item Generator
     <p id="itemDescription"></p>
 </div>
 
-<br>
-
 {% include ads-horizontal-long.html %}
 
+<!-- About the Magic Item Generator -->
 <div>
     <h1>About the Magic Item Generator</h1>
     <p>

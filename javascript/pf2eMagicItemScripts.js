@@ -115,8 +115,6 @@ function getItems() {
 }
 
 // -------------------------------------------------------------------------------- \\
-// Called from fantasy-name-generator.html.
-//
 // Ensures that either 'Curse' power level or 'Add Curse' options are checked, never
 // both.
 // -------------------------------------------------------------------------------- \\
@@ -124,24 +122,43 @@ function addCurseChecked(checkboxElem) { document.getElementById("curse").checke
 function curseChecked(checkboxElem) { document.getElementById("add-curse").checked = false; }
 
 // -------------------------------------------------------------------------------- \\
-// Called from fantasy-name-generator.html.
-//
-// Allows user to select/deselect all checkboxes in the category form.
+// Allows user to select/deselect all checkboxes in the weapon category.
 // -------------------------------------------------------------------------------- \\
-function toggleCategories(source) {
-    categoryBoxes = document.getElementsByName("categories");
+function toggleWeaponCategories(source) {
+    parent = document.getElementById("weapon-fs");
+    categoryBoxes = parent.querySelectorAll("[name='category-checkbox']");
     for (var i=0; i < categoryBoxes.length; i++) {
         categoryBoxes[i].checked = source.checked;
     }
 }
 
 // -------------------------------------------------------------------------------- \\
-// Called from fantasy-name-generator.html.
-//
+// Allows user to select/deselect all checkboxes in the armor category.
+// -------------------------------------------------------------------------------- \\
+function toggleArmorCategories(source) {
+    parent = document.getElementById("armor-fs");
+    categoryBoxes = parent.querySelectorAll("[name='category-checkbox']");
+    for (var i=0; i < categoryBoxes.length; i++) {
+        categoryBoxes[i].checked = source.checked;
+    }
+}
+
+// -------------------------------------------------------------------------------- \\
+// Allows user to select/deselect all checkboxes in the other category.
+// -------------------------------------------------------------------------------- \\
+function toggleOtherCategories(source) {
+    parent = document.getElementById("other-category-fs");
+    categoryBoxes = parent.querySelectorAll("[name='category-checkbox']");
+    for (var i=0; i < categoryBoxes.length; i++) {
+        categoryBoxes[i].checked = source.checked;
+    }
+}
+
+// -------------------------------------------------------------------------------- \\
 // Allows user to select/deselect all checkboxes in the power level form.
 // -------------------------------------------------------------------------------- \\
 function togglePowerLevels(source) {
-    plBoxes = document.getElementsByName("power-level");
+    plBoxes = document.getElementsByName("pl-checkbox");
     for (var i=0; i < plBoxes.length; i++) {
         plBoxes[i].checked = source.checked;
     }
