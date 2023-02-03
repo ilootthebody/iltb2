@@ -1,39 +1,33 @@
 // -------------------------------------------------------------------------------- \\
-// Called from magic-item-generator.html.
-//
 // Gets the selected categories from the form, sends the API request to AWS,
 // and formats/displays the generated item(s).
 // -------------------------------------------------------------------------------- \\
-function getItems() {
+async function getPf2eItems() {
     const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/iltbgetitems";
-    const itemContainer = document.getElementById("item-container");
 
     // Instantiate and populate header.
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
     // Grab categories from HTML.
-    var categoryElement = document.getElementById("category-checkboxes");
-    var categoryCheckboxes = categoryElement.querySelectorAll('input[type=checkbox]:checked');
+    var categoryCheckboxes = document.getElementsByName("category-checkbox");
     var categories = [];
     for (var i = 0; i < categoryCheckboxes.length; i++) {
-        categories.push(categoryCheckboxes[i].value);
+        if (categoryCheckboxes[i].checked) { categories.push(categoryCheckboxes[i].value); }
     };
 
-    // Grab power level from HTML.
-    var powerElement = document.getElementById("power-level-checkboxes");
-    var powerCheckboxes = powerElement.querySelectorAll('input[type=checkbox]:checked');
+    // Grab power levels from HTML.
+    var powerCheckboxes = document.getElementsByName("power-level-checkbox");
     var powerLevels = [];
     for (var i = 0; i < powerCheckboxes.length; i++) {
-        powerLevels.push(powerCheckboxes[i].value);
+        if (powerCheckboxes[i].checked) { powerLevels.push(powerCheckboxes[i].value); }
     };
 
     // Grab other options from HTML.
-    var optionsElement = document.getElementById("options-checkboxes");
-    var optionsCheckboxes = optionsElement.querySelectorAll('input[type=checkbox]:checked');
+    var optionsCheckboxes = document.getElementsByName("options-checkbox");
     var options = [];
     for (var i = 0; i < optionsCheckboxes.length; i++) {
-        options.push(optionsCheckboxes[i].value);
+        if (optionsCheckboxes[i].checked) { options.push(optionsCheckboxes[i].value); }
     };
 
     // Grab number of items from HTML.
@@ -59,59 +53,84 @@ function getItems() {
         redirect: 'follow'
     };
 
-    // Clear old items from HTML.
+    console.log(raw);
+
+    // Make API call with parameters and await response
+    const response = await fetch(API_URL, requestOptions);
+    const responseJSON = await response.json();
+
+    // Check for errors
+    if (responseJSON.hasOwnProperty("errorMessage")) {
+        console.log(responseJSON);
+
+        displayErrorMessage();
+
+        return;
+    }
+
+    // Extract items from JSON
+    const itemList = JSON.parse(responseJSON.body);
+
+    // Get item container from HTML
+    const itemContainer = document.getElementById("item-container");
+
+    // Clear old items from item container.
     while (itemContainer.firstChild) {
         itemContainer.removeChild(itemContainer.firstChild);
     }
 
-    // make API call with parameters and use promises to get response
-    fetch(API_URL, requestOptions)
-        .then(response => response.json())
-        .then(result => {
-            var jsonResponse = JSON.parse(result.body);
+    // Display Items
+    for (var item of itemList.items) {
+        var name = item[0];
+        var details = item[1];
+        var desc = item[2];
 
-            // Display Items
-            for (var item of jsonResponse.items) {
-                var name = item[0];
-                var details = item[1];
-                var desc = item[2];
+        // Item name.
+        var h2 = document.createElement("h2");
+        var h2Text = document.createTextNode(name);
+        h2.appendChild(h2Text);
+        itemContainer.appendChild(h2);
 
-                // Item name.
-                var h2 = document.createElement("h2");
-                var h2Text = document.createTextNode(name);
-                h2.appendChild(h2Text);
-                itemContainer.appendChild(h2);
+        // Item details.
+        var detailsPara = document.createElement("p");
+        var detailsText = document.createTextNode(details);
+        detailsPara.appendChild(detailsText);
+        detailsPara.classList.add("item-details");
+        itemContainer.appendChild(detailsPara);
 
-                // Item details.
-                var detailsPara = document.createElement("p");
-                var detailsText = document.createTextNode(details);
-                detailsPara.appendChild(detailsText);
-                detailsPara.classList.add("item-details");
-                itemContainer.appendChild(detailsPara);
+        // Item description.
+        var descPara = document.createElement("p");
+        var descText = document.createTextNode(desc);
+        descPara.classList.add("item-desc");
+        descPara.appendChild(descText);
+        itemContainer.appendChild(descPara);
+    }
 
-                // Item description.
-                var descPara = document.createElement("p");
-                var descText = document.createTextNode(desc);
-                descPara.classList.add("item-desc");
-                descPara.appendChild(descText);
-                itemContainer.appendChild(descPara);
-            }
+    itemContainer.style.display = "inline-block";
+}
 
-            itemContainer.style.display = "inline-block";
-        })
-        .catch(error => {
-            var h2 = document.createElement("h2");
-            var h2Text = document.createTextNode("Oops");
-            h2.appendChild(h2Text);
-            itemContainer.appendChild(h2);
-            var para = document.createElement("p");
-            var pText = document.createTextNode("Sorry, we rolled a 1 on our investigation check.");
-            para.appendChild(pText);
-            itemContainer.appendChild(para);
-            itemContainer.style.display = "inline-block";
-            console.log('error', error)
-            return;
-        });
+// -------------------------------------------------------------------------------- \\
+// Displays a generic error message to the user.
+// -------------------------------------------------------------------------------- \\
+function displayErrorMessage() {
+    const itemContainer = document.getElementById("item-container");
+
+    // Clear old items from item container.
+    while (itemContainer.firstChild) {
+        itemContainer.removeChild(itemContainer.firstChild);
+    }
+
+    var h2 = document.createElement("h2");
+    var h2Text = document.createTextNode("Oops...");
+    h2.appendChild(h2Text);
+    itemContainer.appendChild(h2);
+
+    var detailsPara = document.createElement("p");
+    var detailsText = document.createTextNode("Looks like we rolled a nat 1 on our investigation check. Please try again later.");
+    detailsPara.appendChild(detailsText);
+    itemContainer.appendChild(detailsPara);
+
+    itemContainer.style.display = "inline-block";
 }
 
 // -------------------------------------------------------------------------------- \\
@@ -127,7 +146,7 @@ function curseChecked(checkboxElem) { document.getElementById("add-curse").check
 function toggleWeaponCategories(source) {
     parent = document.getElementById("weapon-fs");
     categoryBoxes = parent.querySelectorAll("[name='category-checkbox']");
-    for (var i=0; i < categoryBoxes.length; i++) {
+    for (var i = 0; i < categoryBoxes.length; i++) {
         categoryBoxes[i].checked = source.checked;
     }
 }
@@ -138,7 +157,7 @@ function toggleWeaponCategories(source) {
 function toggleArmorCategories(source) {
     parent = document.getElementById("armor-fs");
     categoryBoxes = parent.querySelectorAll("[name='category-checkbox']");
-    for (var i=0; i < categoryBoxes.length; i++) {
+    for (var i = 0; i < categoryBoxes.length; i++) {
         categoryBoxes[i].checked = source.checked;
     }
 }
@@ -149,7 +168,7 @@ function toggleArmorCategories(source) {
 function toggleOtherCategories(source) {
     parent = document.getElementById("other-category-fs");
     categoryBoxes = parent.querySelectorAll("[name='category-checkbox']");
-    for (var i=0; i < categoryBoxes.length; i++) {
+    for (var i = 0; i < categoryBoxes.length; i++) {
         categoryBoxes[i].checked = source.checked;
     }
 }
@@ -159,7 +178,7 @@ function toggleOtherCategories(source) {
 // -------------------------------------------------------------------------------- \\
 function togglePowerLevels(source) {
     plBoxes = document.getElementsByName("pl-checkbox");
-    for (var i=0; i < plBoxes.length; i++) {
+    for (var i = 0; i < plBoxes.length; i++) {
         plBoxes[i].checked = source.checked;
     }
     // Uncheck 'Add Curse' if 'Curse' power level is checked.

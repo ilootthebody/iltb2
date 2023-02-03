@@ -97,15 +97,15 @@ title: Pathfinder Magic Item Generator
             <div class="col no-left-pad">
                 <fieldset id="pl-fs">
                     <legend>Power Level:</legend>
-                    <input type="checkbox" id="mundane" name="pl-checkbox" value="mundane" checked>
+                    <input type="checkbox" id="mundane" name="power-level-checkbox" value="mundane" checked>
                     <label for="mundane">Mundane (60)</label><br>
-                    <input type="checkbox" id="low" name="pl-checkbox" value="low" checked>
+                    <input type="checkbox" id="low" name="power-level-checkbox" value="low" checked>
                     <label for="low">Low (70)</label><br>
-                    <input type="checkbox" id="medium" name="pl-checkbox" value="medium" checked>
+                    <input type="checkbox" id="medium" name="power-level-checkbox" value="medium" checked>
                     <label for="medium">Medium (104)</label><br>
-                    <input type="checkbox" id="high" name="pl-checkbox" value="high" checked>
+                    <input type="checkbox" id="high" name="power-level-checkbox" value="high" checked>
                     <label for="high">High (64)</label><br>
-                    <input type="checkbox" id="curse" name="pl-checkbox" value="curse">
+                    <input type="checkbox" id="curse" name="power-level-checkbox" value="curse">
                     <label for="curse">Curse (66)</label><br>
                 </fieldset>
                 <input type="checkbox" id="power-level-toggle" onchange="togglePowerLevels(this)" checked>
@@ -121,11 +121,11 @@ title: Pathfinder Magic Item Generator
                 <fieldset id="other-options-fs">
                     <legend><a href="/posts/magic-item-generator-options/" target="_blank"
                             rel="noreferrer noopener">Additional Options:</a></legend>
-                    <input type="checkbox" id="price" name="options" value="price" checked>
+                    <input type="checkbox" id="price" name="options-checkbox" value="price" checked>
                     <label for="price">Show Price</label><br>
-                    <input type="checkbox" id="level" name="options" value="level" checked>
+                    <input type="checkbox" id="level" name="options-checkbox" value="level" checked>
                     <label for="level">Show Suggested Level</label><br>
-                    <input type="checkbox" id="add-curse" name="options" value="cursed"
+                    <input type="checkbox" id="add-curse" name="options-checkbox" value="cursed"
                         onchange="addCurseChecked(this);">
                     <label for="add-curse">Add Curse</label><br>
                 </fieldset>
@@ -180,14 +180,16 @@ title: Pathfinder Magic Item Generator
 
 <!-- Generate Item Button -->
 <div>
-    <input type="submit" value="Loot the Body" class="generator-button" onclick="getItems()">
+    <input type="submit" value="Loot the Body" class="generator-button" onclick="getPf2eItems()">
 </div>
 
 <!-- Item Container -->
 <div id="item-container">
-    <h2 id="itemName"></h2>
-    <p id="itemDescription"></p>
+    
 </div>
+
+<br>
+<br>
 
 {% include ads-horizontal-long.html %}
 
