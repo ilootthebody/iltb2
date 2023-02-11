@@ -3,7 +3,7 @@
 // and formats/displays the generated item(s).
 // -------------------------------------------------------------------------------- \\
 async function getPf2eItems() {
-    const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/iltbgetitems";
+    const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/pf2e-item-generator";
 
     // Instantiate and populate header.
     var myHeaders = new Headers();
@@ -177,7 +177,7 @@ function toggleOtherCategories(source) {
 // Allows user to select/deselect all checkboxes in the power level form.
 // -------------------------------------------------------------------------------- \\
 function togglePowerLevels(source) {
-    plBoxes = document.getElementsByName("pl-checkbox");
+    plBoxes = document.getElementsByName("power-level-checkbox");
     for (var i = 0; i < plBoxes.length; i++) {
         plBoxes[i].checked = source.checked;
     }
