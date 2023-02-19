@@ -17,77 +17,122 @@ title: Magic Item Generator
   </p>
 </div>
 
-<div class="flex-container">
-  <!-- Category Selector Form -->
-  <div class="col">
-    <form>
-      <fieldset id="category-checkboxes">
-        <legend><a href="/posts/magic-item-generator-categories/" target="_blank" rel="noreferrer noopener">Item
-            Categories</a>:</legend>
-        <input type="checkbox" id="accessory" name="categories" value="accessory" checked>
-        <label for="accessory">Accessory</label><br>
-        <input type="checkbox" id="focus" name="categories" value="focus" checked>
-        <label for="focus">Arcane Focus</label><br>
-        <input type="checkbox" id="armor" name="categories" value="armor" checked>
-        <label for="armor">Armor</label><br>
-        <input type="checkbox" id="clothing" name="categories" value="clothing" checked>
-        <label for="clothing">Clothing</label><br>
-        <input type="checkbox" id="equipment" name="categories" value="equipment" checked>
-        <label for="equipment">Equipment</label><br>
-        <input type="checkbox" id="instrument" name="categories" value="instrument" checked>
-        <label for="instrument">Instrument</label><br>
-        <input type="checkbox" id="tool" name="categories" value="tool" checked>
-        <label for="tool">Tool Set</label><br>
-        <input type="checkbox" id="vehicle" name="categories" value="vehicle" checked>
-        <label for="vehicle">Vehicle</label><br>
-        <input type="checkbox" id="firearm" name="categories" value="firearm" checked>
-        <label for="firearm">Weapon (Firearm)</label><br>
-        <input type="checkbox" id="melee" name="categories" value="melee" checked>
-        <label for="melee">Weapon (Melee)</label><br>
-        <input type="checkbox" id="ranged" name="categories" value="ranged" checked>
-        <label for="ranged">Weapon (Ranged)</label><br>
-      </fieldset>
-      <input type="checkbox" id="category-toggle" onchange="toggleCategories(this)" checked>
-      <label for="category-toggle">Select/Deselect All</label>
-    </form>
+<!-- Options -->
+<div>
+  <!-- Item Categories -->
+  <button type="button" class="collapsible">Item Categories</button>
+  <div class="content">
+    <div class="flex-container margin-top-10">
+      <!-- Weapons -->
+      <div class="col no-left-pad">
+        <fieldset class="no-left-pad" id="weapon-fs">
+          <legend>Weapons (50):</legend>
+          <input type="checkbox" id="firearm" name="category-checkbox" value="firearm" checked>
+          <label for="firearm">Firearm (11)</label><br>
+          <input type="checkbox" id="melee" name="category-checkbox" value="melee" checked>
+          <label for="melee">Melee (30)</label><br>
+          <input type="checkbox" id="ranged" name="category-checkbox" value="ranged" checked>
+          <label for="ranged">Ranged (9)</label><br>
+        </fieldset>
+        <input type="checkbox" id="weapon-toggle" onchange="toggleWeaponCategories(this)" checked>
+        <label for="weapon-toggle">Select/Deselect All</label>
+      </div>
+      <!-- Wearable -->
+      <div class="col no-left-pad">
+        <fieldset id="wearable-fs">
+          <legend>Wearable (51):</legend>
+          <input type="checkbox" id="accessory" name="category-checkbox" value="accessory" checked>
+          <label for="accessory">Accessory (31)</label><br>
+          <input type="checkbox" id="armor" name="category-checkbox" value="armor" checked>
+          <label for="armor">Armor/Shield (14)</label><br>
+          <input type="checkbox" id="clothing" name="category-checkbox" value="clothing" checked>
+          <label for="clothing">Clothing (6)</label><br>
+        </fieldset>
+        <input type="checkbox" id="wearable-toggle" onchange="toggleWearableCategories(this)" checked>
+        <label for="wearable-toggle">Select/Deselect All</label>
+      </div>
+      <!-- Other -->
+      <div class="col no-left-pad">
+        <fieldset id="other-category-fs">
+          <legend>Other (142):</legend>
+          <input type="checkbox" id="focus" name="category-checkbox" value="focus" checked>
+          <label for="focus">Arcane Focus (13)</label><br>
+          <input type="checkbox" id="equipment" name="category-checkbox" value="equipment" checked>
+          <label for="equipment">Equipment (71)</label><br>
+          <input type="checkbox" id="instrument" name="category-checkbox" value="instrument" checked>
+          <label for="instrument">Instrument (17)</label><br>
+          <input type="checkbox" id="tool" name="category-checkbox" value="tool" checked>
+          <label for="tool">Tool Set (23)</label><br>
+          <input type="checkbox" id="vehicle" name="category-checkbox" value="vehicle" checked>
+          <label for="vehicle">Vehicle (18)</label><br>
+        </fieldset>
+        <input type="checkbox" id="other-toggle" onchange="toggleOtherCategories(this)" checked>
+        <label for="other-toggle">Select/Deselect All</label>
+      </div>
+    </div>
   </div>
-  <!-- Power Level Selector Form -->
-  <div class="col">
-    <form>
-      <fieldset id="power-level-checkboxes">
-        <legend><a href="/posts/magic-item-generator-power-levels/" target="_blank" rel="noreferrer noopener">Effect
-            Power</a>:</legend>
-        <input type="checkbox" id="mundane" name="power-level" value="mundane" checked>
-        <label for="mundane">Mundane</label><br>
-        <input type="checkbox" id="low" name="power-level" value="low" checked>
-        <label for="low">Low</label><br>
-        <input type="checkbox" id="medium" name="power-level" value="medium" checked>
-        <label for="medium">Medium</label><br>
-        <input type="checkbox" id="high" name="power-level" value="high" checked>
-        <label for="high">High</label><br>
-        <input type="checkbox" id="curse" name="power-level" value="curse" onchange="curseChecked(this);">
-        <label for="curse">Curse</label><br>
-      </fieldset>
-      <input type="checkbox" id="power-level-toggle" onchange="togglePowerLevels(this)" checked>
-      <label for="power-level-toggle">Select/Deselect All</label>
-    </form>
+  <!-- Magical Effect Power Levels -->
+  <button type="button" class="collapsible">Magical Effect Power Levels</button>
+  <div class="content">
+    <div class="flex-container margin-top-10">
+      <div class="col no-left-pad">
+        <fieldset id="pl-fs">
+          <legend>Power Level:</legend>
+          <input type="checkbox" id="mundane" name="power-level-checkbox" value="mundane" checked>
+          <label for="mundane">Mundane (60)</label><br>
+          <input type="checkbox" id="low" name="power-level-checkbox" value="low" checked>
+          <label for="low">Low (70)</label><br>
+          <input type="checkbox" id="medium" name="power-level-checkbox" value="medium" checked>
+          <label for="medium">Medium (104)</label><br>
+          <input type="checkbox" id="high" name="power-level-checkbox" value="high" checked>
+          <label for="high">High (64)</label><br>
+          <input type="checkbox" id="curse" name="power-level-checkbox" value="curse" onchange="curseChecked(this)">
+          <label for="curse">Curse (66)</label><br>
+        </fieldset>
+        <input type="checkbox" id="power-level-toggle" onchange="togglePowerLevels(this)" checked>
+        <label for="power-level-toggle">Select/Deselect All</label>
+      </div>
+    </div>
   </div>
-  <!-- Other Options Selector Form -->
-  <div class="col">
-    <form>
-      <fieldset id="options-checkboxes">
-        <legend><a href="/posts/magic-item-generator-options/" target="_blank" rel="noreferrer noopener">Other
-            Options:</a></legend>
-        <input type="checkbox" id="price" name="options" value="price" checked>
-        <label for="price">Show Price</label><br>
-        <input type="checkbox" id="level" name="options" value="level" checked>
-        <label for="level">Show Suggested Level</label><br>
-        <input type="checkbox" id="add-curse" name="options" value="cursed" onchange="addCurseChecked(this);">
-        <label for="add-curse">Add Curse</label><br>
-      </fieldset>
-    </form>
+  <!-- Additional Options -->
+  <button type="button" class="collapsible">Additional Options</button>
+  <div class="content">
+    <div class="flex-container margin-top-10">
+      <div class="col no-left-pad">
+        <fieldset id="other-options-fs">
+          <legend><a href="/posts/magic-item-generator-options/" target="_blank" rel="noreferrer noopener">Additional
+              Options:</a></legend>
+          <input type="checkbox" id="price" name="options-checkbox" value="price" checked>
+          <label for="price">Show Price</label><br>
+          <input type="checkbox" id="level" name="options-checkbox" value="level" checked>
+          <label for="level">Show Suggested Level</label><br>
+          <input type="checkbox" id="add-curse" name="options-checkbox" value="cursed"
+            onchange="addCurseChecked(this);">
+          <label for="add-curse">Add Curse</label><br>
+        </fieldset>
+      </div>
+    </div>
   </div>
 </div>
+<!-- End Options -->
+
+<!-- Collapsible Menu Script -->
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+      this.classList.toggle("collapsible-active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+</script>
 
 <br>
 
