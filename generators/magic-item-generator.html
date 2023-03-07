@@ -37,10 +37,10 @@ title: Magic Item Generator
         <input type="checkbox" id="weapon-toggle" onchange="toggleWeaponCategories(this)" checked>
         <label for="weapon-toggle">Select/Deselect All</label>
       </div>
-      <!-- Wearable -->
+      <!-- Wearables -->
       <div class="col no-left-pad">
         <fieldset id="wearable-fs">
-          <legend>Wearable (51):</legend>
+          <legend>Wearables (51):</legend>
           <input type="checkbox" id="accessory" name="category-checkbox" value="accessory" checked>
           <label for="accessory">Accessory (31)</label><br>
           <input type="checkbox" id="armor" name="category-checkbox" value="armor" checked>
@@ -106,6 +106,8 @@ title: Magic Item Generator
           <label for="price">Show Price</label><br>
           <input type="checkbox" id="level" name="options-checkbox" value="level" checked>
           <label for="level">Show Suggested Level</label><br>
+          <input type="checkbox" id="condensed" name="options-checkbox" value="condensed">
+          <label for="condensed">Condense Item Description</label><br>
           <input type="checkbox" id="add-curse" name="options-checkbox" value="cursed"
             onchange="addCurseChecked(this);">
           <label for="add-curse">Add Curse</label><br>

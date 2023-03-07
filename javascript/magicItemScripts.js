@@ -3,7 +3,7 @@
 // and formats/displays the generated item(s).
 // -------------------------------------------------------------------------------- \\
 async function getItems() {
-    const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/iltbgetitems";
+    const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/dnd5e-item-generator";
     // Instantiate and populate header.
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
