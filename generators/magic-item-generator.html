@@ -13,7 +13,7 @@ title: Magic Item Generator
     The generator randomly selects from lists of items and magical effects to create TRILLIONS of possible items.
     Select or deselect from the lists below to generate specific types of items. A CSV file with the complete list of
     magic effects can be downloaded
-    <a href="/downloads/ILTB-Effects-20221227.csv" download>here</a>.
+    <a href="/downloads/ILTB-Effects-20230310.csv" download>here</a>.
   </p>
 </div>
 
@@ -26,7 +26,7 @@ title: Magic Item Generator
       <!-- Weapons -->
       <div class="col no-left-pad">
         <fieldset class="no-left-pad" id="weapon-fs">
-          <legend>Weapons (50):</legend>
+          <legend>Weapons:</legend>
           <input type="checkbox" id="firearm" name="category-checkbox" value="firearm" checked>
           <label for="firearm">Firearm (11)</label><br>
           <input type="checkbox" id="melee" name="category-checkbox" value="melee" checked>
@@ -40,7 +40,7 @@ title: Magic Item Generator
       <!-- Wearables -->
       <div class="col no-left-pad">
         <fieldset id="wearable-fs">
-          <legend>Wearables (51):</legend>
+          <legend>Wearables:</legend>
           <input type="checkbox" id="accessory" name="category-checkbox" value="accessory" checked>
           <label for="accessory">Accessory (31)</label><br>
           <input type="checkbox" id="armor" name="category-checkbox" value="armor" checked>
@@ -54,7 +54,7 @@ title: Magic Item Generator
       <!-- Other -->
       <div class="col no-left-pad">
         <fieldset id="other-category-fs">
-          <legend>Other (142):</legend>
+          <legend>Other:</legend>
           <input type="checkbox" id="focus" name="category-checkbox" value="focus" checked>
           <label for="focus">Arcane Focus (13)</label><br>
           <input type="checkbox" id="equipment" name="category-checkbox" value="equipment" checked>
@@ -79,15 +79,15 @@ title: Magic Item Generator
         <fieldset id="pl-fs">
           <legend>Power Level:</legend>
           <input type="checkbox" id="mundane" name="power-level-checkbox" value="mundane" checked>
-          <label for="mundane">Mundane (60)</label><br>
+          <label for="mundane">Mundane (73)</label><br>
           <input type="checkbox" id="low" name="power-level-checkbox" value="low" checked>
-          <label for="low">Low (70)</label><br>
+          <label for="low">Low (76)</label><br>
           <input type="checkbox" id="medium" name="power-level-checkbox" value="medium" checked>
-          <label for="medium">Medium (104)</label><br>
+          <label for="medium">Medium (110)</label><br>
           <input type="checkbox" id="high" name="power-level-checkbox" value="high" checked>
-          <label for="high">High (64)</label><br>
+          <label for="high">High (89)</label><br>
           <input type="checkbox" id="curse" name="power-level-checkbox" value="curse" onchange="curseChecked(this)">
-          <label for="curse">Curse (66)</label><br>
+          <label for="curse">Curse (72)</label><br>
         </fieldset>
         <input type="checkbox" id="power-level-toggle" onchange="togglePowerLevels(this)" checked>
         <label for="power-level-toggle">Select/Deselect All</label>
