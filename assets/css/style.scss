@@ -10,7 +10,7 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
 @import "{{ site.theme }}";
 
 /* append your custom style below */
-#item-container, #name-container {
+#name-container, #item-container {
   display: none;
 }
 
@@ -24,7 +24,7 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
   border-radius: 10px;
   font-size: 1.25em;
   margin-top: 2em;
-  // margin-bottom: 3em;
+  margin-bottom: 2em;
 }
 
 .generator-button:hover {
@@ -48,6 +48,20 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
 
 .smaller-text {
   font-size: .85em;
+}
+
+.item-con {
+  border: double;
+  text-align: center;
+  margin-bottom: 1em;
+  display: none;
+}
+
+.item-name {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: Lato, "Microsoft Yahei", sans-serif;
+  color: black;
 }
 
 .item-details {

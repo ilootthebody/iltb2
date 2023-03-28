@@ -3,6 +3,15 @@
 // and formats/displays the generated item(s).
 // -------------------------------------------------------------------------------- \\
 async function getItems() {
+    // Grab number of items from HTML.
+    var i = document.getElementById("num_items");
+    var numItems = i.options[i.selectedIndex].text;
+
+    // Display item containers
+    for (let iter = 1; iter <= numItems; iter++) {
+        document.getElementById("item" + iter + "-con").style.display = "block";
+    }
+
     const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/dnd5e-item-generator";
     // Instantiate and populate header.
     var myHeaders = new Headers();
@@ -29,11 +38,7 @@ async function getItems() {
         if (optionsCheckboxes[i].checked) { options.push(optionsCheckboxes[i].value); }
     };
 
-    // Grab number of items from HTML.
-    var i = document.getElementById("num_items");
-    var numItems = i.options[i.selectedIndex].text;
-
-    // Grab number of items from HTML.
+    // Grab number of effects from HTML.
     var e = document.getElementById("num_effects");
     var numEffects = e.options[e.selectedIndex].text;
 
@@ -70,42 +75,16 @@ async function getItems() {
     // Extract items from JSON
     const itemList = JSON.parse(responseJSON.body);
 
-    // Get item container from HTML
-    const itemContainer = document.getElementById("item-container");
+    // Index for iterating over number of items
+    itemNum = 1;
 
-    // Clear old items from item container.
-    while (itemContainer.firstChild) {
-        itemContainer.removeChild(itemContainer.firstChild);
-    }
-
-    // Display Items
+    // Display Generated Items
     for (var item of itemList.items) {
-        var name = item[0];
-        var details = item[1];
-        var desc = item[2];
-
-        // Item name.
-        var h2 = document.createElement("h2");
-        var h2Text = document.createTextNode(name);
-        h2.appendChild(h2Text);
-        itemContainer.appendChild(h2);
-
-        // Item details.
-        var detailsPara = document.createElement("p");
-        var detailsText = document.createTextNode(details);
-        detailsPara.appendChild(detailsText);
-        detailsPara.classList.add("item-details");
-        itemContainer.appendChild(detailsPara);
-
-        // Item description.
-        var descPara = document.createElement("p");
-        var descText = document.createTextNode(desc);
-        descPara.classList.add("item-desc");
-        descPara.appendChild(descText);
-        itemContainer.appendChild(descPara);
+        document.getElementById("item" + itemNum + "-name").textContent = item[0];
+        document.getElementById("item" + itemNum + "-det").textContent = item[1];
+        document.getElementById("item" + itemNum + "-desc").textContent = item[2];
+        itemNum++;
     }
-
-    itemContainer.style.display = "inline-block";
 }
 
 // -------------------------------------------------------------------------------- \\
