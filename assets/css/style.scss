@@ -54,7 +54,34 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
   border: double;
   text-align: center;
   margin-bottom: 1em;
+  padding-left: .5em;
+  padding-right: .5em;
   display: none;
+}
+
+.lds-dual-ring {
+  float: left;
+  width: 48px;
+  height: 48px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #6B4A8C;
+  border-color: #6B4A8C transparent #6B4A8C transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .item-name {

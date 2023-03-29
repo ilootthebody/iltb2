@@ -8,8 +8,17 @@ async function getItems() {
     var numItems = i.options[i.selectedIndex].text;
 
     // Display item containers
-    for (let iter = 1; iter <= numItems; iter++) {
-        document.getElementById("item" + iter + "-con").style.display = "block";
+    for (let ii = 1; ii <= 5; ii++) {
+        if (ii <= numItems) {
+            document.getElementById("item" + ii + "-con").style.display = "block";
+            document.getElementById("item" + ii + "-loader").style.display = "block";
+        }
+        else {
+            document.getElementById("item" + ii + "-con").style.display = "none";
+            document.getElementById("item" + ii + "-name").textContent = "Generating Item";
+            document.getElementById("item" + ii + "-det").textContent = "...";
+            document.getElementById("item" + ii + "-desc").textContent = "...";
+        }
     }
 
     const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/dnd5e-item-generator";
@@ -42,7 +51,7 @@ async function getItems() {
     var e = document.getElementById("num_effects");
     var numEffects = e.options[e.selectedIndex].text;
 
-    // create a JSON object with parameters for API call and store in a variable
+    // create JSON objects with parameters and options for API call
     var raw = JSON.stringify({
         "category": categories.toString(),
         "power": powerLevels.toString(),
@@ -80,6 +89,7 @@ async function getItems() {
 
     // Display Generated Items
     for (var item of itemList.items) {
+        document.getElementById("item" + itemNum + "-loader").style.display = "none";
         document.getElementById("item" + itemNum + "-name").textContent = item[0];
         document.getElementById("item" + itemNum + "-det").textContent = item[1];
         document.getElementById("item" + itemNum + "-desc").textContent = item[2];
