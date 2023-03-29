@@ -88,7 +88,7 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
   font-size: 1.5rem;
   font-weight: 400;
   font-family: Lato, "Microsoft Yahei", sans-serif;
-  color: black;
+  color: var(--heading-color);
 }
 
 .item-details {
