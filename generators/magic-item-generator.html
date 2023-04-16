@@ -79,16 +79,16 @@ title: Magic Item Generator
         <fieldset id="pl-fs">
           <legend>Power Level:</legend>
           <input type="checkbox" id="mundane" name="power-level-checkbox" value="mundane" checked>
-          <label for="mundane">Mundane (73)</label><br>
+          <label for="mundane">Mundane (90)</label><br>
           <input type="checkbox" id="low" name="power-level-checkbox" value="low" checked>
-          <label for="low">Low (76)</label><br>
+          <label for="low">Low (97)</label><br>
           <input type="checkbox" id="medium" name="power-level-checkbox" value="medium" checked>
-          <label for="medium">Medium (110)</label><br>
+          <label for="medium">Medium (98)</label><br>
           <input type="checkbox" id="high" name="power-level-checkbox" value="high" checked>
-          <label for="high">High (89)</label><br>
+          <label for="high">High (122)</label><br>
           <input type="checkbox" id="curse" name="power-level-checkbox" value="curse" onchange="curseChecked(this)">
-          <label for="curse">Curse (72)</label><br>
-          <input type="checkbox" id="sentient" name="power-level-checkbox" value="sentient" onchange="curseChecked(this)">
+          <label for="curse">Curse (78)</label><br>
+          <input type="checkbox" id="sentient" name="power-level-checkbox" value="sentient">
           <label for="sentient">Sentient (25)</label><br>
         </fieldset>
         <input type="checkbox" id="power-level-toggle" onchange="togglePowerLevels(this)" checked>
@@ -108,6 +108,8 @@ title: Magic Item Generator
           <label for="price">Show Price</label><br>
           <input type="checkbox" id="level" name="options-checkbox" value="level" checked>
           <label for="level">Show Suggested Level</label><br>
+          <input type="checkbox" id="1sentient" name="options-checkbox" value="1sentient" checked>
+          <label for="1sentient">Limit One Sentient Effect Per Item</label><br>
           <input type="checkbox" id="condensed" name="options-checkbox" value="condensed">
           <label for="condensed">Condense Item Description</label><br>
           <input type="checkbox" id="add-curse" name="options-checkbox" value="cursed"
@@ -174,31 +176,111 @@ title: Magic Item Generator
     <div id="item1-loader" class="lds-dual-ring"></div>
     <div id="item1-name" class="item-name">Generating Item</div>
     <p id="item1-det" class="item-details">...</p>
-    <p id="item1-desc" class="item-desc">...</p>
+    <div class="item-flex-container item-desc">
+      <p id="item1-effect1">...</p>
+      <img name="regen-button" id="item1-effect1-regen" src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate"
+        class="regen-button" onclick="regenField('npc-name-header')">
+    </div>
+    <div class="item-flex-container item-desc">
+      <p id="item1-effect2">...</p>
+      <img name="regen-button" id="item1-effect2-regen" src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate"
+        class="regen-button" onclick="regenField('npc-name-header')">
+    </div>
+    <div class="item-flex-container item-desc">
+      <p id="item1-effect3">...</p>
+      <img name="regen-button" id="item1-effect3-regen" src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate"
+        class="regen-button" onclick="regenField('npc-name-header')">
+    </div>
+    <div class="item-flex-container item-desc">
+      <p id="item1-effect4">...</p>
+      <img name="regen-button" id="item1-effect4-regen" src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate"
+        class="regen-button" onclick="regenField('npc-name-header')">
+    </div>
+    <div class="item-flex-container item-desc">
+      <p id="item1-effect5">...</p>
+      <img name="regen-button" id="item1-effect5-regen" src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate"
+        class="regen-button" onclick="regenField('npc-name-header')">
+    </div>
   </div>
   <div id="item2-con" class="item-con">
     <div id="item2-loader" class="lds-dual-ring"></div>
     <div id="item2-name" class="item-name">Generating Item</div>
     <p id="item2-det" class="item-details">...</p>
-    <p id="item2-desc" class="item-desc">...</p>
+    <div>
+      <p id="item2-effect1" class="item-desc">...</p>
+    </div>
+    <div>
+      <p id="item2-effect2" class="item-desc">...</p>
+    </div>
+    <div>
+      <p id="item2-effect3" class="item-desc">...</p>
+    </div>
+    <div>
+      <p id="item2-effect4" class="item-desc">...</p>
+    </div>
+    <div>
+      <p id="item2-effect5" class="item-desc">...</p>
+    </div>
   </div>
   <div id="item3-con" class="item-con">
     <div id="item3-loader" class="lds-dual-ring"></div>
     <div id="item3-name" class="item-name">Generating Item</div>
     <p id="item3-det" class="item-details">...</p>
-    <p id="item3-desc" class="item-desc">...</p>
+    <div>
+      <p id="item3-effect1" class="item-desc">...</p>
+    </div>
+    <div>
+      <p id="item3-effect2" class="item-desc">...</p>
+    </div>
+    <div>
+      <p id="item3-effect3" class="item-desc">...</p>
+    </div>
+    <div>
+      <p id="item3-effect4" class="item-desc">...</p>
+    </div>
+    <div>
+      <p id="item3-effect5" class="item-desc">...</p>
+    </div>
   </div>
   <div id="item4-con" class="item-con">
     <div id="item4-loader" class="lds-dual-ring"></div>
     <div id="item4-name" class="item-name">Generating Item</div>
     <p id="item4-det" class="item-details">...</p>
-    <p id="item4-desc" class="item-desc">...</p>
+    <div>
+      <p id="item4-effect1" class="item-desc">...</p>
+    </div>
+    <div>
+      <p id="item4-effect2" class="item-desc">...</p>
+    </div>
+    <div>
+      <p id="item4-effect3" class="item-desc">...</p>
+    </div>
+    <div>
+      <p id="item4-effect4" class="item-desc">...</p>
+    </div>
+    <div>
+      <p id="item4-effect5" class="item-desc">...</p>
+    </div>
   </div>
   <div id="item5-con" class="item-con">
     <div id="item5-loader" class="lds-dual-ring"></div>
     <div id="item5-name" class="item-name">Generating Item</div>
     <p id="item5-det" class="item-details">...</p>
-    <p id="item5-desc" class="item-desc">...</p>
+    <div>
+      <p id="item5-effect1" class="item-desc">...</p>
+    </div>
+    <div>
+      <p id="item5-effect2" class="item-desc">...</p>
+    </div>
+    <div>
+      <p id="item5-effect3" class="item-desc">...</p>
+    </div>
+    <div>
+      <p id="item5-effect4" class="item-desc">...</p>
+    </div>
+    <div>
+      <p id="item5-effect5" class="item-desc">...</p>
+    </div>
   </div>
 </div>
 

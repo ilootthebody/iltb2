@@ -3,29 +3,6 @@
 // and formats/displays the generated item(s).
 // -------------------------------------------------------------------------------- \\
 async function getItems() {
-    // Grab number of items from HTML.
-    var i = document.getElementById("num_items");
-    var numItems = i.options[i.selectedIndex].text;
-
-    // Display item containers
-    for (let ii = 1; ii <= 5; ii++) {
-        if (ii <= numItems) {
-            document.getElementById("item" + ii + "-con").style.display = "block";
-            document.getElementById("item" + ii + "-loader").style.display = "block";
-        }
-        else {
-            document.getElementById("item" + ii + "-con").style.display = "none";
-            document.getElementById("item" + ii + "-name").textContent = "Generating Item";
-            document.getElementById("item" + ii + "-det").textContent = "...";
-            document.getElementById("item" + ii + "-desc").textContent = "...";
-        }
-    }
-
-    const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/iltbgetitems";
-    // Instantiate and populate header.
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-
     // Grab categories from HTML.
     var categoryCheckboxes = document.getElementsByName("category-checkbox");
     var categories = [];
@@ -47,9 +24,49 @@ async function getItems() {
         if (optionsCheckboxes[i].checked) { options.push(optionsCheckboxes[i].value); }
     };
 
+    // Grab number of items from HTML.
+    var i = document.getElementById("num_items");
+    var numItems = i.options[i.selectedIndex].text;
+
     // Grab number of effects from HTML.
     var e = document.getElementById("num_effects");
     var numEffects = e.options[e.selectedIndex].text;
+    var totalEffects = parseInt(numEffects)
+    if (options.includes("cursed")) { totalEffects = parseInt(numEffects) + 1; }
+
+    // Display/hide item containers
+    for (let ii = 1; ii <= 5; ii++) {
+        if (ii <= parseInt(numItems)) {
+            document.getElementById("item" + ii + "-con").style.display = "block";
+            document.getElementById("item" + ii + "-loader").style.display = "block";
+
+            for (ee = 1; ee <= 5; ee++) {
+                if (ee <= parseInt(totalEffects)){
+                    document.getElementById("item" + ii + "-effect" + ee).style.display = "block";
+                    document.getElementById("item" + ii + "-effect" + ee + "-regen").style.display = "block";
+                }
+                else {
+                    document.getElementById("item" + ii + "-effect" + ee).style.display = "none";
+                    document.getElementById("item" + ii + "-effect" + ee + "-regen").style.display = "none";
+                }
+            }
+        }
+        else {
+            document.getElementById("item" + ii + "-con").style.display = "none";
+            document.getElementById("item" + ii + "-name").textContent = "Generating Item";
+            document.getElementById("item" + ii + "-det").textContent = "...";
+            document.getElementById("item" + ii + "-effect1").textContent = "...";
+            document.getElementById("item" + ii + "-effect2").textContent = "...";
+            document.getElementById("item" + ii + "-effect3").textContent = "...";
+            document.getElementById("item" + ii + "-effect4").textContent = "...";
+            document.getElementById("item" + ii + "-effect5").textContent = "...";
+        }
+    }
+
+    const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/iltbgetitems";
+    // Instantiate and populate header.
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
 
     // create JSON objects with parameters and options for API call
     var raw = JSON.stringify({
@@ -92,7 +109,14 @@ async function getItems() {
         document.getElementById("item" + itemNum + "-loader").style.display = "none";
         document.getElementById("item" + itemNum + "-name").textContent = item[0];
         document.getElementById("item" + itemNum + "-det").textContent = item[1];
-        document.getElementById("item" + itemNum + "-desc").textContent = item[2];
+
+        effectNum = 1;
+        for (let ee = 0; ee < totalEffects; ee++) {
+            document.getElementById("item" + itemNum + "-effect" + effectNum).textContent = item[2][ee];
+            document.getElementById("item" + itemNum + "-effect" + effectNum + "-regen").style.display = "block";
+            effectNum++;
+        }
+
         itemNum++;
     }
 }
