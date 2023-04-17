@@ -110,8 +110,8 @@ title: Magic Item Generator
           <label for="level">Show Suggested Level</label><br>
           <input type="checkbox" id="1sentient" name="options-checkbox" value="1sentient" checked>
           <label for="1sentient">Limit One Sentient Effect Per Item</label><br>
-          <input type="checkbox" id="condensed" name="options-checkbox" value="condensed">
-          <label for="condensed">Condense Item Description</label><br>
+          <!-- <input type="checkbox" id="condensed" name="options-checkbox" value="condensed">
+          <label for="condensed">Condense Item Description</label><br> -->
           <input type="checkbox" id="add-curse" name="options-checkbox" value="cursed"
             onchange="addCurseChecked(this);">
           <label for="add-curse">Add Curse</label><br>
@@ -172,9 +172,14 @@ title: Magic Item Generator
 
 <!-- Item Containers -->
 <div id="result-container">
+  <!-- Item 1-->
   <div id="item1-con" class="item-con">
     <div id="item1-loader" class="lds-dual-ring"></div>
-    <div id="item1-name" class="item-name">Generating Item</div>
+    <div class="item-name">
+      <span id="item1-prefix"></span> 
+      <span id="item1-name">Generating Item</span> 
+      <span id="item1-suffix"></span>
+    </div>
     <p id="item1-det" class="item-details">...</p>
     <div class="item-flex-container item-desc">
       <p id="item1-effect1">...</p>
@@ -202,84 +207,144 @@ title: Magic Item Generator
         class="regen-button" onclick="regenField('npc-name-header')">
     </div>
   </div>
+  <!-- Item 2-->
   <div id="item2-con" class="item-con">
     <div id="item2-loader" class="lds-dual-ring"></div>
-    <div id="item2-name" class="item-name">Generating Item</div>
+    <div class="item-name">
+      <span id="item2-prefix"></span> 
+      <span id="item2-name">Generating Item</span> 
+      <span id="item2-suffix"></span>
+    </div>
     <p id="item2-det" class="item-details">...</p>
-    <div>
-      <p id="item2-effect1" class="item-desc">...</p>
+    <div class="item-flex-container item-desc">
+      <p id="item2-effect1">...</p>
+      <img name="regen-button" id="item2-effect1-regen" src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate"
+        class="regen-button" onclick="regenField('npc-name-header')">
     </div>
-    <div>
-      <p id="item2-effect2" class="item-desc">...</p>
+    <div class="item-flex-container item-desc">
+      <p id="item2-effect2">...</p>
+      <img name="regen-button" id="item2-effect2-regen" src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate"
+        class="regen-button" onclick="regenField('npc-name-header')">
     </div>
-    <div>
-      <p id="item2-effect3" class="item-desc">...</p>
+    <div class="item-flex-container item-desc">
+      <p id="item2-effect3">...</p>
+      <img name="regen-button" id="item2-effect3-regen" src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate"
+        class="regen-button" onclick="regenField('npc-name-header')">
     </div>
-    <div>
-      <p id="item2-effect4" class="item-desc">...</p>
+    <div class="item-flex-container item-desc">
+      <p id="item2-effect4">...</p>
+      <img name="regen-button" id="item2-effect4-regen" src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate"
+        class="regen-button" onclick="regenField('npc-name-header')">
     </div>
-    <div>
-      <p id="item2-effect5" class="item-desc">...</p>
+    <div class="item-flex-container item-desc">
+      <p id="item2-effect5">...</p>
+      <img name="regen-button" id="item2-effect5-regen" src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate"
+        class="regen-button" onclick="regenField('npc-name-header')">
     </div>
   </div>
+  <!-- Item 3-->
   <div id="item3-con" class="item-con">
     <div id="item3-loader" class="lds-dual-ring"></div>
-    <div id="item3-name" class="item-name">Generating Item</div>
+    <div class="item-name">
+      <span id="item3-prefix"></span> 
+      <span id="item3-name">Generating Item</span> 
+      <span id="item3-suffix"></span>
+    </div>
     <p id="item3-det" class="item-details">...</p>
-    <div>
-      <p id="item3-effect1" class="item-desc">...</p>
+    <div class="item-flex-container item-desc">
+      <p id="item3-effect1">...</p>
+      <img name="regen-button" id="item3-effect1-regen" src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate"
+        class="regen-button" onclick="regenField('npc-name-header')">
     </div>
-    <div>
-      <p id="item3-effect2" class="item-desc">...</p>
+    <div class="item-flex-container item-desc">
+      <p id="item3-effect2">...</p>
+      <img name="regen-button" id="item3-effect2-regen" src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate"
+        class="regen-button" onclick="regenField('npc-name-header')">
     </div>
-    <div>
-      <p id="item3-effect3" class="item-desc">...</p>
+    <div class="item-flex-container item-desc">
+      <p id="item3-effect3">...</p>
+      <img name="regen-button" id="item3-effect3-regen" src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate"
+        class="regen-button" onclick="regenField('npc-name-header')">
     </div>
-    <div>
-      <p id="item3-effect4" class="item-desc">...</p>
+    <div class="item-flex-container item-desc">
+      <p id="item3-effect4">...</p>
+      <img name="regen-button" id="item3-effect4-regen" src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate"
+        class="regen-button" onclick="regenField('npc-name-header')">
     </div>
-    <div>
-      <p id="item3-effect5" class="item-desc">...</p>
+    <div class="item-flex-container item-desc">
+      <p id="item3-effect5">...</p>
+      <img name="regen-button" id="item3-effect5-regen" src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate"
+        class="regen-button" onclick="regenField('npc-name-header')">
     </div>
   </div>
+  <!-- Item 4-->
   <div id="item4-con" class="item-con">
     <div id="item4-loader" class="lds-dual-ring"></div>
-    <div id="item4-name" class="item-name">Generating Item</div>
+    <div class="item-name">
+      <span id="item4-prefix"></span> 
+      <span id="item4-name">Generating Item</span> 
+      <span id="item4-suffix"></span>
+    </div>
     <p id="item4-det" class="item-details">...</p>
-    <div>
-      <p id="item4-effect1" class="item-desc">...</p>
+    <div class="item-flex-container item-desc">
+      <p id="item4-effect1">...</p>
+      <img name="regen-button" id="item4-effect1-regen" src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate"
+        class="regen-button" onclick="regenField('npc-name-header')">
     </div>
-    <div>
-      <p id="item4-effect2" class="item-desc">...</p>
+    <div class="item-flex-container item-desc">
+      <p id="item4-effect2">...</p>
+      <img name="regen-button" id="item4-effect2-regen" src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate"
+        class="regen-button" onclick="regenField('npc-name-header')">
     </div>
-    <div>
-      <p id="item4-effect3" class="item-desc">...</p>
+    <div class="item-flex-container item-desc">
+      <p id="item4-effect3">...</p>
+      <img name="regen-button" id="item4-effect3-regen" src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate"
+        class="regen-button" onclick="regenField('npc-name-header')">
     </div>
-    <div>
-      <p id="item4-effect4" class="item-desc">...</p>
+    <div class="item-flex-container item-desc">
+      <p id="item4-effect4">...</p>
+      <img name="regen-button" id="item4-effect4-regen" src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate"
+        class="regen-button" onclick="regenField('npc-name-header')">
     </div>
-    <div>
-      <p id="item4-effect5" class="item-desc">...</p>
+    <div class="item-flex-container item-desc">
+      <p id="item4-effect5">...</p>
+      <img name="regen-button" id="item4-effect5-regen" src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate"
+        class="regen-button" onclick="regenField('npc-name-header')">
     </div>
   </div>
+  <!-- Item 5-->
   <div id="item5-con" class="item-con">
     <div id="item5-loader" class="lds-dual-ring"></div>
-    <div id="item5-name" class="item-name">Generating Item</div>
+    <div class="item-name">
+      <span id="item5-prefix"></span> 
+      <span id="item5-name">Generating Item</span> 
+      <span id="item5-suffix"></span>
+    </div>
     <p id="item5-det" class="item-details">...</p>
-    <div>
-      <p id="item5-effect1" class="item-desc">...</p>
+    <div class="item-flex-container item-desc">
+      <p id="item5-effect1">...</p>
+      <img name="regen-button" id="item5-effect1-regen" src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate"
+        class="regen-button" onclick="regenField('npc-name-header')">
     </div>
-    <div>
-      <p id="item5-effect2" class="item-desc">...</p>
+    <div class="item-flex-container item-desc">
+      <p id="item5-effect2">...</p>
+      <img name="regen-button" id="item5-effect2-regen" src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate"
+        class="regen-button" onclick="regenField('npc-name-header')">
     </div>
-    <div>
-      <p id="item5-effect3" class="item-desc">...</p>
+    <div class="item-flex-container item-desc">
+      <p id="item5-effect3">...</p>
+      <img name="regen-button" id="item5-effect3-regen" src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate"
+        class="regen-button" onclick="regenField('npc-name-header')">
     </div>
-    <div>
-      <p id="item5-effect4" class="item-desc">...</p>
+    <div class="item-flex-container item-desc">
+      <p id="item5-effect4">...</p>
+      <img name="regen-button" id="item5-effect4-regen" src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate"
+        class="regen-button" onclick="regenField('npc-name-header')">
     </div>
-    <div>
-      <p id="item5-effect5" class="item-desc">...</p>
+    <div class="item-flex-container item-desc">
+      <p id="item5-effect5">...</p>
+      <img name="regen-button" id="item5-effect5-regen" src="/assets/img/icons/Refresh_icon.svg.png" alt="Regenerate"
+        class="regen-button" onclick="regenField('npc-name-header')">
     </div>
   </div>
 </div>

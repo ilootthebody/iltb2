@@ -41,7 +41,7 @@ async function getItems() {
             document.getElementById("item" + ii + "-loader").style.display = "block";
 
             for (ee = 1; ee <= 5; ee++) {
-                if (ee <= parseInt(totalEffects)){
+                if (ee <= parseInt(totalEffects)) {
                     document.getElementById("item" + ii + "-effect" + ee).style.display = "block";
                     document.getElementById("item" + ii + "-effect" + ee + "-regen").style.display = "block";
                 }
@@ -104,15 +104,25 @@ async function getItems() {
     // Index for iterating over number of items
     itemNum = 1;
 
-    // Display Generated Items
+    // Display Generated Items. Item array is formatted as [item_name, effect_position, effect_name, details, effect_descs]
     for (var item of itemList.items) {
         document.getElementById("item" + itemNum + "-loader").style.display = "none";
         document.getElementById("item" + itemNum + "-name").textContent = item[0];
-        document.getElementById("item" + itemNum + "-det").textContent = item[1];
+
+        if (item[1] == "PREFIX") {
+            document.getElementById("item" + itemNum + "-prefix").textContent = item[2];
+            document.getElementById("item" + itemNum + "-suffix").textContent = "";
+        }
+        else if (item[1] == "SUFFIX") {
+            document.getElementById("item" + itemNum + "-suffix").textContent = item[2];
+            document.getElementById("item" + itemNum + "-prefix").textContent = "";
+        }
+
+        document.getElementById("item" + itemNum + "-det").textContent = item[3];
 
         effectNum = 1;
         for (let ee = 0; ee < totalEffects; ee++) {
-            document.getElementById("item" + itemNum + "-effect" + effectNum).textContent = item[2][ee];
+            document.getElementById("item" + itemNum + "-effect" + effectNum).textContent = item[4][ee];
             document.getElementById("item" + itemNum + "-effect" + effectNum + "-regen").style.display = "block";
             effectNum++;
         }

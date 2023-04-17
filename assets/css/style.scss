@@ -96,7 +96,7 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
 }
 
 .item-desc {
-  white-space: pre-wrap;
+  text-align: left;
 }
 
 .flex-container {
