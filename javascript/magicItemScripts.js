@@ -155,6 +155,9 @@ async function regenEffect(effectID) {
     // Grab item name from HTML
     item = document.getElementById(itemNum + "-name").textContent;
 
+    // Grab current effect power level from HTML
+    effectPower = document.getElementById(itemNum + "-" + effectNum).textContent.split(" ")[0];
+
     // Instantiate and populate header
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -163,7 +166,8 @@ async function regenEffect(effectID) {
     var raw = JSON.stringify({
         "power": powerLevels.toString(),
         "details": itemDetails,
-        "item": item
+        "item": item,
+        "old_power": effectPower
     });
     var requestOptions = {
         method: 'POST',
@@ -181,9 +185,7 @@ async function regenEffect(effectID) {
     // Check for errors
     if (responseJSON.hasOwnProperty("errorMessage")) {
         console.log(responseJSON);
-
         displayErrorMessage();
-
         return;
     }
 
@@ -192,6 +194,9 @@ async function regenEffect(effectID) {
 
     // Set new effect description
     document.getElementById(itemNum + "-" + effectNum).textContent = newEffect.effect_desc;
+
+    // Set new item details
+    document.getElementById(itemNum + "-det").textContent = newEffect.details;
 
     // If effect is first effect, update item name
     if (effectNum == "effect1") {
