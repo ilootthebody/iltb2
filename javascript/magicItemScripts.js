@@ -132,6 +132,84 @@ async function getItems() {
 }
 
 // -------------------------------------------------------------------------------- \\
+// API call to regenerate a single effect on an item.
+// -------------------------------------------------------------------------------- \\
+async function regenEffect(effectID) {
+    splitID = effectID.split("-");
+    itemNum = splitID[0];
+    effectNum = splitID[1];
+
+    // API URL
+    const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/iltbgetitem";
+
+    // Grab power levels from HTML
+    var powerCheckboxes = document.getElementsByName("power-level-checkbox");
+    var powerLevels = [];
+    for (var i = 0; i < powerCheckboxes.length; i++) {
+        if (powerCheckboxes[i].checked) { powerLevels.push(powerCheckboxes[i].value); }
+    };
+
+    // Grab item details from HTML and split into an array
+    itemDetails = document.getElementById(itemNum + "-det").textContent;
+
+    // Grab item name from HTML
+    item = document.getElementById(itemNum + "-name").textContent;
+
+    // Instantiate and populate header
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    // create JSON objects with parameters and options for API call
+    var raw = JSON.stringify({
+        "power": powerLevels.toString(),
+        "details": itemDetails,
+        "item": item
+    });
+    var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+    };
+
+    console.log(raw);
+
+    // Make API call with parameters and await response
+    const response = await fetch(API_URL, requestOptions);
+    const responseJSON = await response.json();
+
+    // Check for errors
+    if (responseJSON.hasOwnProperty("errorMessage")) {
+        console.log(responseJSON);
+
+        displayErrorMessage();
+
+        return;
+    }
+
+    // Extract items from JSON
+    const newEffect = JSON.parse(responseJSON.body);
+
+    // Set new effect description
+    document.getElementById(itemNum + "-" + effectNum).textContent = newEffect.effect_desc;
+
+    // If effect is first effect, update item name
+    if (effectNum == "effect1") {
+        if (newEffect.position == "PREFIX") {
+            document.getElementById(itemNum + "-prefix").textContent = newEffect.effect_name;
+            document.getElementById(itemNum + "-suffix").textContent = "";
+        }
+        else if (newEffect.position == "SUFFIX") {
+            document.getElementById(itemNum + "-suffix").textContent = newEffect.effect_name;
+            document.getElementById(itemNum + "-prefix").textContent = "";
+        }
+    }
+
+    console.log(newEffect);
+
+}
+
+// -------------------------------------------------------------------------------- \\
 // Displays a generic error message to the user.
 // -------------------------------------------------------------------------------- \\
 function displayErrorMessage() {
