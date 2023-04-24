@@ -1,0 +1,58 @@
+---
+layout: page
+title: DnD 5e Treasure Generator
+---
+
+<script src="../javascript/dnd5eTreasureScripts.js"></script>
+
+<!-- Header -->
+<div>
+    <p>This tool generates treasure using the methods and tables laid out in <a
+            href="https://www.dndbeyond.com/sources/dmg/treasure">chapter 7 of the Dungeon Master's Guide (DMG)</a>.
+        Choose what type of treasure you want to generate, hoard or individual, then select the challenge rating (CR) of
+        the monster or encounter that the treasure will be found in. The tool will generate currency, gems & art
+        objects, and magic items using the various tables provided in the DMG. I hope this helps when your players
+        manage to kill that dragon wayyyy before they were supposed to.</p>
+</div>
+
+<!-- Type of treasure selector -->
+<div class="w3-row w3-padding-16 centered-text">
+    <label>Type of Treasure:</label>
+    <select name="treasure_type" id="treasure_type">
+        <option value="hoard">Hoard</option>
+        <option value="individual">Individual</option>
+    </select>
+</div>
+
+<!-- CR selector -->
+<div class="w3-row w3-padding-16 centered-text">
+    <label>Challenge Rating (CR):</label>
+    <select name="cr" id="cr">
+        <option value="0-4">0-4</option>
+        <option value="5-10">5-10</option>
+        <option value="11-16">11-16</option>
+        <option value="17+">17+</option>
+    </select>
+</div>
+
+<!-- Button -->
+<div>
+    <input type="submit" value="Generate Treasure" class="generator-button" onclick="getTreasure()">
+</div>
+
+<div id="currency-con">
+    <h3>Currency <span id="currency-total"></span></h3>
+    <ul id="currency-list"></ul>
+</div>
+<div id="gems-art-con">
+    <h3>Gems & Art Objects <span id="gems-art-total"></span></h3>
+    <ul id="gems-art-list"></ul>
+</div>
+<div id="items-con">
+    <h3>Magic Items</h3>
+    <ul id="items-list"></ul>
+</div>
+
+<br>
+
+{% include ads-horizontal-long.html %}
