@@ -1,0 +1,216 @@
+---
+layout: page
+title: Pathfinder 2e Treasure Generator
+---
+
+<script src="../javascript/pf2eTreasureScripts.js"></script>
+
+<!-- Header -->
+<div>
+    <p>
+        This generator randomly generates treasure for Pathfinder 2e by selecting magic items from all officially
+        published Pathfinder 2e items.
+    </p>
+</div>
+
+<!-- Options -->
+<div>
+    <!-- Item Levels -->
+    <button type="button" class="collapsible">Item Level</button>
+    <div class="content">
+        <div class="flex-container margin-top-10">
+            <!-- Levels 1-10 -->
+            <div class="col no-left-pad">
+                <fieldset class="no-left-pad" id="item-level-fs">
+                    <input type="checkbox" id="lvl-1" name="level-checkbox" value="lvl-1" checked>
+                    <label for="lvl-1">1</label><br>
+                    <input type="checkbox" id="lvl-2" name="level-checkbox" value="lvl-2" checked>
+                    <label for="lvl-2">2</label><br>
+                    <input type="checkbox" id="lvl-3" name="level-checkbox" value="lvl-3" checked>
+                    <label for="lvl-3">3</label><br>
+                    <input type="checkbox" id="lvl-4" name="level-checkbox" value="lvl-4" checked>
+                    <label for="lvl-4">4</label><br>
+                    <input type="checkbox" id="lvl-5" name="level-checkbox" value="lvl-5" checked>
+                    <label for="lvl-5">5</label><br>
+                    <input type="checkbox" id="lvl-6" name="level-checkbox" value="lvl-6" checked>
+                    <label for="lvl-6">6</label><br>
+                    <input type="checkbox" id="lvl-7" name="level-checkbox" value="lvl-7" checked>
+                    <label for="lvl-7">7</label><br>
+                    <input type="checkbox" id="lvl-8" name="level-checkbox" value="lvl-8" checked>
+                    <label for="lvl-8">8</label><br>
+                    <input type="checkbox" id="lvl-9" name="level-checkbox" value="lvl-9" checked>
+                    <label for="lvl-9">9</label><br>
+                    <input type="checkbox" id="lvl-10" name="level-checkbox" value="lvl-10" checked>
+                    <label for="lvl-10">10</label><br>
+                </fieldset>
+            </div>
+            <!-- Levels 11-20 -->
+            <div class="col no-left-pad">
+                <fieldset class="no-left-pad" id="item-level-fs">
+                    <input type="checkbox" id="lvl-11" name="level-checkbox" value="lvl-11" checked>
+                    <label for="lvl-11">11</label><br>
+                    <input type="checkbox" id="lvl-12" name="level-checkbox" value="lvl-12" checked>
+                    <label for="lvl-12">12</label><br>
+                    <input type="checkbox" id="lvl-13" name="level-checkbox" value="lvl-13" checked>
+                    <label for="lvl-13">13</label><br>
+                    <input type="checkbox" id="lvl-14" name="level-checkbox" value="lvl-14" checked>
+                    <label for="lvl-14">14</label><br>
+                    <input type="checkbox" id="lvl-15" name="level-checkbox" value="lvl-15" checked>
+                    <label for="lvl-15">15</label><br>
+                    <input type="checkbox" id="lvl-16" name="level-checkbox" value="lvl-16" checked>
+                    <label for="lvl-16">16</label><br>
+                    <input type="checkbox" id="lvl-17" name="level-checkbox" value="lvl-17" checked>
+                    <label for="lvl-17">17</label><br>
+                    <input type="checkbox" id="lvl-18" name="level-checkbox" value="lvl-18" checked>
+                    <label for="lvl-18">18</label><br>
+                    <input type="checkbox" id="lvl-19" name="level-checkbox" value="lvl-19" checked>
+                    <label for="lvl-19">19</label><br>
+                    <input type="checkbox" id="lvl-20" name="level-checkbox" value="lvl-20" checked>
+                    <label for="lvl-20">20</label><br>
+                </fieldset>
+            </div>
+            <!-- Levels 21-28 and 0 -->
+            <div class="col no-left-pad">
+                <fieldset class="no-left-pad" id="item-level-fs">
+                    <input type="checkbox" id="lvl-21" name="level-checkbox" value="lvl-21" checked>
+                    <label for="lvl-21">21</label><br>
+                    <input type="checkbox" id="lvl-22" name="level-checkbox" value="lvl-22" checked>
+                    <label for="lvl-22">22</label><br>
+                    <input type="checkbox" id="lvl-23" name="level-checkbox" value="lvl-23" checked>
+                    <label for="lvl-23">23</label><br>
+                    <input type="checkbox" id="lvl-24" name="level-checkbox" value="lvl-24" checked>
+                    <label for="lvl-24">24</label><br>
+                    <input type="checkbox" id="lvl-25" name="level-checkbox" value="lvl-25" checked>
+                    <label for="lvl-25">25</label><br>
+                    <input type="checkbox" id="lvl-26" name="level-checkbox" value="lvl-26" checked>
+                    <label for="lvl-26">26</label><br>
+                    <input type="checkbox" id="lvl-27" name="level-checkbox" value="lvl-27" checked>
+                    <label for="lvl-27">27</label><br>
+                    <input type="checkbox" id="lvl-28" name="level-checkbox" value="lvl-28" checked>
+                    <label for="lvl-28">28</label><br>
+                    <input type="checkbox" id="lvl-0" name="level-checkbox" value="lvl-0" checked>
+                    <label for="lvl-0">0 (Mundane Items)</label><br>
+                </fieldset>
+                <input type="checkbox" id="levels-toggle" onchange="toggleAllLevels(this)" checked>
+                <label for="levels-toggle">Select/Deselect All</label>
+            </div>
+        </div>
+    </div>
+    <!-- Item Categories -->
+    <button type="button" class="collapsible">Item Categories</button>
+    <div class="content">
+        <div class="flex-container margin-top-10">
+            <!-- Column 1 -->
+            <div class="col no-left-pad">
+                <fieldset id="category-fs">
+                    <input type="checkbox" id="adjustments" name="category-checkbox" value="adjustments" checked>
+                    <label for="adjustments">Adjustments</label><br>
+                    <input type="checkbox" id="adventuring-gear" name="category-checkbox" value="adventuring-gear"
+                        checked>
+                    <label for="adventuring-gear">Adventuring Gear</label><br>
+                    <input type="checkbox" id="alchemical-items" name="category-checkbox" value="alchemical-items"
+                        checked>
+                    <label for="alchemical-items">Alchemical Items</label><br>
+                    <input type="checkbox" id="animals-and-gear" name="category-checkbox" value="animals-and-gear"
+                        checked>
+                    <label for="animals-and-gear">Animals and Gear</label><br>
+                    <input type="checkbox" id="armor" name="category-checkbox" value="armor" checked>
+                    <label for="armor">Armor</label><br>
+                    <input type="checkbox" id="artifacts" name="category-checkbox" value="artifacts" checked>
+                    <label for="artifacts">Artifacts</label><br>
+                    <input type="checkbox" id="assistive-items" name="category-checkbox" value="assistive-items"
+                        checked>
+                    <label for="assistive-items">Assistive Items</label><br>
+                    <input type="checkbox" id="blighted-boons" name="category-checkbox" value="blighted-boons" checked>
+                    <label for="blighted-boons">Blighted Boons</label><br>
+                    <input type="checkbox" id="consumables" name="category-checkbox" value="consumables" checked>
+                    <label for="consumables">Consumables</label><br>
+                    <input type="checkbox" id="contracts" name="category-checkbox" value="contracts" checked>
+                    <label for="contracts">Contracts</label><br>
+                    <input type="checkbox" id="cursed-items" name="category-checkbox" value="cursed-items" checked>
+                    <label for="cursed-items">Cursed Items</label><br>
+                    <input type="checkbox" id="customizations" name="category-checkbox" value="customizations" checked>
+                    <label for="customizations">Customizations</label><br>
+                </fieldset>
+            </div>
+            <!-- Column 2 -->
+            <div class="col no-left-pad">
+                <fieldset id="category-fs">
+                    <input type="checkbox" id="grimoires" name="category-checkbox" value="grimoires" checked>
+                    <label for="grimoires">Grimoires</label><br>
+                    <input type="checkbox" id="held-items" name="category-checkbox" value="held-items" checked>
+                    <label for="held-items">Held Items</label><br>
+                    <input type="checkbox" id="intelligent-items" name="category-checkbox" value="intelligent-items" checked>
+                    <label for="intelligent-items">Intelligent Items</label><br>
+                    <input type="checkbox" id="materials" name="category-checkbox" value="materials" checked>
+                    <label for="materials">Materials</label><br>
+                    <input type="checkbox" id="other" name="category-checkbox" value="other" checked>
+                    <label for="other">Other</label><br>
+                    <input type="checkbox" id="relics" name="category-checkbox" value="relics" checked>
+                    <label for="relics">Relics</label><br>
+                    <input type="checkbox" id="runes" name="category-checkbox" value="runes" checked>
+                    <label for="runes">Runes</label><br>
+                    <input type="checkbox" id="shields" name="category-checkbox" value="shields" checked>
+                    <label for="shields">Shields</label><br>
+                    <input type="checkbox" id="siege-weapons" name="category-checkbox" value="siege-weapons">
+                    <label for="siege-weapons">Siege Weapons</label><br>
+                    <input type="checkbox" id="snares" name="category-checkbox" value="snares" checked>
+                    <label for="snares">Snares</label><br>
+                    <input type="checkbox" id="spellhearts" name="category-checkbox" value="spellhearts" checked>
+                    <label for="spellhearts">Spellhearts</label><br>
+                    <input type="checkbox" id="staves" name="category-checkbox" value="staves" checked>
+                    <label for="staves">Staves</label><br>
+                </fieldset>
+            </div>
+            <!-- Column 3 -->
+            <div class="col no-left-pad">
+                <fieldset id="category-fs">
+                    <input type="checkbox" id="structures" name="category-checkbox" value="structures" checked>
+                    <label for="structures">Structures</label><br>
+                    <input type="checkbox" id="tattoos" name="category-checkbox" value="tattoos" checked>
+                    <label for="tattoos">Tattoos</label><br>
+                    <input type="checkbox" id="trade-goods" name="category-checkbox" value="trade-goods" checked>
+                    <label for="trade-goods">Trade Goods</label><br>
+                    <input type="checkbox" id="vehicles" name="category-checkbox" value="vehicles">
+                    <label for="vehicles">Vehicles</label><br>
+                    <input type="checkbox" id="wands" name="category-checkbox" value="wands" checked>
+                    <label for="wands">Wands</label><br>
+                    <input type="checkbox" id="weapons" name="category-checkbox" value="weapons" checked>
+                    <label for="weapons">Weapons</label><br>
+                    <input type="checkbox" id="worn-items" name="category-checkbox" value="worn-items" checked>
+                    <label for="worn-items">Worn Items</label><br>
+                </fieldset>
+                <input type="checkbox" id="categories-toggle" onchange="toggleAllCategories(this)" checked>
+                <label for="categories-toggle">Select/Deselect All</label>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Options -->
+<!-- Collapsible Menu Script -->
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("collapsible-active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
+
+<!-- Button -->
+<div>
+    <div>
+        <button class="generator-button" type="button" onclick="generateNPC()">Generate Treasure</button>
+    </div>
+</div>
+<br>
+
+{% include ads-horizontal-long.html %}
