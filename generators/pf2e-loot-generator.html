@@ -194,6 +194,7 @@ title: Pathfinder 2e Loot Generator
     </div>
 </div>
 <!-- End Options -->
+
 <!-- Collapsible Menu Script -->
 <script>
     var coll = document.getElementsByClassName("collapsible");
@@ -216,14 +217,8 @@ title: Pathfinder 2e Loot Generator
 
 <!-- Number of items selector -->
 <div class="w3-row w3-padding-16 centered-text">
-    <label>Number of items:</label>
-    <select name="num_items" id="num_items">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-    </select>
+    <label for="num-items">Number of items (max 20):</label>
+    <input type="text" id="num-items" name="num-items" style="width: 80px;" value="1">
 </div>
 
 <!-- Button -->
@@ -235,18 +230,19 @@ title: Pathfinder 2e Loot Generator
 <br>
 
 <!-- Item Container -->
-<div>
-    <p id="error-p" style="display: none;">Error.</p>
+<div id="pf2e-item-con">
+    <p id="error-p" style="display: none;" class="error-text">Error.</p>
     <table>
         <thead>
             <tr>
                 <th>Item</th>
+                <th>Name</th>
                 <th>Category</th>
                 <th>Level</th>
                 <th>Price</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="item-tbody">
             <tr id="item-1" style="display: none;">
                 <td><a id="item-1-name" target="_blank" rel="noopener noreferrer">Item 1</a></td>
                 <td><span id="item-1-cat">Category</span></td>

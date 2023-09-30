@@ -27,8 +27,13 @@ async function generatePf2eTreasure() {
     };
 
     // Grab number of items from HTML.
-    var i = document.getElementById("num_items");
-    var numItems = i.options[i.selectedIndex].text;
+    var i = document.getElementById("num-items");
+
+    // Validate number of items input
+    if (!i.value) {
+        console.log("No input in number of items.")
+    }
+    var numItems = i.value;
 
     // create a JSON object with parameters for API call and store in a variable
     var raw = JSON.stringify({
@@ -49,30 +54,62 @@ async function generatePf2eTreasure() {
     const response = await fetch(API_URL, requestOptions);
     const responseJSON = await response.json();
     const statusCode = responseJSON.statusCode;
+    
+    // Check for uncaught server side error
+    if (responseJSON.errorMessage) {
+        document.getElementById("error-p").style.display = "inline-block";
+        document.getElementById("error-p").textContent = "Server error. Please try reducing the number of items generated or contact us at ilootthebody@gmail.com.";
+        return;
+    }
+
+    // Parse JSON into dict
     const items = JSON.parse(responseJSON.body);
 
     console.log(items);
 
-    // Update HTML
+    // Display error message if error detected
     if (statusCode == 500) {
         document.getElementById("error-p").style.display = "inline-block";
         document.getElementById("error-p").textContent = items;
     }
+    // Update item table with generated items
     else {
-        itemNum = 1;
+        var itemNum = 1;
+
+        // Get body of item table
+        var itemTableBody = document.getElementById("item-tbody");
+
+        //Clear all existing rows from item table body
+        itemTableBody.innerHTML = '';
+
         for (var item of items.items) {
-            document.getElementById("item-" + itemNum.toString()).style.display = "table-row";
-            document.getElementById("item-" + itemNum.toString() + "-name").textContent = titleCase(item.name);
-            document.getElementById("item-" + itemNum.toString() + "-cat").textContent = titleCase(item.category);
-            document.getElementById("item-" + itemNum.toString() + "-lvl").textContent = item.level;
-            document.getElementById("item-" + itemNum.toString() + "-name").href = item.link;
-            document.getElementById("item-" + itemNum.toString() + "-price").textContent = item.price;
+            // Insert new row into item table
+            var row = itemTableBody.insertRow(itemNum - 1);
+
+            // Insert cells into new row
+            var itemIndex = row.insertCell(0);
+            var itemName = row.insertCell(1);
+            var itemCat = row.insertCell(2);
+            var itemLevel = row.insertCell(3);
+            var itemPrice = row.insertCell(4);
+
+            // Set cell values from item
+            itemIndex.innerHTML = itemNum;
+            itemCat.innerHTML = titleCase(item.category);
+            itemLevel.innerHTML = item.level;
+            itemPrice.innerHTML = item.price;
+            
+            // Create link for name cell
+            var a = document.createElement('a');
+            var tn = document.createTextNode(titleCase(item.name));
+            a.appendChild(tn);
+            a.href = item.link;
+            a.target = "_blank";
+            a.rel = "noopener noreferrer";
+            itemName.appendChild(a);
 
             itemNum += 1;
         }
-
-        // Hide any unused items
-        for (itemNum; itemNum <= 5; itemNum++) { document.getElementById("item-" + itemNum.toString()).style.display = "none"; }
     }
 }
 
