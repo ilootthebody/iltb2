@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Pathfinder 2e Loot Generator (Beta)
+title: Pathfinder 2e Loot Generator
 ---
 
 <script src="../javascript/pf2eTreasureScripts.js"></script>
@@ -13,7 +13,8 @@ title: Pathfinder 2e Loot Generator (Beta)
         item levels and/or categories in the menus below.
     </p>
     <p>
-        Clicking on a generated item will open that item's page on the <a href="https://2e.aonprd.com/" target="_blank" rel="noopener noreferrer">Archives of Nethys</a> 
+        Clicking on a generated item will open that item's page on the <a href="https://2e.aonprd.com/" target="_blank"
+            rel="noopener noreferrer">Archives of Nethys</a>
         where you can view more detailed information about the item.
     </p>
 </div>
@@ -236,33 +237,48 @@ title: Pathfinder 2e Loot Generator (Beta)
 <!-- Item Container -->
 <div>
     <p id="error-p" style="display: none;">Error.</p>
-    <ol>
-        <li id="item-1" style="display: none;">
-            <a id="item-1-name" target="_blank" rel="noopener noreferrer">Item 1</a> - 
-            <span id="item-1-cat">Category</span> - 
-            Level <span id="item-1-lvl">1</span>
-        </li>
-        <li id="item-2" style="display: none;">
-            <a id="item-2-name" target="_blank" rel="noopener noreferrer">Item 2</a> - 
-            <span id="item-2-cat">Category</span> - 
-            Level <span id="item-2-lvl">2</span>
-        </li>
-        <li id="item-3" style="display: none;">
-            <a id="item-3-name" target="_blank" rel="noopener noreferrer">Item 3</a> - 
-            <span id="item-3-cat">Category</span> - 
-            Level <span id="item-3-lvl">3</span>
-        </li>
-        <li id="item-4" style="display: none;">
-            <a id="item-4-name" target="_blank" rel="noopener noreferrer">Item 4</a> - 
-            <span id="item-4-cat">Category</span> - 
-            Level <span id="item-4-lvl">4</span>
-        </li>
-        <li id="item-5" style="display: none;">
-            <a id="item-5-name" target="_blank" rel="noopener noreferrer">Item 5</a> - 
-            <span id="item-5-cat">Category</span> - 
-            Level <span id="item-5-lvl">5</span>
-        </li>
-    </ol>
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Category</th>
+                <th>Level</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="item-1" style="display: none;">
+                <td><a id="item-1-name" target="_blank" rel="noopener noreferrer">Item 1</a></td>
+                <td><span id="item-1-cat">Category</span></td>
+                <td>Level <span id="item-1-lvl">1</span></td>
+                <td><span id="item-1-price">Price</span></td>
+            </tr>
+            <tr id="item-2" style="display: none;">
+                <td><a id="item-2-name" target="_blank" rel="noopener noreferrer">Item 2</a></td>
+                <td><span id="item-2-cat">Category</span></td>
+                <td>Level <span id="item-2-lvl">1</span></td>
+                <td><span id="item-2-price">Price</span></td>
+            </tr>
+            <tr id="item-3" style="display: none;">
+                <td><a id="item-3-name" target="_blank" rel="noopener noreferrer">Item 3</a></td>
+                <td><span id="item-3-cat">Category</span></td>
+                <td>Level <span id="item-3-lvl">1</span></td>
+                <td><span id="item-3-price">Price</span></td>
+            </tr>
+            <tr id="item-4" style="display: none;">
+                <td><a id="item-4-name" target="_blank" rel="noopener noreferrer">Item 4</a></td>
+                <td><span id="item-4-cat">Category</span></td>
+                <td>Level <span id="item-4-lvl">1</span></td>
+                <td><span id="item-4-price">Price</span></td>
+            </tr>
+            <tr id="item-5" style="display: none;">
+                <td><a id="item-5-name" target="_blank" rel="noopener noreferrer">Item 5</a></td>
+                <td><span id="item-5-cat">Category</span></td>
+                <td>Level <span id="item-5-lvl">5</span></td>
+                <td><span id="item-5-price">Price</span></td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 
 <br>

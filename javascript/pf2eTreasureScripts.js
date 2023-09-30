@@ -61,27 +61,19 @@ async function generatePf2eTreasure() {
     else {
         itemNum = 1;
         for (var item of items.items) {
-            document.getElementById("item-" + itemNum.toString()).style.display = "list-item";
+            document.getElementById("item-" + itemNum.toString()).style.display = "table-row";
             document.getElementById("item-" + itemNum.toString() + "-name").textContent = titleCase(item.name);
             document.getElementById("item-" + itemNum.toString() + "-cat").textContent = titleCase(item.category);
             document.getElementById("item-" + itemNum.toString() + "-lvl").textContent = item.level;
             document.getElementById("item-" + itemNum.toString() + "-name").href = item.link;
+            document.getElementById("item-" + itemNum.toString() + "-price").textContent = item.price;
+
             itemNum += 1;
         }
 
         // Hide any unused items
         for (itemNum; itemNum <= 5; itemNum++) { document.getElementById("item-" + itemNum.toString()).style.display = "none"; }
     }
-
-
-    // document.getElementById("npc-name-header").textContent = npcDetails.name;
-    // document.getElementById("npc-race-text").textContent = npcDetails.race;
-    // document.getElementById("npc-appearance-text").textContent = npcDetails.appearance;
-    // document.getElementById("npc-clothing-text").textContent = npcDetails.clothing;
-    // document.getElementById("npc-voice-text").textContent = npcDetails.voice;
-    // document.getElementById("npc-personality-text").textContent = npcDetails.personality;
-    // document.getElementById("npc-profession-text").textContent = npcDetails.profession;
-    // document.getElementById("npc-motivation-text").textContent = npcDetails.motivation;
 }
 
 // -------------------------------------------------------------------------------- \\
