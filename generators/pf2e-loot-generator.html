@@ -215,18 +215,17 @@ title: Pathfinder 2e Loot Generator
 
 <br>
 
-<!-- Number of items selector -->
-<div class="w3-row w3-padding-16 centered-text">
-    <label for="num-items">Number of items (max 20):</label>
-    <input type="text" id="num-items" name="num-items" style="width: 80px;" value="1">
-</div>
-
-<!-- Button -->
-<div>
+<!-- Number of items form and submit button -->
+<form action="#" onsubmit="generatePf2eTreasure();return false">
     <div>
-        <button class="generator-button" type="button" onclick="generatePf2eTreasure()">Generate Loot</button>
+        <label for="num-items">Number of items (max 20):</label>
+        <input type="text" id="num-items" name="num-items" style="width: 80px;" value="1">
     </div>
-</div>
+    <div>
+        <input type="submit" value="Generate Loot" class="generator-button">
+    </div>
+</form>
+
 <br>
 
 <!-- Item Container -->
