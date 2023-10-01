@@ -217,10 +217,17 @@ title: Pathfinder 2e Loot Generator
 
 <!-- Number of items form and submit button -->
 <form action="#" onsubmit="generatePf2eTreasure();return false">
+    <!-- Number of items -->
     <div>
-        <label for="num-items">Number of items (max 20):</label>
+        <label for="num-items">Number of items (max 20): </label>
         <input type="text" id="num-items" name="num-items" style="width: 80px;" value="1">
     </div>
+    <!-- Gold cap -->
+    <!-- <div>
+        <label for="gold-cap">Gold cap (optional): </label>
+        <input type="text" id="gold-cap" name="gold-cap" style="width: 80px;">
+    </div> -->
+    <!-- Generate loot button -->
     <div>
         <input type="submit" value="Generate Loot" class="generator-button">
     </div>
@@ -242,36 +249,7 @@ title: Pathfinder 2e Loot Generator
             </tr>
         </thead>
         <tbody id="item-tbody">
-            <tr id="item-1" style="display: none;">
-                <td><a id="item-1-name" target="_blank" rel="noopener noreferrer">Item 1</a></td>
-                <td><span id="item-1-cat">Category</span></td>
-                <td>Level <span id="item-1-lvl">1</span></td>
-                <td><span id="item-1-price">Price</span></td>
-            </tr>
-            <tr id="item-2" style="display: none;">
-                <td><a id="item-2-name" target="_blank" rel="noopener noreferrer">Item 2</a></td>
-                <td><span id="item-2-cat">Category</span></td>
-                <td>Level <span id="item-2-lvl">1</span></td>
-                <td><span id="item-2-price">Price</span></td>
-            </tr>
-            <tr id="item-3" style="display: none;">
-                <td><a id="item-3-name" target="_blank" rel="noopener noreferrer">Item 3</a></td>
-                <td><span id="item-3-cat">Category</span></td>
-                <td>Level <span id="item-3-lvl">1</span></td>
-                <td><span id="item-3-price">Price</span></td>
-            </tr>
-            <tr id="item-4" style="display: none;">
-                <td><a id="item-4-name" target="_blank" rel="noopener noreferrer">Item 4</a></td>
-                <td><span id="item-4-cat">Category</span></td>
-                <td>Level <span id="item-4-lvl">1</span></td>
-                <td><span id="item-4-price">Price</span></td>
-            </tr>
-            <tr id="item-5" style="display: none;">
-                <td><a id="item-5-name" target="_blank" rel="noopener noreferrer">Item 5</a></td>
-                <td><span id="item-5-cat">Category</span></td>
-                <td>Level <span id="item-5-lvl">5</span></td>
-                <td><span id="item-5-price">Price</span></td>
-            </tr>
+            <!-- Rows generated via javascript -->
         </tbody>
     </table>
 </div>

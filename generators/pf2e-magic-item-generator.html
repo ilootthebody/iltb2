@@ -1,17 +1,13 @@
 ---
 layout: page
-title: Pathfinder Magic Item Generator
+title: This Page is Under Construction
 ---
 
 <script src="../javascript/pf2eMagicItemScripts.js"></script>
 
 <!-- Header -->
 <div>
-    <p>This tool randomly generates Pathfinder 2e items with (mostly) weak and (hopefully) unique magical enchantments.
-        I hope this helps when your players want to loot the body of random goblin #3.</p>
-    <p>Simply click the button below to generate millions of unique magical items. You can select/deselect various item
-        categories, magical effect power levels, and other options to narrow down the type of items the generator
-        creates.</p>
+    <p>This page is currently under construction. Feel free to use the tool, but note that it is not a completed product yet.</p>
 </div>
 
 <!-- Options -->
@@ -190,86 +186,5 @@ title: Pathfinder Magic Item Generator
 
 <br>
 <br>
-
-{% include ads-horizontal-long.html %}
-
-<!-- About the Magic Item Generator -->
-<div>
-    <h1>About the Magic Item Generator</h1>
-    <p>
-        The magic item generator randomly selects from lists of items and lists of magical effects to create unique
-        magical
-        items. There are a total of 243 items and 353 magical effects to choose from. Each item can have up to 4 magical
-        effects (including 63 curses) OR it can have up to 4 magical effects (excluding 63 curses) plus an additional
-        curse
-        effect. The total number of unique items comes out to 112,436,233,914,870. More details on how the generator
-        works
-        are provided below.
-    </p>
-    <p>
-        The list of 243 items is divided up into 11 item categories. A full list of all items and their categories is
-        provided <a href="/posts/magic-item-generator-categories/">here</a>. When an item is generated, a random
-        category is
-        chosen from the list of categories selected in the options above the generator. All categories in the list have
-        an
-        equal chance of being selected, regardless of the number of items in the category. Once a category is chosen, a
-        random item from that category is then selected from the database. Up to 5 items can be generated at a time.
-    </p>
-    <p>
-        The magical effects are divided into 5 power levels: mundane, low, medium, high, and curse. A more in-depth
-        description of these power levels can be found <a href="/posts/magic-item-generator-power-levels/">here</a> and
-        a
-        CSV with all 353 effects can be downloaded <a href="/downloads/ILTB-Effects-20221227.csv" download>here</a>.
-        After
-        an item has been selected, a random power level is chosen from the list of power levels selected in the options
-        above the generator. All power levels have an equal chance of being selected, regardless of the number of
-        effects in
-        the power level. Up to 4 effects can be applied to a single item. If the ‘Add Curse’ option is selected, the
-        curse
-        power level is not included when selecting the main effect(s) of an item. Instead, an additional curse effect is
-        randomly selected and added to the end of the item’s description.
-    </p>
-    <p>
-        In addition to the ‘Add Curse’ option, the magic item generator also includes several optional fields that can
-        be
-        toggled on/off in the ‘Other Options’ section. The ‘Show Price’ option allows you toggle on/off the suggested
-        price
-        of each item. When selected, the generator will display the suggested price as part of the item details (the
-        italicized line just under the item name).
-    </p>
-    <p>The price is calculated by taking the base price of the item and adding a number based on the power level of each
-        effect on that item: mundane = 25 gp, low = 100 gp, medium = 250 gp, and high = 500 gp (curses are worth 0 gp).
-        For
-        example, let’s say the generator spits out a shortsword with two effects: 1 medium and 1 high. The price for
-        that
-        item would be the sum of the shortsword’s base value, the medium effect’s value, and the high effect’s value for
-        a
-        total of 760 gp (10 + 250 + 500 = 760).</p>
-    <p>
-        The ‘Show Suggested Level’ option allows you to toggle on/off the suggested level for each item. When selected,
-        the
-        generator will display the suggested level as part of the item details (the italicized line just under the item
-        name).
-    </p>
-    <p>
-        The suggested level provides a guideline for the minimum level your players should be to receive that particular
-        item. This can also be used as a rough indication of how powerful each item is. For example, an item with a
-        suggested level of 13 is significantly more powerful than an item with a suggested level of 4. This is by no
-        means
-        meant to be a strict requirement. The goal of the suggested level system is to provide a more clear indication
-        of an
-        item’s power, taking into account the combination of multiple effects of different power levels on a single
-        item.
-    </p>
-    <p>
-        The suggested level is calculated based on the number of effects on the item and the power level of each effect.
-        Each effect power level is given a numeric weight: mundane = 1, low = 2, medium = 3, and high = 4 (curses have a
-        weight of 0). The suggested level is simply equal to the sum of the weights of all of the effects on a
-        particular
-        item. For example, an item with 1 high effect, 2 medium effects, and 1 mundane effect would have a suggested
-        level
-        of 11 (4 + 3 + 3 + 1 = 11).
-    </p>
-</div>
 
 {% include ads-horizontal-long.html %}
