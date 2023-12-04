@@ -3,6 +3,14 @@ layout: page
 # The Home page layout
 ---
 
+<!-- Generator List -->
+<div>
+  <h1>Generators & Tools</h1>
+
+  {% include generator-list.html %}
+</div>
+
+
 {% assign pinned = site.posts | where: "pin", "true" %}
 {% assign default = site.posts | where_exp: "item", "item.pin != true and item.hidden != true" %}
 
@@ -39,6 +47,7 @@ layout: page
 {% endif %}
 
 <div id="post-list">
+  <h1>Blog Posts</h1>
 
 {% for post in posts %}
 

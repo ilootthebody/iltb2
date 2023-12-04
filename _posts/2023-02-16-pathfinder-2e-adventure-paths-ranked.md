@@ -2,6 +2,7 @@
 title: "Pathfinder 2e Adventure Paths Ranked"
 author: njm
 date: 2023-02-16 23:30:00 -0500
+last_modified_at: 2023-12-04 16:15:00 -0500
 categories: [Pathfinder, Adventure Paths]
 tags: [pathfinder]
 ---
@@ -56,7 +57,7 @@ Rather than quit my day job and spend the next several years running Pathfinder 
 - **Goodreads** - I aggregated and averaged the product reviews for each AP product listing on [Goodreads](https://www.goodreads.com/search?utf8=%E2%9C%93&q=pathfinder+adventure+path&search_type=books).
 - **Paizo** - I aggregated and averaged the reviews for each AP product listing in the official [Paizo store](https://paizo.com/store/pathfinder/adventures/adventurePath).
 - **Reddit (Dec 2022)** - Reddit user u/DuncanBaxter posted [a fantastic survey](https://www.reddit.com/r/Pathfinder2e/comments/zq6dao/pathfinder_2e_adventure_path_survey_results/) on Reddit which is well worth a read. One of the questions they asked directly applies to my goal here, so I took their results, adjusted them to fit a 1-5 scale, and included them in the final calculations. They also used the results to create [a fantastic guide](https://scribe.pf2.tools/v/wM84QWch-adventures) to help people pick the right Adventure Path for them - I love the idea of making each Adventure Path into a stat block. Go check it out!
-- **Reddit (Feb 2023)** - I also posted [a survey](https://forms.gle/4NrTv6gQsdvNPDKw5) (which is still active BTW if you want to contribute your own ratings) on a couple of Pathfinder subreddits asking people to rate each AP. You can read my post on the results of that survey [here](/posts/pathfinder-2e-adventure-path-survey-results/).
+- **Reddit (Feb 2023)** - I also posted [a survey](https://www.reddit.com/r/Pathfinder2e/comments/10wdzzq/adventure_path_rating_survey/) on a couple of Pathfinder subreddits asking people to rate each AP. You can read my post on the results of that survey [here](/posts/pathfinder-2e-adventure-path-survey-results/).
 
 On their own, each of the sources I used are probably not the best indicator of AP quality. However, I hope that presenting all the data in one, cohesive format will provide you with a reasonable indication of which APs are more or less well regarded by the Pathfinder community.
 
