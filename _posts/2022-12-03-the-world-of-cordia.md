@@ -55,5 +55,3 @@ There are many nations and cultures across Cordia. Below are short descriptions 
 **Wistari** - The ancestral homeland of the elves and home to the refugee nation of the dwarves. The peaceful Wistarians are master crafters and artisans skilled in weaving old magics of the mountains and forests they call home.
 
 **The Wilds** - The Wyrmwood Forest, Giant’s Belt, and the unexplored eastern wilds hold many secrets. Individuals from these lands seem to have inherited some of the primal energy of their homelands.
-
-{% include ads-in-article.html %}

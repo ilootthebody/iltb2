@@ -42,5 +42,3 @@ Wastelands are a dangerous place. The people that call these desolate places hom
 
 ## Downloads
 A PDF containing the barbed weapon item description as well as the Goblin Thorn Thrower and Wasteland Hunter stat blocks can be downloaded [here](/downloads/Barbed%20Weapons%20-%20ILTB.pdf). This PDF was generated using the [Homebrewery](https://homebrewery.naturalcrit.com/) tool.
-
-{% include ads-in-article.html %}

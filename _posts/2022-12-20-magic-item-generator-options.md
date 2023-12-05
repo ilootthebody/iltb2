@@ -33,5 +33,3 @@ When generating an item with multiple effects, the generator's default behavior 
 The 'Add Curse' option allows you to add an additional curse effect to a magic item. When selected, the generator will display each item's normal magical effects along with an additional curse effect just below it.
 
 Note: Selecting the 'Add Curse' option will deselect the 'Curse' power level option. I felt that it would be silly to have a an already cursed item with an additional curse.
-
-{% include ads-in-article.html %}

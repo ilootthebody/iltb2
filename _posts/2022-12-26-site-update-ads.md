@@ -23,5 +23,3 @@ Privacy is important and I understand that many people have concerns over data c
 I also believe that it is your prerogative to choose not to see ads if you so wish. I will be working on introducing an ad-free version of the site available to those who would rather support my work directly, likely using Patreon. In the meantime, if you’d rather not see ads on my site, I encourage you to use one of the many ad-blocking programs out there. I myself have used the [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en) plugin for Google Chrome in the past and have confirmed that it successfully blocks the ads on this site. No hard feelings if you want to go that route.
 
 As always, please reach out to me if you have any questions or concerns. I want this site to grow and adapt based on the feedback of its users. I appreciate you all being here and for your continued support of this project. Happy looting and I wish you all the best in the upcoming new year!
-
-{% include ads-in-article.html %}

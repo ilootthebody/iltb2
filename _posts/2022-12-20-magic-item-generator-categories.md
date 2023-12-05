@@ -286,5 +286,3 @@ At a high level, the [magic item generator](/generators/magic-item-generator.htm
 * Longbow
 * Shortbow
 * Sling
-
-{% include ads-in-article.html %}

@@ -45,5 +45,3 @@ I’m angry at Wizards of the Coast for handling this so poorly. If they had sho
 I’m angry with Hasbro for putting ever-increasing profits above the community that helped make their company so profitable in the first place.
 
 But mostly I’m just sad. Sad that the game that I once cherished now has this dark cloud hanging over it. Sad that fond memories are now dulled by a melancholy filter. I’m sad because I think that D&D, a game that made me feel a true sense of wonder for the first time since I was a kid, has lost some of its magic for me.
-
-{% include ads-in-article.html %}

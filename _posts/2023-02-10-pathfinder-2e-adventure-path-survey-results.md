@@ -111,5 +111,3 @@ As I mentioned above, u/DuncanBaxter also recently published a survey about Path
 
 
 Overall, the results seem to line up fairly well considering the large discrepancy in our sample sizes. The scores for my survey were generally lower than theirs and our final rankings don’t line up exactly one-to-one, but they are relatively close. Our three top rated and three bottom rated Adventure Paths are the same, just in slightly different orders.
-
-{% include ads-vertical.html %}

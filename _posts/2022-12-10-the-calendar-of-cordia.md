@@ -96,5 +96,3 @@ Rhega had dealt a mortal blow to the Emperor but he still lived. Rhega's death c
 ### The Dawn Age (379 Years, Present Day)
 
 Emperor Arraxian's retreat allowed for much of his conquered lands to be liberated. The Arraxian Empire was shrunk down to a fraction of its former power but it still holds some territories and patiently waits for its leader to return. The rest of Cordia has begun the process of healing from the damage dealt by centuries of war. Progress towards a brighter future has been made but with one of the Primal Wyrms dead and the world far out of balance, Cordia's fate is still uncertain as this new age dawns.
-
-{% include ads-in-article.html %}

@@ -40,5 +40,3 @@ No matter the setting or encounter you use them in, the Bone Collector works bes
 ## Downloads
 
 A PDF containing the sawtooth weapon item description as well as the Bone Collector stat block can be downloaded [here](/downloads/Sawtooth%20Weapons%20-%20ILTB.pdf). This PDF was generated using the [Homebrewery](https://homebrewery.naturalcrit.com/) tool.
-
-{% include ads-in-article.html %}

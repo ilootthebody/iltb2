@@ -82,5 +82,3 @@ The armor has 5 charges, which are used to fuel the spells within it. While attu
 3 charges: bones of the earth, investiture of stone
 
 The armor regains 1d4 + 1 expended charges each day at dawn.
-
-{% include ads-in-article.html %}
