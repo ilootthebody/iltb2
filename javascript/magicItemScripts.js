@@ -3,6 +3,12 @@
 // and formats/displays the generated item(s).
 // -------------------------------------------------------------------------------- \\
 async function getItems() {
+    // Create API URL. If in DEV, change it.
+    var API_URL = "https://r5v52vn69g.execute-api.us-east-2.amazonaws.com/iltb/PRD-DND5E-HB-Item-Gen";
+    if (document.location.hostname != "www.ilootthebody.com") {
+        API_URL = "https://qi9d504bkk.execute-api.us-east-2.amazonaws.com/iltb/DEV-DND5E-HB-Item-Gen";
+    }
+
     // Grab categories from HTML.
     var categoryCheckboxes = document.getElementsByName("category-checkbox");
     var categories = [];
@@ -63,7 +69,6 @@ async function getItems() {
         }
     }
 
-    const API_URL = "https://l3ks5hv18d.execute-api.us-east-2.amazonaws.com/dev/iltbgetitems";
     // Instantiate and populate header.
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
