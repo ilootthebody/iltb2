@@ -109,25 +109,31 @@ async function getItems() {
     // Index for iterating over number of items
     itemNum = 1;
 
-    // Display Generated Items. Item array is formatted as [item_name, effect_position, effect_name, details, effect_descs]
+    // Display Generated Items. Item array is formatted as [item_name, effect_position, effect_name, details, effect_desc]
     for (var item of itemList.items) {
-        document.getElementById("item" + itemNum + "-loader").style.display = "none";
-        document.getElementById("item" + itemNum + "-name").textContent = item[0];
+        var itemName = item[0];
+        var effectPosition = item[1];
+        var effectName = item[2];
+        var itemDetails = item[3];
+        var effectDescription = item[4];
 
-        if (item[1] == "PREFIX") {
-            document.getElementById("item" + itemNum + "-prefix").textContent = item[2];
+        document.getElementById("item" + itemNum + "-loader").style.display = "none";
+        document.getElementById("item" + itemNum + "-name").textContent = itemName;
+
+        if (effectPosition == "PREFIX") {
+            document.getElementById("item" + itemNum + "-prefix").textContent = effectName;
             document.getElementById("item" + itemNum + "-suffix").textContent = "";
         }
-        else if (item[1] == "SUFFIX") {
-            document.getElementById("item" + itemNum + "-suffix").textContent = item[2];
+        else if (effectPosition == "SUFFIX") {
+            document.getElementById("item" + itemNum + "-suffix").textContent = effectName;
             document.getElementById("item" + itemNum + "-prefix").textContent = "";
         }
 
-        document.getElementById("item" + itemNum + "-det").textContent = item[3];
+        document.getElementById("item" + itemNum + "-det").textContent = itemDetails;
 
         effectNum = 1;
         for (let ee = 0; ee < totalEffects; ee++) {
-            document.getElementById("item" + itemNum + "-effect" + effectNum).textContent = item[4][ee];
+            document.getElementById("item" + itemNum + "-effect" + effectNum).textContent = effectDescription[ee];
             document.getElementById("item" + itemNum + "-effect" + effectNum + "-regen").style.display = "block";
             effectNum++;
         }
