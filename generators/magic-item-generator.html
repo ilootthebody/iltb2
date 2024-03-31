@@ -79,15 +79,17 @@ title: Homebrew Magic Item Generator
         <fieldset id="pl-fs">
           <legend>Power Level:</legend>
           <input type="checkbox" id="mundane" name="power-level-checkbox" value="mundane" checked>
-          <label for="mundane">Mundane (90)</label><br>
+          <label for="mundane">Mundane (97)</label><br>
           <input type="checkbox" id="low" name="power-level-checkbox" value="low" checked>
-          <label for="low">Low (97)</label><br>
+          <label for="low">Low (93)</label><br>
           <input type="checkbox" id="medium" name="power-level-checkbox" value="medium" checked>
-          <label for="medium">Medium (98)</label><br>
+          <label for="medium">Medium (166)</label><br>
           <input type="checkbox" id="high" name="power-level-checkbox" value="high" checked>
-          <label for="high">High (122)</label><br>
+          <label for="high">High (82)</label><br>
+          <input type="checkbox" id="very high" name="power-level-checkbox" value="very high" checked>
+          <label for="very high">Very High (20)</label><br>
           <input type="checkbox" id="curse" name="power-level-checkbox" value="curse" onchange="curseChecked(this)">
-          <label for="curse">Curse (78)</label><br>
+          <label for="curse">Curse (79)</label><br>
           <input type="checkbox" id="sentient" name="power-level-checkbox" value="sentient">
           <label for="sentient">Sentient (25)</label><br>
         </fieldset>
@@ -106,12 +108,10 @@ title: Homebrew Magic Item Generator
               Options:</a></legend>
           <input type="checkbox" id="price" name="options-checkbox" value="price" checked>
           <label for="price">Show Price</label><br>
-          <input type="checkbox" id="level" name="options-checkbox" value="level" checked>
-          <label for="level">Show Suggested Level</label><br>
+          <input type="checkbox" id="rarity" name="options-checkbox" value="rarity" checked>
+          <label for="level">Show Suggested Rarity</label><br>
           <input type="checkbox" id="1sentient" name="options-checkbox" value="1sentient" checked>
           <label for="1sentient">Limit One Sentient Effect Per Item</label><br>
-          <!-- <input type="checkbox" id="condensed" name="options-checkbox" value="condensed">
-          <label for="condensed">Condense Item Description</label><br> -->
           <input type="checkbox" id="add-curse" name="options-checkbox" value="cursed"
             onchange="addCurseChecked(this);">
           <label for="add-curse">Add Curse</label><br>
