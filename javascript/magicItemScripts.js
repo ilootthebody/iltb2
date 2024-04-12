@@ -3,38 +3,53 @@
 // and formats/displays the generated item(s).
 // -------------------------------------------------------------------------------- \\
 async function getItems() {
-    // Create API URL. If in DEV, change it.
+    // Create API URL. If in DEV, change it
     var API_URL = "https://r5v52vn69g.execute-api.us-east-2.amazonaws.com/iltb/PRD-DND5E-HB-Item-Gen";
     if (document.location.hostname != "www.ilootthebody.com") {
         API_URL = "https://qi9d504bkk.execute-api.us-east-2.amazonaws.com/iltb/DEV-DND5E-HB-Item-Gen";
     }
 
-    // Grab categories from HTML.
+    // Hide error message
+    document.getElementById("error-message-text").style.display = "none";
+
+    // Grab categories from HTML
     var categoryCheckboxes = document.getElementsByName("category-checkbox");
     var categories = [];
     for (var i = 0; i < categoryCheckboxes.length; i++) {
         if (categoryCheckboxes[i].checked) { categories.push(categoryCheckboxes[i].value); }
     };
 
-    // Grab power levels from HTML.
+    // Check for empty categories
+    if (categories.length == 0) {
+        displayErrorMessage("ERROR: Please select at least one item category.");
+        return;
+    }
+
+    // Grab power levels from HTML
     var powerCheckboxes = document.getElementsByName("power-level-checkbox");
     var powerLevels = [];
     for (var i = 0; i < powerCheckboxes.length; i++) {
         if (powerCheckboxes[i].checked) { powerLevels.push(powerCheckboxes[i].value); }
     };
 
-    // Grab other options from HTML.
+    // Check for empty power levels
+    if (powerLevels.length == 0) {
+        displayErrorMessage("ERROR: Please select at least one magical effect power level.");
+        return;
+    }
+
+    // Grab other options from HTML
     var optionsCheckboxes = document.getElementsByName("options-checkbox");
     var options = [];
     for (var i = 0; i < optionsCheckboxes.length; i++) {
         if (optionsCheckboxes[i].checked) { options.push(optionsCheckboxes[i].value); }
     };
 
-    // Grab number of items from HTML.
+    // Grab number of items from HTML
     var i = document.getElementById("num_items");
     var numItems = i.options[i.selectedIndex].text;
 
-    // Grab number of effects from HTML.
+    // Grab number of effects from HTML
     var e = document.getElementById("num_effects");
     var numEffects = e.options[e.selectedIndex].text;
     var totalEffects = parseInt(numEffects)
@@ -98,7 +113,7 @@ async function getItems() {
     if (responseJSON.hasOwnProperty("errorMessage")) {
         console.log(responseJSON);
 
-        displayErrorMessage();
+        displayErrorMessage("ERROR: The server encountered an unexpected error. Please try again. Contact ilootthebody@gmail.com if the issue persists.");
 
         return;
     }
@@ -219,7 +234,7 @@ async function regenEffect(effectID) {
     // Check for errors
     if (responseJSON.hasOwnProperty("errorMessage")) {
         console.log(responseJSON);
-        displayErrorMessage();
+        displayErrorMessage("ERROR: The server encountered an unexpected error. Please try again. Contact ilootthebody@gmail.com if the issue persists.");
         return;
     }
 
@@ -249,27 +264,11 @@ async function regenEffect(effectID) {
 }
 
 // -------------------------------------------------------------------------------- \\
-// Displays a generic error message to the user.
+// Displays an error message to the user.
 // -------------------------------------------------------------------------------- \\
-function displayErrorMessage() {
-    const itemContainer = document.getElementById("result-container");
-
-    // Clear old items from item container.
-    // while (itemContainer.firstChild) {
-    //     itemContainer.removeChild(itemContainer.firstChild);
-    // }
-
-    var detailsPara = document.createElement("p");
-    var detailsText = document.createTextNode("Looks like we rolled a nat 1 on our investigation check. Please try again later.");
-    detailsPara.appendChild(detailsText);
-    itemContainer.prepend(detailsPara);
-
-    var h2 = document.createElement("h2");
-    var h2Text = document.createTextNode("Oops...");
-    h2.appendChild(h2Text);
-    itemContainer.prepend(h2);
-
-    itemContainer.style.display = "inline-block";
+function displayErrorMessage(errorMessage) {
+    document.getElementById("error-message-text").innerText = errorMessage;
+    document.getElementById("error-message-text").style.display = "block";
 }
 
 // -------------------------------------------------------------------------------- \\

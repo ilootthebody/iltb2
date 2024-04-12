@@ -10,6 +10,10 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
 @import "{{ site.theme }}";
 
 /* append your custom style below */
+.red-text {
+  color: #bb0000;
+}
+
 .sm-button {
   padding: 20px;
   font-size: 30px;
