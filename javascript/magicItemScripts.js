@@ -205,7 +205,7 @@ async function regenEffect(effectID) {
     item = document.getElementById(itemNum + "-name").textContent;
 
     // Grab current effect power level from HTML
-    effectPower = document.getElementById(itemNum + "-" + effectNum).textContent.split(" ")[0];
+    effectPower = document.getElementById(itemNum + "-" + effectNum).textContent.match(/\(([^)]+)\)/)[1]
 
     // Instantiate and populate header
     var myHeaders = new Headers();
