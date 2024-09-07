@@ -1,13 +1,9 @@
 #  The contact options.
 
-# -
-#   type: instagram
+# - type: instagram
 #   icon: 'fab fa-instagram'
-# -
-#   type: twitter
-#   icon: 'fab fa-twitter'
-# -
-#   type: email
+
+# - type: email
 #   icon: 'fas fa-envelope'
 #   noblank: true            # open link in current tab
 
